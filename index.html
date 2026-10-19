@@ -34,6 +34,19 @@ h1 em{font-style:normal;color:#7fe3d6}
 .booklet .btn:hover{transform:translateY(-2px)}
 .booklet .btn small{display:block;font-weight:500;font-size:13px;color:#8a5a4d}
 
+
+.solutions{margin-top:18px;background:#fff;border-radius:20px;padding:24px 28px;display:flex;gap:22px;align-items:flex-start;box-shadow:0 2px 0 var(--line),0 10px 30px rgba(22,33,58,.07);border-right:8px solid var(--asset)}
+.solutions .ic{font-size:48px;flex:none}
+.solutions h3{font-size:22px;font-weight:800;line-height:1.25}
+.solutions .rec-tag{display:inline-block;background:#dff5f2;color:#087469;border-radius:99px;padding:2px 14px;font-weight:700;font-size:14px;margin-bottom:6px}
+.solutions p{font-size:16px;color:var(--ink2);margin-top:6px}
+.solutions .warn{margin-top:12px;background:#fff7e0;border-right:5px solid #f0b429;border-radius:10px;padding:10px 14px;font-size:15px;color:#4a4130}
+.solutions .warn a{color:var(--navy2);font-weight:700;direction:ltr;unicode-bidi:isolate;display:inline-block;text-decoration:underline}
+.solutions .btn2{flex:none;margin-right:auto;align-self:center;background:var(--asset);color:#fff;font-weight:800;font-size:17px;padding:12px 22px;border-radius:14px;text-align:center;transition:transform .15s}
+.solutions .btn2:hover{transform:translateY(-2px)}
+.solutions .btn2 small{display:block;font-weight:500;font-size:13px;opacity:.9}
+@media (max-width:760px){.solutions{flex-direction:column}.solutions .btn2{margin-right:0;width:100%}}
+
 /* lecture card */
 section.block{padding-top:46px}
 h2.sec{font-size:30px;font-weight:800;display:flex;gap:12px;align-items:center}
@@ -117,6 +130,17 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
     </div>
     <span class="btn">פתיחת החוברת<small>PDF · 158 עמודים</small></span>
   </a>
+
+  <div class="solutions">
+    <div class="ic">📗</div>
+    <div>
+      <span class="rec-tag">מומלץ לגשת רק אחרי שפותרים לבד</span>
+      <h3>חוברת הפתרונות המפורטים</h3>
+      <p>לכל תרגיל ושאלה בחוברת התרגילים מצורף פתרון מפורט בשלבים, באותה שיטה שנלמדה בקורס. כדי ללמוד מהפתרון, כדאי לנסות לפתור את התרגיל לבד ורק אחר כך לבדוק.</p>
+      <div class="warn">למרות הבקרה, ההיקף הגדול של התרגילים והפתרונות המפורטים עלול להוביל מדי פעם לטעויות הקלדה. כשמשהו נראה חריג, אפשר לפנות עם צילומי מסך מתאימים אל <a href="mailto:shay.tsaban@gmail.com">shay.tsaban@gmail.com</a>.</div>
+    </div>
+    <a class="btn2" href="materials/detailed-solutions.pdf" target="_blank" rel="noopener">פתיחת הפתרונות<small>PDF · 427 עמודים</small></a>
+  </div>
 
   <section class="block" id="lectures">
     <h2 class="sec">השיעורים</h2>
