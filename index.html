@@ -232,7 +232,7 @@ function toEmbed(u){
 Object.keys(RECORDINGS).forEach(function(id){
   var u=RECORDINGS[id]; if(!u) return;
   var box=document.getElementById(id); if(!box) return;
-  box.innerHTML='<iframe src="'+toEmbed(u)+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="הקלטת השיעור"></iframe>';
+  box.innerHTML='<iframe src="'+toEmbed(u)+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy" title="הקלטת השיעור"></iframe>';
 });
 </script>
 </body>
