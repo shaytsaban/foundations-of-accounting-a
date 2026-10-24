@@ -6,7 +6,7 @@
 - `materials/detailed-solutions.pdf`: חוברת הפתרונות המפורטים
 - `lectures/lecture-1/presentation.html`: מצגת שיעור 1
 - `lectures/lecture-1/summary.pdf`: סיכום מורחב של שיעור 1
-- `lectures/lecture-2/presentation.html`: מצגת אינטראקטיבית של שיעור 2 (כל תרגילי השיעור והשאלות האמריקאיות)
+- `lectures/lecture-2/presentation.html`: מצגת אינטראקטיבית של שיעור 2 (מיון ובנייה של הדוחות, ו-22 שאלות תרגול)
 - `lectures/lecture-2/summary.pdf`: סיכום מורחב של שיעור 2
 - `assets/`: גופנים ותמונת המרצה (`shay.jpg`)
 
