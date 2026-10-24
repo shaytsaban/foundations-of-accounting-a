@@ -498,6 +498,35 @@ button.tc:hover{border-color:var(--coral)}
 .tdef span{flex:1}
 .rf{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:6px;font-size:14px}
 .rf a{font-weight:800;color:#b8391f;border:2px dashed var(--coral);border-radius:9px;padding:1px 9px;text-decoration:none;font-size:13px}
+
+/* ===== effects ===== */
+.fxt{width:100%;border-collapse:separate;border-spacing:0 3px}
+.fxt td{background:#fff;padding:3px 12px;font-size:14.5px;font-weight:700}
+.fxt td:first-child{border-radius:0 10px 10px 0}
+.fxt td.s{width:30px;border-radius:10px 0 0 10px;text-align:center;font-size:17px}
+.fxt select{border:2px solid var(--line);border-radius:9px;padding:2px 6px;font-family:inherit;font-size:14px;font-weight:700;background:#fff;width:130px}
+.fxt select.ok{border-color:var(--inc);background:var(--incbg)}
+.fxt select.bad{border-color:var(--exp);background:var(--expbg)}
+.fxx{padding:10px 14px;min-height:300px;max-height:500px;overflow:auto;font-size:14.5px;line-height:1.5}
+.fxconc{background:var(--incbg);border-radius:10px;padding:6px 10px;font-weight:800;margin-bottom:6px}
+.fxsec{margin-top:6px}
+.fxsec.trap{background:#fff1ec;border-radius:10px;padding:5px 10px}
+.fxn td{font-size:14px}
+.fxgo{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.fxgo button{background:#fff;border-radius:10px;padding:5px 8px;text-align:right;font-weight:700;font-size:13.5px;box-shadow:inset 0 0 0 2px var(--line)}
+.fxgo button:hover{box-shadow:inset 0 0 0 2px var(--coral)}
+.fxsum{width:100%;border-collapse:separate;border-spacing:0 4px;margin-top:8px}
+.fxsum th{font-size:13.5px;color:var(--mut);font-weight:700;padding:2px 8px;text-align:right}
+.fxsum td{background:#fff;padding:6px 10px;font-size:15px;font-weight:700}
+.fxsum td:first-child{border-radius:0 10px 10px 0}
+.fxsum td:last-child{border-radius:10px 0 0 10px}
+.fxsum td.u{color:#167a43}.fxsum td.dn{color:#b3262f}.fxsum td.z{color:var(--mut);font-weight:600}
+button.ch{background:#f1ece0;border-radius:8px;padding:0 8px;margin:1px 2px;font-size:13px;font-weight:800;color:var(--ink);cursor:pointer}
+button.ch:hover{background:var(--coral);color:#fff}
+
+#rbs-main td,#rbs-main div.r{padding-top:1px!important;padding-bottom:1px!important;font-size:14px!important;line-height:1.25}
+#rbs-main .hd{padding:6px 10px!important;font-size:16px!important}
+#s-rbs h2{font-size:34px}
 </style>
 </head>
 <body>
@@ -700,7 +729,7 @@ button.tc:hover{border-color:var(--coral)}
 <!-- REPORT: BALANCE SHEET -->
 <section class="slide" id="s-rbs" data-title="המאזן המלא">
   <div class="kick">תחנה 4 · הדוחות המלאים (2 מתוך 2)</div>
-  <h2>המאזן המלא (הדוח על המצב הכספי): לחצו על שורה לראות את הרכבה</h2>
+  <h2>המאזן המלא: לחצו על שורה לראות את הרכבה</h2>
   <div class="ctrl" style="margin-top:2px"><span id="rbs-act" style="display:inline-flex;align-items:center"></span></div>
   <div class="row" style="gap:20px;margin-top:6px;align-items:flex-start">
     <div style="flex:1.35" id="rbs-main"></div>
@@ -708,16 +737,7 @@ button.tc:hover{border-color:var(--coral)}
   </div>
 </section>
 
-<!-- TRAPS -->
-<section class="slide" id="s-traps" data-title="מעבדת המלכודות">
-  <div class="kick">תחנה 5 · הוצאה אינה תשלום, ועוד</div>
-  <h2>מעבדת המלכודות</h2>
-  <p class="sub" style="font-size:16px;margin-top:2px">בחרו אירוע. קודם ענו על השאלה, ואז ראו מה השתנה במאזן ובהון.</p>
-  <div class="row" style="gap:18px;margin-top:6px;align-items:flex-start">
-    <div style="flex:.85"><div class="evs tr6" id="tr-evs"></div></div>
-    <div style="flex:1.15"><div class="quizcard trbox" id="tr-box"><div class="hint">בחרו אירוע מהרשימה.</div></div></div>
-  </div>
-</section>
+<section class="slide" id="s-fx0" data-title="השפעת אירועים על הדוחות"><div class="kick">תחנה 5 · השפעת אירועים על הדוחות</div><h2>לא רק בונים דוחות: מבינים איך אירוע משפיע עליהם</h2><div class="row" style="gap:20px;margin-top:8px;align-items:flex-start"><div style="flex:1.1" class="col"><div class="card" style="padding:12px 16px;font-size:17px;line-height:1.55">בשקפים הקודמים בנינו דוחות מנתונים שקיבלנו. במקרים רבים, כמנהלים, המטרה שלנו אינה לבנות דוחות אלא להבין כיצד <b>אירוע או עסקה</b> משפיעים, נקודתית, על הדיווח. לכן במבחנים רבים, אחרי שאלות על הדוחות עצמם, יש סעיפי המשך שבוחנים את התופעה הזו. נעבור תופעה אחר תופעה, בשקף נפרד לכל אחת.</div><div class="card" style="padding:10px 16px"><b style="color:var(--coral);font-size:17px">ארבע שאלות לכל אירוע</b><ol style="margin:4px 20px 0 0;padding:0;font-size:15.5px;line-height:1.55"><li>מה קרה בפועל?</li><li>האם נצרך משאב או ניתן שירות (פעילות), או שרק הוחלף נכס בנכס, או נוצר חוב?</li><li>מה משתנה: מזומן, נכס אחר, התחייבויות, הון מניות ופרמיה, עודפים (דרך הרווח), ודוח רווח והפסד?</li><li>האם המשוואה נשארת מאוזנת?</li></ol></div></div><div style="flex:.9" class="col"><div class="eqbox" style="margin:0"><div class="b" style="background:var(--assetbg);color:#087469;font-size:19px;padding:8px 12px">נכסים</div><span class="op">=</span><div class="b" style="background:var(--liabbg);color:#4f33c9;font-size:19px;padding:8px 12px">התחייבויות</div><span class="op">+</span><div class="b" style="background:var(--eqbg);color:#a86703;font-size:19px;padding:8px 12px">הון עצמי</div></div><div class="card" style="padding:8px 14px;font-size:15px;line-height:1.5"><b>הון עצמי</b> = הון מניות ופרמיה (השקעת בעלים) + עודפים.<br>הרווח הנקי של השנה מצטרף <b>לעודפים בלבד</b>.</div><div class="fxgo" id="fxgo"></div></div></div></section><section class="slide" id="s-fx1" data-title="השפעה 1: שירות שנצרך וטרם שולם"><div class="kick">תחנה 5 · השפעה 1 מתוך 7</div><h2>הוצאה היא שווי השירות שנצרך, ולא התשלום</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> במהלך 2025 צרכה החברה שירותי ייעוץ בשווי 90,000 ש״ח. עד 31.12.2025 שולמו 60,000 ש״ח במזומן, ויתרת החוב תשולם ב-2026.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-1"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-1">בדיקה</button><button class="btn ghost" id="fxsh-1">הצג הסבר</button><span class="hint" id="fxsc-1"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-1"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx2" data-title="השפעה 2: הפקדה בפקדון"><div class="kick">תחנה 5 · השפעה 2 מתוך 7</div><h2>המרה של נכס בנכס אינה הוצאה</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה העבירה 50,000 ש״ח מחשבון העו״ש לפקדון בנקאי לשנה.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-2"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-2">בדיקה</button><button class="btn ghost" id="fxsh-2">הצג הסבר</button><span class="hint" id="fxsc-2"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-2"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx3" data-title="השפעה 3: הלוואה ביום האחרון"><div class="kick">תחנה 5 · השפעה 3 מתוך 7</div><h2>ריבית נצברת בחלוף זמן</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> ב-31.12.2025 נטלה החברה הלוואה של 100,000 ש״ח לשלוש שנים, בריבית שנתית של 6%.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-3"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-3">בדיקה</button><button class="btn ghost" id="fxsh-3">הצג הסבר</button><span class="hint" id="fxsc-3"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-3"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx4" data-title="השפעה 4: הוצאה שלא נרשמה"><div class="kick">תחנה 5 · השפעה 4 מתוך 7</div><h2>תיקון של הוצאה שלא נרשמה משנה שני צדדים</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> בביקורת התברר שלא נרשמה צריכת שירות בסך 25,000 ש״ח שכבר שולם במזומן במהלך השנה. מה משתנה כשמתקנים את הדוחות?</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-4"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-4">בדיקה</button><button class="btn ghost" id="fxsh-4">הצג הסבר</button><span class="hint" id="fxsc-4"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-4"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx5" data-title="השפעה 5: שירות שניתן וטרם נגבה"><div class="kick">תחנה 5 · השפעה 5 מתוך 7</div><h2>הכנסה היא שווי השירות שניתן, ולא הגבייה</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> ב-2025 סיפקה החברה שירות בשווי 70,000 ש״ח, והלקוח טרם שילם.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-5"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-5">בדיקה</button><button class="btn ghost" id="fxsh-5">הצג הסבר</button><span class="hint" id="fxsc-5"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-5"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx6" data-title="השפעה 6: הנחת מזומן ללקוח"><div class="kick">תחנה 5 · השפעה 6 מתוך 7</div><h2>הנחת מזומן היא הוצאת מימון</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> לקוח חייב של 80,000 ש״ח שילם מוקדם וקיבל הנחת מזומן של 2,000 ש״ח.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-6"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-6">בדיקה</button><button class="btn ghost" id="fxsh-6">הצג הסבר</button><span class="hint" id="fxsc-6"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-6"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx7" data-title="השפעה 7: השקעת בעלים"><div class="kick">תחנה 5 · השפעה 7 מתוך 7</div><h2>השקעת בעלים מגדילה הון מניות ופרמיה, ולא את הרווח</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> הבעלים השקיעו בחברה 120,000 ש״ח במזומן.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-7"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-7">בדיקה</button><button class="btn ghost" id="fxsh-7">הצג הסבר</button><span class="hint" id="fxsc-7"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-7"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fxsum" data-title="סיכום ההשפעות"><div class="kick">תחנה 5 · סיכום</div><h2>שבע ההשפעות בטבלה אחת</h2><p class="sub" style="font-size:16px;margin-top:2px">חץ למעלה הוא עלייה וחץ למטה הוא ירידה. בכל שורה שינוי הנכסים שווה לשינוי ההתחייבויות וההון. לחצו על אירוע כדי לחזור להסבר.</p><table class="fxsum" id="fxsum"></table></section>
 
 <!-- PRACTICE QUESTIONS -->
 <section class="slide" id="s-prac" data-title="שאלות תרגול">
@@ -745,7 +765,7 @@ button.tc:hover{border-color:var(--coral)}
     <div class="card" style="color:var(--ink)"><b>1</b>דוח רווח והפסד נבנה בסדר קבוע: מכירות, עלות המכירות, גולמי, הוצאות, תפעולי, מימון, לפני מסים, נקי.</div>
     <div class="card" style="color:var(--ink)"><b>2</b>מכירות נטו: ברוטו בניכוי החזרות והנחות מסחריות. הנחת מזומן היא סעיף מימון.</div>
     <div class="card" style="color:var(--ink)"><b>3</b>במאזן מפרידים שוטף (עד שנה) מלא שוטף, ומאחדים כרטיסים דומים לשורה אחת.</div>
-    <div class="card" style="color:var(--ink)"><b>4</b>הון עצמי הוא מקור מימון: עודפי פתיחה, ועוד השקעת בעלים, ועוד רווח השנה.</div>
+    <div class="card" style="color:var(--ink)"><b>4</b>הון עצמי הוא מקור מימון: הון מניות ופרמיה (השקעת בעלים) ועודפים. הרווח של השנה מצטרף לעודפים בלבד.</div>
     <div class="card" style="color:var(--ink)"><b>5</b>הוצאה היא שווי השירות שנצרך, והפקדה בפקדון אינה הוצאה.</div>
   </div>
   <div class="row" style="margin-top:26px;gap:12px;align-items:center;flex-wrap:wrap">
@@ -763,7 +783,7 @@ button.tc:hover{border-color:var(--coral)}
 <div id="bar" class="noprint">
   <button id="bNext" title="הבא">← הבא</button>
   <div id="prog"><i id="progi"></i></div>
-  <div id="cnt">1 / 24</div>
+  <div id="cnt">1 / 32</div>
   <button id="bPrev" title="הקודם">הקודם →</button>
   <button id="bMenu">☰ תוכן</button>
   <button id="bGloss">📖 מושגים</button>
@@ -1043,7 +1063,8 @@ const ACC_X=[
 ['שיקים לפירעון',5000,'l','','cl','supp'],
 ['זכאים אחרים',15000,'l','','cl','cred'],
 ['הלוואות לזמן ארוך',100000,'l','','nl','ltcredit'],
-['הון עצמי ליום 1.1.2025',225000,'e','','','equity'],
+['הון מניות ופרמיה',150000,'e','','','owners'],
+['עודפים ליום 1.1.2025',75000,'e','','','reopen'],
 ['מכירות',700000,'i','sales','',''],
 ['הכנסות ריבית',6000,'i','fini','',''],
 ['רווח הון ממכירת ציוד',14000,'i','othi','',''],
@@ -1233,6 +1254,7 @@ const PQ=[
 ];
 PQ.forEach((p,i)=>{p.id=i+1;p.a=p.o.findIndex(x=>x[1]===null);});
 
+const FX=[{"n": 1, "short": "שירות שנצרך וטרם שולם", "title": "הוצאה היא שווי השירות שנצרך, ולא התשלום", "scenario": "במהלך 2025 צרכה החברה שירותי ייעוץ בשווי 90,000 ש״ח. עד 31.12.2025 שולמו 60,000 ש״ח במזומן, ויתרת החוב תשולם ב-2026.", "d": {"cash": -60000, "oth": 0, "liab": 30000, "own": 0, "re": -90000}, "inc": 0, "exp": 90000, "plLine": "הוצאות הנהלה וכלליות (שירותי ייעוץ) גדלות ב-90,000, והרווח קטן ב-90,000.", "bsLines": "המזומן יורד ב-60,000. זכאים אחרים (התחייבות שוטפת) עולים ב-30,000. העודפים יורדים ב-90,000 דרך הרווח.", "what": "שווי השירות שנצרך הוא 90,000, ולכן זו ההוצאה של השנה. המזומן יורד רק בסכום ששולם בפועל, 60,000. ההפרש, 30,000, הוא חוב שטרם שולם, כלומר התחייבות.", "concl": "ההוצאה (90,000) גדולה מהתשלום (60,000), וההפרש הוא התחייבות.", "wrong": "להגדיר את ההוצאה כסכום ששולם, 60,000. אז הרווח גבוה מדי ב-30,000 וחסרה התחייבות במאזן.", "ex": ["2.4"], "q": [19], "pq": [16], "extra": "כך גם בשכר: משכורת דצמבר ששולמה בינואר היא הוצאה של השנה שבה העבודה בוצעה."}, {"n": 2, "short": "הפקדה בפקדון", "title": "המרה של נכס בנכס אינה הוצאה", "scenario": "החברה העבירה 50,000 ש״ח מחשבון העו״ש לפקדון בנקאי לשנה.", "d": {"cash": -50000, "oth": 50000, "liab": 0, "own": 0, "re": 0}, "inc": 0, "exp": 0, "plLine": "אין השפעה על דוח רווח והפסד.", "bsLines": "המזומן יורד ב-50,000, וההשקעה לזמן קצר (הפקדון) עולה ב-50,000. סך הנכסים, ההתחייבויות וההון לא משתנים.", "what": "הפקדה אינה צריכה של משאב או שירות. נכס אחד, המזומן, הומר בנכס אחר, הפקדון.", "concl": "נכס מוחלף בנכס: אין הוצאה, ואין שינוי ברווח ובהון.", "wrong": "לרשום הוצאה של 50,000 ולהקטין את הרווח. אבל הכסף לא נצרך: הוא נמצא בפקדון.", "ex": ["2.5"], "q": [20], "pq": [17, 14], "extra": "אותו עיקרון חל על רכישת ציוד במזומן: מזומן יורד וציוד עולה, בלי הוצאה."}, {"n": 3, "short": "הלוואה ביום האחרון", "title": "ריבית נצברת בחלוף זמן", "scenario": "ב-31.12.2025 נטלה החברה הלוואה של 100,000 ש״ח לשלוש שנים, בריבית שנתית של 6%.", "d": {"cash": 100000, "oth": 0, "liab": 100000, "own": 0, "re": 0}, "inc": 0, "exp": 0, "plLine": "הוצאות מימון: 0 ב-2025. הריבית תירשם משנת 2026, 6,000 בכל שנה.", "bsLines": "המזומן עולה ב-100,000. אשראי לזמן ארוך (התחייבות לא שוטפת) עולה ב-100,000.", "what": "ריבית היא תשלום בעד שימוש באשראי לאורך זמן. ההלוואה ניתנה ביום האחרון של השנה, ועוד לא נצרכו שירותי אשראי. נוצרה רק התחייבות בגובה הקרן.", "concl": "הלוואה מגדילה מזומן והתחייבות באותו סכום, ואינה משנה את הרווח ואת ההון.", "wrong": "לרשום ריבית של שנה מלאה (6,000), או את הקרן כהוצאה.", "ex": ["2.6"], "q": [21], "pq": [20, 6], "extra": "אילו ההלוואה נלקחה בתחילת השנה, היו נרשמות הוצאות ריבית של שנה מלאה."}, {"n": 4, "short": "הוצאה שלא נרשמה", "title": "תיקון של הוצאה שלא נרשמה משנה שני צדדים", "scenario": "בביקורת התברר שלא נרשמה צריכת שירות בסך 25,000 ש״ח שכבר שולם במזומן במהלך השנה. מה משתנה כשמתקנים את הדוחות?", "d": {"cash": -25000, "oth": 0, "liab": 0, "own": 0, "re": -25000}, "inc": 0, "exp": 25000, "plLine": "ההוצאה מתווספת לסעיף המתאים (למשל הנהלה וכלליות), והרווח קטן ב-25,000.", "bsLines": "המזומן יורד ב-25,000, והעודפים יורדים ב-25,000 (וההון העצמי קטן בהתאם).", "what": "ההוצאה מקטינה את הרווח, והרווח מצטרף לעודפים, ולכן ההון העצמי קטן. בנוסף, התשלום לא נרשם, ולכן גם המזומן גבוה מדי.", "concl": "תיקון של צד אחד בלבד שובר את המשוואה: מקטינים גם נכס וגם הון.", "wrong": "להקטין רק את המזומן, או רק את ההון.", "ex": ["2.7"], "q": [22], "pq": [19], "extra": "בדיקה: שינוי בנכסים (מינוס 25,000) שווה לשינוי בהתחייבויות ובהון (מינוס 25,000)."}, {"n": 5, "short": "שירות שניתן וטרם נגבה", "title": "הכנסה היא שווי השירות שניתן, ולא הגבייה", "scenario": "ב-2025 סיפקה החברה שירות בשווי 70,000 ש״ח, והלקוח טרם שילם.", "d": {"cash": 0, "oth": 70000, "liab": 0, "own": 0, "re": 70000}, "inc": 70000, "exp": 0, "plLine": "הכנסות (מכירות או שירותים) גדלות ב-70,000, והרווח גדל ב-70,000.", "bsLines": "לקוחות (נכס שוטף) עולים ב-70,000. העודפים עולים ב-70,000. המזומן לא משתנה.", "what": "ההכנסה נרשמת לפי הפעילות, כלומר מתן השירות. התמורה טרם התקבלה, ולכן נוצר חוב של הלקוח כלפי החברה: נכס לקוחות.", "concl": "הכנסה בלי גבייה: הלקוחות עולים, והמזומן לא.", "wrong": "לרשום הכנסה רק בעת הגבייה, או לרשום עלייה במזומן.", "ex": [], "q": [28], "pq": [], "extra": "בשיעור 1 התרגול הזה מופיע בשקף ״הכנסה היא לא מזומן״."}, {"n": 6, "short": "הנחת מזומן ללקוח", "title": "הנחת מזומן היא הוצאת מימון", "scenario": "לקוח חייב של 80,000 ש״ח שילם מוקדם וקיבל הנחת מזומן של 2,000 ש״ח.", "d": {"cash": 78000, "oth": -80000, "liab": 0, "own": 0, "re": -2000}, "inc": 0, "exp": 2000, "plLine": "הוצאות מימון גדלות ב-2,000. סעיף המכירות לא משתנה.", "bsLines": "המזומן עולה ב-78,000, הלקוחות יורדים ב-80,000 והעודפים יורדים ב-2,000.", "what": "הנחת מזומן ניתנת בעד תשלום מוקדם, כלומר בעד אשראי. היא דומה לריבית, ולכן נרשמת כהוצאת מימון.", "concl": "הלקוחות יורדים בחוב המלא, המזומן עולה בנטו, וההפרש הוא הוצאת מימון.", "wrong": "להקטין את המכירות ב-2,000. זה נכון רק להנחה מסחרית.", "ex": ["2.9"], "q": [8, 10], "pq": [4, 18], "extra": "אילו ההנחה הייתה מסחרית, היא הייתה מקטינה את המכירות ולא הייתה הוצאת מימון."}, {"n": 7, "short": "השקעת בעלים", "title": "השקעת בעלים מגדילה הון מניות ופרמיה, ולא את הרווח", "scenario": "הבעלים השקיעו בחברה 120,000 ש״ח במזומן.", "d": {"cash": 120000, "oth": 0, "liab": 0, "own": 120000, "re": 0}, "inc": 0, "exp": 0, "plLine": "אין השפעה על דוח רווח והפסד: השקעת בעלים אינה הכנסה.", "bsLines": "המזומן עולה ב-120,000. הון מניות ופרמיה (השקעת בעלים) עולה ב-120,000. העודפים לא משתנים.", "what": "השקעת בעלים היא מקור מימון הוני: הכסף הגיע מהבעלים. המזומן, שהוא נכס, גדל, וגם ההון העצמי גדל, בסעיף השקעת הבעלים. אין כאן פעילות עסקית, ולכן אין רווח.", "concl": "השקעת בעלים מגדילה נכס ואת הון המניות והפרמיה, ואינה נוגעת בעודפים.", "wrong": "לרשום אותה כהכנסה או כהתחייבות, או להוסיף אותה לעודפים.", "ex": ["2.2"], "q": [17, 18], "pq": [10, 14], "extra": "רק הרווח הנקי מצטרף לעודפים. השקעת הבעלים נשארת בהון מניות ופרמיה."}];
 /* ===== lesson 2 engine and modules (v3) ===== */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const fmt=n=>{n=Math.round(n*100)/100;return (n<0?'-':'')+Math.abs(n).toLocaleString('en-US');};
@@ -1314,7 +1336,7 @@ const MQ=[['חברה סיפקה שירות בשווי 70,000 ש״ח וטרם ג�
  draw();})();
 
 /* ---------- slide 3: route ---------- */
-const RT=[['1','מבנה הדוח והגדרות','הסעיפים לפי הסדר, מכירות נטו והנחות.','s-struct'],['2','משחק סיווג לסעיפי הדוח','לאיזה סעיף שייך כל פריט.','s-lines'],['3','המאזן והגדרותיו','שוטף ולא שוטף, איחוד כרטיסים, משחק סיווג.','s-bsdef'],['4','מיון ובניית הדוחות','פריט אחר פריט, ואז כל דוח לאט לאט.','s-sort'],['5','מלכודות','הוצאה אינה תשלום, פקדון, הלוואה.','s-traps'],['6','שאלות תרגול','22 שאלות אמריקאיות חדשות, מקבילות לחוברת, עם פתרון מפורט.','s-prac']];
+const RT=[['1','מבנה הדוח והגדרות','הסעיפים לפי הסדר, מכירות נטו והנחות.','s-struct'],['2','משחק סיווג לסעיפי הדוח','לאיזה סעיף שייך כל פריט.','s-lines'],['3','המאזן והגדרותיו','שוטף ולא שוטף, איחוד כרטיסים, משחק סיווג.','s-bsdef'],['4','מיון ובניית הדוחות','פריט אחר פריט, ואז כל דוח לאט לאט.','s-sort'],['5','השפעת אירועים על הדוחות','תופעה אחר תופעה: איך אירוע בודד משנה את הדיווח.','s-fx0'],['6','שאלות תרגול','22 שאלות אמריקאיות חדשות, מקבילות לחוברת, עם פתרון מפורט.','s-prac']];
 $('#routegrid').innerHTML=RT.map(r=>`<button class="rcard" data-go="${r[3]}"><div class="n">${r[0]}</div><b>${r[1]}</b><span>${r[2]}</span></button>`).join('');
 
 /* ---------- slide 4: flow ---------- */
@@ -1391,7 +1413,7 @@ function plRows(){const V=plV();
  const R=[['sales','מכירות (נטו)','+',V.sales,'l'],['cos','עלות המכירות **','(-)',V.cos,'l'],['gp','רווח גולמי','=',V.gp,'sub','מכירות נטו פחות עלות המכירות'],['sell','הוצאות מכירה ושיווק','(-)',V.sell,'l'],['ga','הוצאות הנהלה וכלליות','(-)',V.ga,'l'],['op','רווח תפעולי *','=',V.op,'sub','גולמי, פחות מכירה ושיווק, פחות הנהלה וכלליות'],['fine','הוצאות מימון','(-)',V.fine,'l'],['fini','הכנסות מימון','+',V.fini,'l'],['othi','הכנסות אחרות','+',V.othi,'l'],['othe','הוצאות אחרות','(-)',V.othe,'l'],['pbt','רווח לפני מסים על ההכנסה','=',V.pbt,'sub','תפעולי, פחות הוצאות מימון, ועוד הכנסות מימון והכנסות אחרות, פחות הוצאות אחרות'],['tax','מסים על ההכנסה','(-)',V.tax,'l'],['net','רווח נקי','=',V.net,'tot','רווח לפני מסים פחות מסים']];
  return R.map(r=>({id:r[0],l:r[1],sg:r[2],v:r[3],k:r[4],f:r[5]||'',nf:F[r[0]]||'',kind:'s'})).filter(r=>r.k!=='l'||hasC(r.id,'s'));}
 function bsV(){const V={};BLDEF.forEach(b=>V[b[0]]=val(b[0],'b'));const sT=t=>BLDEF.filter(b=>b[2]===t).reduce((s,b)=>s+V[b[0]],0);V.CA=sT('ca');V.NA=sT('na');V.A=V.CA+V.NA;V.CL=sT('cl');V.NL=sT('nl');V.L=V.CL+V.NL;V.net=plV().net;
- if(D().eq==='open'){V.eqOpen=val('equity','b');V.E=V.eqOpen+V.net;}else{V.owners=val('owners','b');V.E=V.A-V.L;V.reOpen=V.E-V.owners-V.net;}
+ V.owners=val('owners','b');if(D().eq==='open'){V.reOpen=val('reopen','b');V.reEnd=V.reOpen+V.net;V.E=V.owners+V.reEnd;}else{V.E=V.A-V.L;V.reOpen=V.E-V.owners-V.net;V.reEnd=V.reOpen+V.net;}
  V.LE=V.L+V.E;return V;}
 function bsRows(){const V=bsV();const row=(id,sg,v,k,f,nf)=>({id,l:LBL[id]||'',sg,v,k,f,nf,kind:'b'});
  const L=BLDEF.filter(b=>hasC(b[0],'b')).map(b=>row(b[0],'',V[b[0]],'l','',''));
@@ -1418,7 +1440,7 @@ const CATNAME={a:'נכס',l:'התחייבות',e:'הון עצמי',i:'הכנסה
 const stp={q:[],i:0,err:0,led:[]};
 const hash=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h;};
 function splitInfo(it){return it.parts.map(p=>p.s?`${Math.round(p.p*100)}% ל${LNAME[p.s]}`:`${Math.round(p.p*100)}% ב${LBL[p.b]} (${TERMN[p.t]})`).join(', ');}
-function finalTag(it){if(it.c==='e')return 'הון עצמי';if(it.parts)return splitInfo(it);if(it.c==='a'||it.c==='l')return TERMN[it.t]+' · '+LBL[it.b];return LNAME[it.s];}
+function finalTag(it){if(it.c==='e')return it.b==='owners'?'הון עצמי: השקעת בעלים':'הון עצמי: עודפים';if(it.parts)return splitInfo(it);if(it.c==='a'||it.c==='l')return TERMN[it.t]+' · '+LBL[it.b];return LNAME[it.s];}
 function stInit(){stp.q=ITEMS().slice().sort((a,b)=>hash(a.n+dsCur)-hash(b.n+dsCur));stp.i=0;stp.err=0;stp.led=[];stRender();}
 function stRender(){const n=stp.q.length;$('#st-co').textContent=D().co;$('#st-prog').textContent=stp.i<n?`פריט ${stp.i+1} מתוך ${n} · טעויות: ${stp.err}`:`הושלם · טעויות: ${stp.err}`;
  $('#st-led').innerHTML='<div class="lh">מה כבר מוינו</div>'+(stp.led.length?stp.led.slice().reverse().map(l=>`<div class="lr"><b>${l.n}</b><span>${l.t}</span></div>`).join(''):'<div class="hint" style="padding:6px">הפריטים שתמיינו יופיעו כאן.</div>');
@@ -1435,7 +1457,7 @@ function stRender(){const n=stp.q.length;$('#st-co').textContent=D().co;$('#st-p
 function stStep2(it){const box=$('#st-s2'),fb=$('#st-fb');
  const finish=()=>{fb.className='fb show ok';fb.innerHTML='<b>ההיגיון:</b> '+whyOf(it)+(it.parts?' <br><b>הפיצול:</b> '+splitInfo(it)+'.':'');stp.led.push({n:it.n,t:finalTag(it)});$('#st-nx').innerHTML='<button class="btn coral" id="st-go">הפריט הבא ←</button>';$('#st-go').onclick=()=>{stp.i++;stRender();};$('#st-prog').textContent=`פריט ${stp.i+1} מתוך ${stp.q.length} · טעויות: ${stp.err}`;};
  const info=(txt)=>{box.innerHTML=`<div class="stlab">שלב 2 · ${txt}</div><button class="btn" id="st-ok">הבנתי, להסבר ←</button>`;$('#st-ok').onclick=()=>{box.innerHTML='';finish();};};
- if(it.c==='e'){info('הון עצמי: מקור מימון, אין שוטף ולא שוטף');return;}
+ if(it.c==='e'){info('הון עצמי הוא מקור מימון: אין שוטף ולא שוטף');return;}
  if(it.parts){info('הפריט מתחלק בין כמה סעיפים לפי ההערה');return;}
  const wrong=(msg)=>{const card=$('#st-card');card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');stp.err++;$('#st-prog').textContent=`פריט ${stp.i+1} מתוך ${stp.q.length} · טעויות: ${stp.err}`;fb.className='fb show bad';fb.innerHTML=msg;};
  if(it.c==='a'||it.c==='l'){const opts=it.c==='a'?[['ca','נכס שוטף'],['na','נכס לא שוטף']]:[['cl','התחייבות שוטפת'],['nl','התחייבות לא שוטפת']];
@@ -1452,7 +1474,7 @@ const BUILD={
  bs1:{st:'bs',ids:['cash','cust','tca'],kick:'תחנה 4 · בונים את המאזן (1 מתוך 4)',h:'נכסים שוטפים'},
  bs2:{st:'bs',ids:['ppe','ppem','ppeb','intang','tna','ta'],kick:'תחנה 4 · בונים את המאזן (2 מתוך 4)',h:'נכסים לא שוטפים וסך הנכסים'},
  bs3:{st:'bs',ids:['stcredit','supp','cred','tcl','ltcredit','checkslt','credlt','tnl','tl'],kick:'תחנה 4 · בונים את המאזן (3 מתוך 4)',h:'התחייבויות: שוטפות ולא שוטפות'},
- bs4:{st:'bs4',ids:[],kick:'תחנה 4 · בונים את המאזן (4 מתוך 4)',h:'ההון העצמי: עודפי פתיחה ועוד רווח השנה'}
+ bs4:{st:'bs4',ids:[],kick:'תחנה 4 · בונים את המאזן (4 מתוך 4)',h:'ההון העצמי: הון מניות ופרמיה, ועודפים'}
 };
 
 
@@ -1467,11 +1489,12 @@ function buildRowsFor(sid){const cfg=BUILD[sid];
  if(sid==='bs3')return {prior:[],cur,chips:[['סך הנכסים (משקף קודם)',B.V.A]]};
  return {prior:[],cur,chips:[]};}
 function bs4Rows(){const V=bsV();const lk=(id,l,sg,v)=>({id,l,sg,v,k:'',lock:true});
- if(D().eq==='open')return {rows:[lk('eo','הון עצמי בפתיחה (עודפי פתיחה)','',V.eqOpen),lk('np','רווח נקי של השנה (מדוח רווח והפסד)','+',V.net),{id:'E',l:'הון עצמי ל-31.12 = ?',sg:'=',v:V.E,k:'sub',f:'עודפי פתיחה ועוד רווח השנה',nf:`${fmt(V.eqOpen)} + ${fmt(V.net)}`},{id:'LE',l:'סך התחייבויות והון עצמי',sg:'=',v:V.LE,k:'tot',f:'התחייבויות ועוד הון עצמי',nf:`${fmt(V.L)} + ${fmt(V.E)}`}],chips:[['סך הנכסים',V.A],['סך ההתחייבויות',V.L],['רווח נקי',V.net]],V};
- return {rows:[{id:'E',l:'הון עצמי = ?  (נכסים פחות התחייבויות)',sg:'=',v:V.E,k:'sub',f:'נכסים פחות התחייבויות',nf:`${fmt(V.A)} - ${fmt(V.L)}`},lk('ow','השקעת בעלים','',V.owners),lk('np','רווח נקי של השנה','',V.net),{id:'re',l:'עודפי פתיחה = הון פחות השקעת בעלים פחות רווח',sg:'=',v:V.reOpen,k:'sub',f:'הון עצמי, פחות השקעת בעלים, פחות רווח השנה',nf:`${fmt(V.E)} - ${fmt(V.owners)} - ${fmt(V.net)}`},{id:'LE',l:'סך התחייבויות והון עצמי',sg:'=',v:V.LE,k:'tot',f:'התחייבויות ועוד הון עצמי',nf:`${fmt(V.L)} + ${fmt(V.E)}`}],chips:[['סך הנכסים',V.A],['סך ההתחייבויות',V.L],['רווח נקי',V.net]],V};}
+ const chips=[['סך הנכסים',V.A],['סך ההתחייבויות',V.L],['רווח נקי',V.net]];
+ if(D().eq==='open')return {rows:[lk('ow','הון מניות ופרמיה (השקעת בעלים)','',V.owners),lk('ro','עודפי פתיחה','',V.reOpen),lk('np','רווח נקי של השנה (מדוח רווח והפסד)','+',V.net),{id:'RE',l:'עודפים ל-31.12 = ?',sg:'=',v:V.reEnd,k:'sub',f:'עודפי פתיחה ועוד רווח השנה. הרווח מצטרף לעודפים בלבד',nf:`${fmt(V.reOpen)} + ${fmt(V.net)}`},{id:'E',l:'הון עצמי ל-31.12 = ?',sg:'=',v:V.E,k:'sub',f:'הון מניות ופרמיה ועוד עודפים',nf:`${fmt(V.owners)} + ${fmt(V.reEnd)}`},{id:'LE',l:'סך התחייבויות והון עצמי',sg:'=',v:V.LE,k:'tot',f:'התחייבויות ועוד הון עצמי',nf:`${fmt(V.L)} + ${fmt(V.E)}`}],chips,V};
+ return {rows:[],chips,V};}
 function renderBuild(sid){const cfg=BUILD[sid];const tb=$('#bw-'+sid),mem=$('#mem-'+sid);$('#co-'+sid).textContent=D().co;$('#sc-'+sid).textContent='';
  let prior=[],cur=[],chips=[],extra='';
- if(cfg.st==='bs4'){const b=bs4Rows();cur=b.rows;chips=b.chips;extra=`<div class="mg"><div class="mgh">הון עצמי: הגדרה</div><div style="font-size:13.5px;line-height:1.5;padding:2px 4px">${EQ_NOTE}</div></div><div class="mg"><div class="mgh">אם עודפי הפתיחה אינם נתונים</div><div style="font-size:13.5px;line-height:1.5;padding:2px 4px">מחלצים אותם: הון עצמי = נכסים פחות התחייבויות. עודפי פתיחה = הון עצמי פחות השקעת בעלים פחות רווח השנה.<br><span class="hint">דוגמה: הון 400,000, השקעת בעלים 200,000, רווח 50,000: עודפי פתיחה 150,000.</span></div></div>`;}
+ if(cfg.st==='bs4'){const b=bs4Rows();cur=b.rows;chips=b.chips;extra=`<div class="mg"><div class="mgh">הון עצמי: הגדרה</div><div style="font-size:13.5px;line-height:1.5;padding:2px 4px">${EQ_NOTE}<br><b>הרווח הנקי של השנה מצטרף לעודפים בלבד.</b> השקעת הבעלים (הון מניות ופרמיה) אינה משתנה מהרווח.</div></div><div class="mg"><div class="mgh">אם עודפי הפתיחה אינם נתונים</div><div style="font-size:13.5px;line-height:1.5;padding:2px 4px">מחלצים אותם: הון עצמי = נכסים פחות התחייבויות. עודפי פתיחה = הון עצמי פחות הון מניות ופרמיה פחות רווח השנה.<br><span class="hint">דוגמה: הון 400,000, הון מניות ופרמיה 200,000, רווח 50,000: עודפי פתיחה 150,000.</span></div></div>`;}
  else{const b=buildRowsFor(sid);prior=b.prior;cur=b.cur;chips=b.chips;}
  const rowH=(r,locked)=>{const isIn=!locked&&!r.lock;const q=(r.f||r.nf)?`<button data-h="${r.id}">?</button>`:'';const bi=isIn&&r.k==='l'?`<button data-n="${r.id}" class="bn">ביאור</button>`:'';
   return `<tr class="${r.k==='l'?'':r.k} ${locked||r.lock?'lk':''}" data-id="${r.id}"><td>${r.l}</td><td class="sg">${r.sg}</td><td>${isIn?`<input inputmode="numeric" autocomplete="off" data-id="${r.id}" placeholder="?">`:`<span class="lv num">${fmt(r.v)}</span>`}</td><td class="q">${isIn?(bi||q):''}</td></tr>`;};
@@ -1493,7 +1516,10 @@ const compRows=(id,kind)=>contribs(id,kind).map(c=>`<div class="mi ${c.amt<0?'ng
 function plPanel(id){const r=plRows().find(x=>x.id===id);if(!r)return '';
  return r.k==='l'?`<h4 class="ph4">${r.l}</h4><div class="hint">ההרכב:</div>${compRows(id,'s')}<div class="mi tt"><span>סך הכול</span><b class="num">${fmt(r.v)}</b></div>`:`<h4 class="ph4">${r.l.replace(' *','')}</h4><div>${r.f}</div><div class="mi tt" style="margin-top:8px"><span class="num">${r.nf}</span><b class="num">= ${fmt(r.v)}</b></div>`;}
 function bsPanel(id){const B=bsRows(),V=B.V;const r=B.lines.find(x=>x.id===id)||B[id];
- if(id==='E'){return rpEq?(D().eq==='open'?`<h4 class="ph4">הון עצמי</h4><div>${EQ_NOTE}</div><div class="mi tt" style="margin-top:8px"><span>עודפי פתיחה + רווח השנה</span><b class="num">${fmt(V.eqOpen)} + ${fmt(V.net)} = ${fmt(V.E)}</b></div>`:`<h4 class="ph4">הון עצמי</h4><div>${EQ_NOTE}</div><div class="mi"><span>נכסים פחות התחייבויות</span><b class="num">${fmt(V.A)} - ${fmt(V.L)} = ${fmt(V.E)}</b></div><div class="mi"><span>השקעת בעלים</span><b class="num">${fmt(V.owners)}</b></div><div class="mi"><span>עודפי פתיחה (מחולצים)</span><b class="num">${fmt(V.reOpen)}</b></div><div class="mi"><span>רווח השנה</span><b class="num">${fmt(V.net)}</b></div>`):`<h4 class="ph4">הון עצמי: ?</h4><div>${EQ_NOTE}</div><div style="margin-top:6px">${D().eq==='open'?'מחשבים אותו כעודפי פתיחה ועוד רווח השנה.':'עודפי הפתיחה אינם נתונים, ולכן מחשבים את ההון כנכסים פחות התחייבויות, ומחלצים את העודפים.'}</div><div class="hint" style="margin-top:6px">לחצו על ״חשבו את ההון העצמי״ למעלה.</div>`;}
+ const q=D().eq==='open';
+ if(id==='own')return `<h4 class="ph4">הון מניות ופרמיה (השקעת בעלים)</h4><div>זה החלק בהון העצמי שמקורו בבעלים: הכסף שהם השקיעו בחברה.</div><div class="mi tt" style="margin-top:8px"><span>סך הכול</span><b class="num">${fmt(V.owners)}</b></div><div class="hint" style="margin-top:6px">הרווח הנקי של השנה אינו מצטרף לסעיף הזה. הוא מצטרף לעודפים.</div>`;
+ if(id==='RE')return rpEq?`<h4 class="ph4">עודפים</h4><div>העודפים הם הרווחים שנצברו. הרווח הנקי של השנה מצטרף אליהם.</div>${q?`<div class="mi"><span>עודפי פתיחה</span><b class="num">${fmt(V.reOpen)}</b></div>`:`<div class="mi"><span>עודפי פתיחה (מחולצים: הון פחות השקעת בעלים פחות רווח)</span><b class="num">${fmt(V.reOpen)}</b></div>`}<div class="mi"><span>רווח נקי של השנה (+)</span><b class="num">${fmt(V.net)}</b></div><div class="mi tt"><span>עודפים ל-31.12</span><b class="num">${fmt(V.reOpen)} + ${fmt(V.net)} = ${fmt(V.reEnd)}</b></div>`:`<h4 class="ph4">עודפים: ?</h4><div>העודפים ל-31.12 הם עודפי הפתיחה ועוד הרווח הנקי של השנה.</div><div class="hint" style="margin-top:6px">לחצו על ״חשבו את ההון העצמי״ למעלה.</div>`;
+ if(id==='E')return rpEq?`<h4 class="ph4">הון עצמי</h4><div>${EQ_NOTE}</div><div class="mi"><span>הון מניות ופרמיה (השקעת בעלים)</span><b class="num">${fmt(V.owners)}</b></div><div class="mi"><span>עודפים</span><b class="num">${fmt(V.reEnd)}</b></div><div class="mi tt"><span>סך הון עצמי</span><b class="num">${fmt(V.owners)} + ${fmt(V.reEnd)} = ${fmt(V.E)}</b></div><div class="hint" style="margin-top:6px">בדיקה: נכסים ${fmt(V.A)} = התחייבויות ${fmt(V.L)} + הון עצמי ${fmt(V.E)}.</div>`:`<h4 class="ph4">הון עצמי: ?</h4><div>${EQ_NOTE}</div><div class="hint" style="margin-top:6px">הון עצמי = הון מניות ופרמיה + עודפים. לחצו על ״חשבו את ההון העצמי״ למעלה.</div>`;
  if(r&&r.k==='l')return `<h4 class="ph4">${r.l}</h4><div class="hint">ההרכב:</div>${compRows(id,'b')}<div class="mi tt"><span>סך הכול</span><b class="num">${fmt(r.v)}</b></div>`;
  return r?`<h4 class="ph4">${r.l}</h4><div>${r.f}</div><div class="mi tt" style="margin-top:8px"><span class="num">${r.nf}</span><b class="num">= ${fmt(r.v)}</b></div>`:'';}
 function bindReport(tab,m,panel,fn){const show=id=>{rpSel[tab]=id;$$('[data-rid]',m).forEach(x=>x.classList.toggle('sel',x.dataset.rid===id));panel.innerHTML=fn(id);};m.onclick=e=>{const t=e.target.closest('[data-rid]');if(t)show(t.dataset.rid);};if(rpSel[tab]&&$('[data-rid="'+rpSel[tab]+'"]',m))show(rpSel[tab]);else panel.innerHTML='<div class="hint">לחצו על שורה כדי לראות את הרכבה.</div>';return show;}
@@ -1504,23 +1530,34 @@ function renderRbs(){const m=$('#rbs-main'),panel=$('#rbs-panel');const B=bsRows
  const rl=r=>`<div class="rl" data-rid="${r.id}"><span>${r.l}</span><span class="v">${fmt(r.v)}</span></div>`;
  const rt=r=>`<div class="rt click" data-rid="${r.id}"><span>${r.l}</span><span class="num">${fmt(r.v)}</span></div>`;
  const eqv=rpEq?fmt(V.E):'?',lev=rpEq?fmt(V.LE):'?';
- m.innerHTML=`<div class="rep"><div class="hdr">${D().co}: דוח על המצב הכספי (מאזן)</div><div class="cols"><div><div class="rg" style="font-size:15px;color:var(--ink)">נכסים</div><div class="rg">נכסים שוטפים</div>${L('ca').map(rl).join('')}${rt(B.tca)}<div class="rg">נכסים לא שוטפים</div>${L('na').map(rl).join('')}${rt(B.tna)}${rt(B.ta)}</div><div><div class="rg" style="font-size:15px;color:var(--ink)">התחייבויות והון עצמי</div><div class="rg">התחייבויות שוטפות</div>${L('cl').map(rl).join('')}${rt(B.tcl)}<div class="rg">התחייבויות לא שוטפות</div>${L('nl').map(rl).join('')}${rt(B.tnl)}${rt(B.tl)}<div class="rg">הון עצמי</div><div class="rl eqr" data-rid="E"><span>הון עצמי</span><span class="v">${eqv}</span></div><div class="rt"><span>סך התחייבויות והון עצמי</span><span class="num">${lev}</span></div></div></div></div>`;
- $('#rbs-act').innerHTML=`<button class="btn" id="rbs-eq" style="padding:4px 14px;font-size:15px">${rpEq?'הסתר את החישוב':'חשבו את ההון העצמי'}</button><span class="hint" style="margin-right:8px">${rpEq?`בדיקה: ${fmt(V.A)} = ${fmt(V.LE)}`:'ההון העצמי בסימן שאלה עד שמחשבים אותו'}</span>`;
+ m.innerHTML=`<div class="rep"><div class="hdr">${D().co}: דוח על המצב הכספי (מאזן)</div><div class="cols"><div><div class="rg" style="font-size:15px;color:var(--ink)">נכסים</div><div class="rg">נכסים שוטפים</div>${L('ca').map(rl).join('')}${rt(B.tca)}<div class="rg">נכסים לא שוטפים</div>${L('na').map(rl).join('')}${rt(B.tna)}${rt(B.ta)}</div><div><div class="rg" style="font-size:15px;color:var(--ink)">התחייבויות והון עצמי</div><div class="rg">התחייבויות שוטפות</div>${L('cl').map(rl).join('')}${rt(B.tcl)}<div class="rg">התחייבויות לא שוטפות</div>${L('nl').map(rl).join('')}${rt(B.tnl)}${rt(B.tl)}<div class="rg">הון עצמי</div><div class="rl" data-rid="own"><span>הון מניות ופרמיה (השקעת בעלים)</span><span class="v">${fmt(V.owners)}</span></div><div class="rl eqr" data-rid="RE"><span>עודפים</span><span class="v">${rpEq?fmt(V.reEnd):'?'}</span></div><div class="rt click" data-rid="E"><span>סך הון עצמי</span><span class="num">${eqv}</span></div><div class="rt"><span>סך התחייבויות והון עצמי</span><span class="num">${lev}</span></div></div></div></div>`;
+ $('#rbs-act').innerHTML=`<button class="btn" id="rbs-eq" style="padding:4px 14px;font-size:15px">${rpEq?'הסתר את החישוב':'חשבו את ההון העצמי'}</button><span class="hint" style="margin-right:8px">${rpEq?`בדיקה: ${fmt(V.A)} = ${fmt(V.LE)}`:'העודפים וההון העצמי בסימן שאלה עד שמחשבים אותם'}</span>`;
  const show=bindReport('bs',m,panel,bsPanel);
- $('#rbs-eq').onclick=()=>{rpEq=!rpEq;renderRbs();rpSel.bs='E';const m2=$('#rbs-main');$$('[data-rid]',m2).forEach(x=>x.classList.toggle('sel',x.dataset.rid==='E'));$('#rbs-panel').innerHTML=bsPanel('E');};}
+ $('#rbs-eq').onclick=()=>{rpEq=!rpEq;renderRbs();rpSel.bs='RE';const m2=$('#rbs-main');$$('[data-rid]',m2).forEach(x=>x.classList.toggle('sel',x.dataset.rid==='RE'));$('#rbs-panel').innerHTML=bsPanel('RE');};}
 function renderReport(){renderRpl();renderRbs();}
 
-/* ---------- traps lab ---------- */
-(function(){
- $('#tr-evs').innerHTML=TRAPS.map((e,i)=>`<button class="ev" data-i="${i}"><span class="k">${i+1}</span><span>${e.t}<br><small style="color:var(--mut);font-weight:700">${e.ref}</small></span></button>`).join('');
- const pf=v=>v===0?'0':(v>0?'+':'-')+fmt(Math.abs(v));
- function pick(i){$$('#tr-evs .ev').forEach((b,j)=>b.classList.toggle('done',j===i));const e=TRAPS[i];
-  const opts=e.mc?e.mc:['כן','לא'];const ai=e.mc?e.ai:(e.a?0:1);
-  $('#tr-box').innerHTML=`<div class="hint" style="font-weight:700;color:var(--coral)">${e.ref}</div><div style="font-size:16px;font-weight:800;margin:2px 0 4px;line-height:1.35">${e.t}</div><div style="font-size:15px;font-weight:700;margin-bottom:3px">${e.q}</div><div class="vsbtn" style="margin-top:3px">${opts.map((o,j)=>`<button class="btn ghost" style="flex:1;padding:5px;font-size:15px" data-j="${j}">${o}</button>`).join('')}</div><div class="fb" id="tr-fb" style="font-size:14px;padding:6px 10px"></div><div id="tr-res"></div>`;
-  $$('#tr-box .vsbtn button').forEach(b=>b.onclick=()=>{const ok=+b.dataset.j===ai;const fb=$('#tr-fb');fb.className='fb show '+(ok?'ok':'bad');fb.innerHTML=ok?'<b>נכון.</b>':'<b>לא בדיוק.</b> התשובה: '+opts[ai]+'.';$$('#tr-box .vsbtn button').forEach(x=>x.disabled=true);
-   const d=e.d,A=d.cash+d.cust+d.dep,LE=d.liab+d.eq;const row=(n,v)=>`<div class="bsr ${v?'flash':''}" style="font-size:14px;padding:2px 6px"><span>${n}</span><span class="v">${pf(v)}</span></div>`;
-   $('#tr-res').innerHTML=`<div class="bs" style="margin-top:6px"><div class="side" style="padding:6px 10px"><h5 style="font-size:14px">שינוי בנכסים</h5>${row('מזומן',d.cash)}${row('לקוחות',d.cust)}${row('פקדון',d.dep)}<div class="bst" style="font-size:14px"><span>סך</span><span class="num">${pf(A)}</span></div></div><div class="side" style="padding:6px 10px"><h5 style="font-size:14px">שינוי בהתחייבויות ובהון</h5>${row('התחייבויות',d.liab)}${row('הון עצמי (רווח)',d.eq)}<div class="bst" style="font-size:14px"><span>סך</span><span class="num">${pf(LE)}</span></div></div></div><div class="evnote" style="font-size:14px;padding:6px 10px;min-height:0;margin-top:6px">${e.n} <span class="hint">המאזן נשאר מאוזן: ${pf(A)} = ${pf(LE)}.</span></div>`;});}
- $('#tr-evs').onclick=e=>{const b=e.target.closest('.ev');if(b)pick(+b.dataset.i);};})();
+/* ---------- effects of single events, one slide per phenomenon ---------- */
+const FXROWS=[['cash','מזומן'],['oth','נכס אחר (לקוחות, פקדון או ציוד)'],['liab','התחייבויות'],['own','הון מניות ופרמיה (השקעת בעלים)'],['re','עודפים (הרווח הנקי מצטרף אליהם)'],['inc','דוח רווח והפסד: הכנסות'],['exp','דוח רווח והפסד: הוצאות']];
+const fxSign=v=>v>0?'up':(v<0?'down':'same');
+const fxAmt=v=>v===0?'0':(v>0?'+':'-')+fmt(Math.abs(v));
+const FXLBL={up:'עולה',down:'יורד',same:'לא משתנה'};
+function fxExpected(f,k){return fxSign(k==='inc'?f.inc:(k==='exp'?f.exp:f.d[k]));}
+function fxExplain(f){const d=f.d;const A=d.cash+d.oth,LE=d.liab+d.own+d.re;
+ const refs=f.ex.map(x=>exLink(x)).concat(f.q.map(x=>qLink(x))).join('');
+ const pq=f.pq.length?`<div class="fxsec"><b>שאלות תרגול מקבילות:</b> ${f.pq.map(n=>`<button class="ch" data-p="${n}">שאלה ${n}</button>`).join('')}</div>`:'';
+ return `<h4 class="ph4">ההסבר המלא</h4><div class="fxconc">${f.concl}</div><div class="fxsec"><b>מה קרה:</b> ${f.what}</div>
+ <table class="nt big fxn"><tr><td>מזומן</td><td>${fxAmt(d.cash)}</td></tr><tr><td>נכס אחר</td><td>${fxAmt(d.oth)}</td></tr><tr class="t"><td>שינוי בנכסים</td><td>${fxAmt(A)}</td></tr><tr><td>התחייבויות</td><td>${fxAmt(d.liab)}</td></tr><tr><td>הון מניות ופרמיה</td><td>${fxAmt(d.own)}</td></tr><tr><td>עודפים (רווח)</td><td>${fxAmt(d.re)}</td></tr><tr class="t"><td>שינוי בהתחייבויות ובהון</td><td>${fxAmt(LE)}</td></tr></table>
+ <div class="fxsec"><b>בדוח רווח והפסד:</b> ${f.plLine}</div><div class="fxsec"><b>במאזן:</b> ${f.bsLines}</div><div class="fxsec trap"><b>הטעות הנפוצה:</b> ${f.wrong}</div>${f.extra?`<div class="fxsec">${f.extra}</div>`:''}${refs?`<div class="fxsec"><b>בחוברת:</b>${refs}</div>`:''}${pq}`;}
+FX.forEach(f=>{const n=f.n;const tb=$('#fxt-'+n),ex=$('#fxx-'+n);
+ tb.innerHTML=FXROWS.map(r=>`<tr data-k="${r[0]}"><td>${r[1]}</td><td><select data-k="${r[0]}"><option value="">בחרו</option>${['up','down','same'].map(o=>`<option value="${o}">${FXLBL[o]}</option>`).join('')}</select></td><td class="s"></td></tr>`).join('');
+ const check=()=>{let ok=0,all=0;$$('select',tb).forEach(s=>{const row=s.closest('tr'),st=row.querySelector('.s');if(s.value===''){s.className='';st.textContent='';return;}all++;const good=s.value===fxExpected(f,s.dataset.k);if(good)ok++;s.className=good?'ok':'bad';st.textContent=good?'✓':'✗';});
+  $('#fxsc-'+n).textContent=all?`${ok} מתוך ${FXROWS.length} נכונים`:'';ex.innerHTML=fxExplain(f);if(ok===FXROWS.length&&all===FXROWS.length)toast('כל ההשפעות נכונות!');};
+ $('#fxchk-'+n).onclick=check;
+ $('#fxsh-'+n).onclick=()=>{$$('select',tb).forEach(s=>{s.value=fxExpected(f,s.dataset.k);});check();};
+ tb.onchange=()=>{};});
+$('#fxgo').innerHTML=FX.map(f=>`<button data-go="s-fx${f.n}">${f.n}. ${f.short}</button>`).join('')+'<button data-go="s-fxsum">סיכום: כל ההשפעות</button>';
+(function(){const T=$('#fxsum');if(!T)return;const cell=v=>v===0?'<td class="z">0</td>':`<td class="${v>0?'u':'dn'}">${v>0?'↑':'↓'} ${fmt(Math.abs(v))}</td>`;
+ T.innerHTML='<tr><th>האירוע</th><th>מזומן</th><th>נכס אחר</th><th>התחייבויות</th><th>הון מניות ופרמיה</th><th>עודפים</th><th>דוח רווח והפסד</th></tr>'+FX.map(f=>`<tr><td><button class="ch" data-go="s-fx${f.n}">${f.n}. ${f.short}</button></td>${cell(f.d.cash)}${cell(f.d.oth)}${cell(f.d.liab)}${cell(f.d.own)}${cell(f.d.re)}<td>${f.inc?'הכנסה +'+fmt(f.inc):(f.exp?'הוצאה +'+fmt(f.exp):'ללא שינוי')}</td></tr>`).join('');})();
 
 /* ---------- practice questions ---------- */
 let pCur=1,pTab='sol';const pAns=store('pans')||{};
@@ -1562,7 +1599,7 @@ const HWM=[
 ['לאיזה סעיף שייך',[['ex','2.9'],['ex','2.12'],['q',2],['q',5],['q',6],['q',23],['q',27]],'s-lines','למשחק הסיווג',[2,5]],
 ['שוטף ולא שוטף, איחוד ופחת',[['ex','2.10'],['ex','2.11'],['ex','2.12'],['q',11],['q',12],['q',13],['q',14],['q',15],['q',24],['q',26]],'s-bsdef','להגדרות',[6,7,8,9,11,12,22]],
 ['הון עצמי',[['ex','2.2'],['ex','2.3'],['ex','2.7'],['ex','2.13'],['q',16],['q',17],['q',18],['q',25]],'s-bs4','להון העצמי',[10,13,14,15]],
-['הוצאה אינה תשלום',[['ex','2.4'],['ex','2.5'],['ex','2.6'],['ex','2.7'],['q',19],['q',20],['q',21],['q',22],['q',28]],'s-traps','למעבדה',[16,17,19,20]],
+['השפעת אירועים על הדוחות',[['ex','2.2'],['ex','2.4'],['ex','2.5'],['ex','2.6'],['ex','2.7'],['ex','2.9'],['q',8],['q',17],['q',18],['q',19],['q',20],['q',21],['q',22],['q',28]],'s-fx0','להשפעות',[4,10,14,16,17,18,19,20]],
 ['דוחות מלאים, במתכונת בחינה (בעזרת מעדני השרון)',[['ex','2.1'],['ex','2.13']],'s-sort','למיון ולבנייה',[21,22]]];
 const bkChip=i=>i[0]==='ex'?`<a class="ch" href="../../materials/exercise-booklet.pdf#page=${EXP_PAGE[i[1]][0]}" target="_blank" rel="noopener">תרגיל ${i[1]}</a>`:`<a class="ch" href="../../materials/exercise-booklet.pdf#page=${QS.find(x=>x.id===i[1]).page}" target="_blank" rel="noopener">שאלה 2.${i[1]}</a>`;
 $('#hwtbl').innerHTML='<tr><td class="gl">נושא</td><td class="gl">בחוברת התרגילים</td><td class="gl">שאלות תרגול חדשות</td><td class="gl">שקף</td></tr>'+HWM.map(r=>`<tr><td>${r[0]}</td><td>${r[1].map(bkChip).join('')}</td><td>${r[4].map(n=>`<button class="ch" data-p="${n}">${n}</button>`).join('')}</td><td><button class="pl" data-go="${r[2]}">${r[3]} ←</button></td></tr>`).join('');
