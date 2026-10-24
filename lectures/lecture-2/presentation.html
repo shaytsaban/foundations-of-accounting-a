@@ -407,6 +407,70 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
 
 .seg.segs button{padding:3px 14px;font-size:14px}
 .seg.segs{padding:3px}
+
+/* ===== v3 pipeline ===== */
+.hier{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:8px}
+.hcol{display:flex;flex-direction:column;gap:6px}
+.hh{border-radius:12px;padding:6px;text-align:center;font-weight:800;font-size:19px}
+.hg{background:#fff;border-radius:12px;padding:6px 8px;box-shadow:0 2px 0 var(--line)}
+.hgt{font-size:13px;font-weight:800;color:var(--mut);margin-bottom:3px}
+.hp{display:block;width:100%;text-align:right;padding:3px 8px;margin-bottom:3px;border-radius:8px;background:#f6f2ea;font-size:13.5px;font-weight:700}
+.hp:hover{background:#ffe3da}.hp.sel{background:var(--coral);color:#fff}
+.plf.st13{border-spacing:0 3px}
+.plf.st13 td{padding:3px 12px;font-size:14.5px}
+.plf.st13 td.sg{width:40px;text-align:center;font-weight:800;color:var(--mut)}
+.plf.st13 td:first-child{width:auto}
+.plf.bw{border-spacing:0 3px}
+.plf.bw td{padding:3px 12px;font-size:15px}
+.bw input{width:110px;border:2px solid var(--line);border-radius:9px;padding:2px 8px;font-size:15px;font-weight:800;font-family:inherit;direction:ltr;text-align:left;background:#fff}
+.bw input.ok{border-color:var(--inc);background:var(--incbg)}
+.bw input.bad{border-color:var(--exp);background:var(--expbg)}
+.bw tr.lk td{opacity:.78}
+.bw tr.sep td{background:transparent!important;font-size:12.5px;font-weight:800;color:var(--mut);padding:2px 6px;border:0}
+.bw td.sg{width:34px;text-align:center;font-weight:800;color:var(--mut)}
+.bw td.q{width:74px;text-align:center}
+.bw td.q button{min-width:24px;height:24px;border-radius:12px;background:#f1ece0;font-weight:800;font-size:13px;padding:0 6px}
+.bw td.q button.bn{background:var(--coral);color:#fff;font-size:12.5px}
+.bw tr.hintrow td{background:#fff7e0!important;font-size:13.5px;padding:3px 12px;color:#4a4130}
+.lv{font-weight:800;direction:ltr;display:inline-block}
+.mem{background:#fff;border-radius:16px;padding:10px 12px;box-shadow:0 2px 0 var(--line);max-height:470px;overflow:auto}
+.mh{font-weight:800;color:var(--coral);font-size:16px;margin-bottom:6px}
+.mg{border:2px solid var(--line);border-radius:12px;padding:6px 10px;margin-bottom:8px}
+.mg.hl{border-color:var(--coral);background:#fff4ef}
+.mgh{font-weight:800;color:var(--navy2);font-size:15px;margin-bottom:3px}
+.mi{display:flex;justify-content:space-between;gap:8px;font-size:14px;padding:1px 2px;border-bottom:1px dotted var(--line)}
+.mi small{color:var(--mut)}
+.mi.ng b{color:var(--exp)}
+.mi.tt{border-top:2px solid var(--ink);border-bottom:0;font-weight:800}
+.mf{margin-top:4px;background:#e8eefb;border-radius:8px;padding:3px 8px;font-weight:800;font-size:14px}
+.mchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.mchip{background:#e8eefb;border-radius:10px;padding:3px 10px;font-size:13.5px;font-weight:700;display:flex;gap:8px}
+.ledger{background:#fff;border-radius:14px;padding:8px 12px;box-shadow:0 2px 0 var(--line);max-height:440px;overflow:auto}
+.lh{font-weight:800;color:var(--coral);margin-bottom:4px}
+.lr{display:flex;flex-direction:column;border-bottom:1px dotted var(--line);padding:2px 0;font-size:13px}
+.lr span{color:var(--mut)}
+.stlab{font-size:15px;font-weight:800;color:var(--navy2);margin:8px 0 3px}
+.plf.rp td{padding:4px 14px;font-size:16px}
+.plf.rp tr.click{cursor:pointer}
+.plf.rp tr.click:hover td{outline:2px solid #ffd2c6}
+.plf.rp tr.sel td{outline:3px solid var(--coral)}
+.rep .rt.click{cursor:pointer}
+.rl.eqr .v{color:var(--coral)}
+.ph4{font-size:19px;font-weight:800;color:var(--navy2);margin-bottom:4px}
+.tr6 .ev{padding:5px 10px;font-size:14px}
+.trbox{padding:10px 14px}
+.nt.big td{font-size:15px;padding:3px 4px}
+
+.gamecat.g9{grid-template-columns:repeat(5,1fr);gap:8px;margin-top:6px}
+.gamecat.g9 button{font-size:14.5px;padding:10px 3px;line-height:1.15}
+
+#rp-main .rl{padding:1px 8px;font-size:14px}
+#rp-main .rt{padding:2px 8px;font-size:15px;margin-top:3px}
+#rp-main .rg{margin:3px 0 0;font-size:13px}
+#rp-main .rep .cols>div{padding:4px 10px}
+#rp-main .rep .hdr{padding:5px 12px;font-size:15px}
+#rp-act{display:inline-flex;align-items:center}
+.bw tr.tot td.q button{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -421,7 +485,7 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
     <div class="kick" style="color:#ffb199"><span>יסודות החשבונאות א׳ · שיעור 2</span></div>
     <h1><span style="animation-delay:.1s">מיתרות</span> <span style="animation-delay:.25s">פזורות</span><br><span style="animation-delay:.45s;color:var(--coral2)">לדוחות</span> <span style="animation-delay:.6s;color:var(--coral2)">כספיים</span> <span style="animation-delay:.75s">מלאים</span></h1>
     <p class="sub" style="margin-top:24px;font-size:25px">עריכת דוח רווח והפסד ודוח על המצב הכספי, והקשר ביניהם. כל תרגילי שיעור 2 שבחוברת, וכל השאלות האמריקאיות, נפתרים כאן צעד אחר צעד.</p>
-    <div class="chipbar" style="margin-top:28px"><a class="chip" href="../lecture-1/presentation.html" style="text-decoration:none">🔗 ממשיך את שיעור 1</a><span class="chip">🧮 כלי תרגול לכל נושא</span><span class="chip">📝 בנק תרגילים ושאלות</span></div>
+    <div class="chipbar" style="margin-top:28px"><a class="chip" href="../lecture-1/presentation.html" style="text-decoration:none">🔗 ממשיך את שיעור 1</a><span class="chip">🎮 משחקי סיווג</span><span class="chip">📝 בנק תרגילים ושאלות</span></div>
   </div>
   <div style="position:absolute;right:70px;bottom:62px;font-size:21px;color:#c8d4f2"><b style="color:#fff">ד״ר שי צבאן</b> · המרכז האקדמי רופין · סמסטר א׳ תשפ״ז</div>
 </section>
@@ -443,10 +507,10 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
     <div class="card" style="flex:.75;padding:14px 18px;font-size:18px;line-height:1.5">
       <b style="color:var(--coral)">מה חדש היום</b>
       <ul style="margin:6px 18px 0 0;padding:0">
+        <li>סיווג בשני שלבים: קטגוריה, ואז סעיף.</li>
         <li>הדוחות נבנים במלואם, עם סעיפי ביניים.</li>
         <li>מכירות נטו, הנחות והחזרות.</li>
-        <li>מאזן עם חלוקה לשוטף ולא שוטף.</li>
-        <li>הקשר בין הרווח להון העצמי.</li>
+        <li>המאזן והקשר להון העצמי.</li>
       </ul>
     </div>
   </div>
@@ -456,60 +520,75 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
 <section class="slide" id="s-route" data-title="מפת הדרכים">
   <div class="kick">מפת השיעור</div>
   <h2>שש תחנות, וכל תרגיל בחוברת נמצא באחת מהן</h2>
-  <p class="sub" style="font-size:19px">לחצו על תחנה כדי לקפוץ אליה. בסוף יש בנק של כל התרגילים ושל כל השאלות האמריקאיות.</p>
+  <p class="sub" style="font-size:19px">לחצו על תחנה כדי לקפוץ אליה. קודם שני שקפי מבוא, ובסוף בנק של כל התרגילים ושל כל השאלות האמריקאיות.</p>
   <div class="route" id="routegrid"></div>
 </section>
 
-<!-- 4 SORT -->
-<section class="slide" id="s-sort" data-title="מיון יתרות">
-  <div class="kick">תחנה 1 · הצעד הראשון בכל תרגיל</div>
-  <h2>מיון יתרות: מה נכס, מה התחייבות, מה הון?</h2>
-  <p class="sub" style="font-size:17px;margin-top:2px"><b id="cl30-co"></b>. בחרו קטגוריה לכל יתרה ולחצו ״בדיקה״. ההון העצמי כאן הוא יתרת הפתיחה, ל-1.1.2025.</p>
-  <div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-sort"></div></div>
-  <div class="cl4 cl30" id="cl30"></div>
-  <div class="ctrl noprint" style="margin-top:6px;gap:12px"><button class="btn" id="cl30-chk">בדיקה</button><button class="btn ghost" id="cl30-rst">איפוס</button><span class="hint" id="cl30-sc"></span></div>
-  <div class="cl4sum" id="cl30-sum"></div>
-  <button class="hw" data-ex="2.1">🔗 תרגיל 2.1 בבנק התרגילים</button>
+<!-- 4 FLOW -->
+<section class="slide" id="s-flow" data-title="התהליך: מאירוע לדוח">
+  <div class="kick">מבוא · איפה היינו ולאן ממשיכים</div>
+  <h2>תהליך עריכת הדוחות</h2>
+  <p class="sub" style="font-size:18px;margin-top:2px">הדוחות הכספיים הם התחנה הרביעית בתהליך. לחצו על תחנה, או תנו לה לרוץ.</p>
+  <div class="pipe" id="fpipe" style="margin-top:18px">
+    <div class="pline"><i id="fline"></i></div>
+    <div class="pstage" data-i="0"><div class="pnode">🧾</div><b>אירוע</b><span>מכירה, קנייה, שכר</span></div>
+    <div class="pstage" data-i="1"><div class="pnode">✍️</div><b>רישום</b><span>לפי מסמכים</span></div>
+    <div class="pstage" data-i="2"><div class="pnode">🗂️</div><b>מיון</b><span>כל סכום לקטגוריה</span></div>
+    <div class="pstage" data-i="3"><div class="pnode">📊</div><b>דוחות</b><span>רווח והפסד, מאזן</span></div>
+    <div class="pstage" data-i="4"><div class="pnode">💡</div><b>החלטות</b><span>מי שקורא מחליט</span></div>
+  </div>
+  <div class="pbox" id="fbox" style="margin-top:14px;min-height:76px;font-size:19px;padding:12px 20px"></div>
+  <div class="row" style="gap:20px;margin-top:12px">
+    <div class="card" style="flex:1;padding:10px 16px;border-top:5px solid var(--asset)"><b style="color:#087469;font-size:18px">שיעור 1: מיון לחמש קבוצות</b><div style="font-size:15px;line-height:1.55;margin-top:3px">נכס, התחייבות, הון עצמי, הכנסה והוצאה. הכנסה והוצאה נמדדות לפי הפעילות ולא לפי המזומן, והמאזן מקיים נכסים = התחייבויות + הון עצמי.</div></div>
+    <div class="card" style="flex:1;padding:10px 16px;border-top:5px solid var(--coral)"><b style="color:var(--coral);font-size:18px">שיעור 2: מיון לסעיפי הדוחות</b><div style="font-size:15px;line-height:1.55;margin-top:3px">כל קבוצה מתחלקת לסעיפים, והם השורות בדוחות. מרכזים כל סעיף מהכרטיסים שלו, בונים את דוח רווח והפסד ואת המאזן, ומחברים ביניהם דרך ההון העצמי.</div></div>
+  </div>
 </section>
 
-<!-- 5 P&L BUILD -->
-<section class="slide" id="s-plb" data-title="בונים דוח רווח והפסד">
-  <div class="kick">תחנה 2 · דוח רווח והפסד</div>
-  <h2>בונים את הדוח שורה אחר שורה</h2>
-  <p class="sub" style="font-size:17px;margin-top:2px"><b id="plb-co"></b>. הקלידו כל סכום, בלי סימן, ולחצו Enter. לחצו על <b>?</b> לנוסחה.</p>
-  <div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-plb"></div></div>
-  <div class="row" style="gap:22px;margin-top:6px">
-    <div style="flex:1.35"><table class="plf plb" id="plb"></table>
-      <div class="ctrl noprint" style="margin-top:4px"><button class="btn ghost" id="plb-show">הצג פתרון</button><button class="btn ghost" id="plb-clear">נקה</button><span class="hint" id="plb-sc"></span></div></div>
-    <div style="flex:.9" class="col" style="gap:8px">
-      <div class="card" style="padding:10px 14px"><b style="color:var(--coral);font-size:17px">ביאורים: איך מגיעים לסעיפים</b><div class="hint" style="margin-top:2px">הערכים נלקחים מטבלת המיון</div><div id="plb-notes" style="font-size:15px;line-height:1.5;margin-top:4px"></div></div>
+<!-- 5 HIERARCHY -->
+<section class="slide" id="s-hier" data-title="מחמש קבוצות לסעיפים">
+  <div class="kick">מבוא · שתי רמות של סיווג</div>
+  <h2>מחמש קבוצות לסעיפי הדוחות</h2>
+  <p class="sub" style="font-size:17px;margin-top:2px">שיעור 1 הגדיר את חמש הקבוצות. היום כל קבוצה מתפרטת לסעיפים. לחצו על סעיף כדי לראות מה הוא כולל.</p>
+  <div class="hier" id="hier"></div>
+  <div class="expl" id="hierbox" style="margin-top:8px;font-size:17px;min-height:0;padding:8px 16px">לחצו על סעיף.</div>
+</section>
 
+<!-- 6 STRUCTURE -->
+<section class="slide" id="s-struct" data-title="מבנה הדוח והגדרות הסעיפים">
+  <div class="kick">תחנה 1 · דוח רווח והפסד</div>
+  <h2>הסעיפים לפי הסדר, ומה כלול בכל אחד</h2>
+  <div class="row" style="gap:20px;margin-top:6px">
+    <div style="flex:1.55"><table class="plf st13" id="strtab"></table></div>
+    <div style="flex:.85" class="col" style="gap:8px">
+      <div class="card" style="padding:9px 14px"><b style="color:var(--coral);font-size:16px">נוסחאות הביניים</b><div id="strform" style="font-size:14px;line-height:1.6;margin-top:3px"></div></div>
+      <div class="card" style="padding:9px 14px"><b style="color:var(--coral);font-size:16px">טעויות נפוצות</b>
+        <ul style="margin:3px 16px 0 0;padding:0;font-size:13.5px;line-height:1.5">
+          <li>ניכוי כפול של החזרות או הנחות.</li>
+          <li>הכללת מימון בתוך הרווח התפעולי.</li>
+          <li>סיכום כל ההוצאות במקום סינון לפי תחום.</li>
+          <li>היפוך סימן של הכנסות המימון.</li>
+          <li>שכחה של הכנסות אחרות או של מסים.</li>
+        </ul></div>
     </div>
   </div>
-  <button class="hw" data-ex="2.3">🔗 תרגילים 2.1 (ב), 2.3 בבנק</button>
+  <div class="srcnote" style="margin-top:6px;font-size:14px;padding:5px 12px">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div>
 </section>
 
-<!-- 6 SALES -->
+<!-- 7 SALES -->
 <section class="slide" id="s-sales" data-title="מכירות נטו והנחות">
-  <div class="kick">תחנה 2 · שורת המכירות</div>
-  <h2>מכירות נטו: מה מנכים, ומה לא</h2>
-  <div class="row" style="gap:26px;margin-top:6px">
-    <div style="flex:.85" class="col">
-      <div class="card" style="padding:8px 16px"><div class="hint">מכירות ברוטו</div><div style="font-size:23px;font-weight:800"><span class="num" id="sg">640,000</span></div><input type="range" class="sl" id="sgs" min="100000" max="1000000" step="10000" value="500000"></div>
-      <div class="card" style="padding:8px 16px"><div class="hint">החזרות מלקוחות</div><div style="font-size:23px;font-weight:800"><span class="num" id="sr">45,000</span></div><input type="range" class="sl" id="srs" min="0" max="150000" step="5000" value="30000"></div>
-      <div class="card" style="padding:8px 16px"><div class="hint">הנחות מסחריות ללקוחות</div><div style="font-size:23px;font-weight:800"><span class="num" id="st1">25,000</span></div><input type="range" class="sl" id="sts" min="0" max="100000" step="5000" value="20000"></div>
-      <div class="card" style="padding:8px 16px"><div class="hint">הנחות מזומן ללקוחות (בעד הקדמת תשלום)</div><div style="font-size:23px;font-weight:800"><span class="num" id="sc">4,000</span></div><input type="range" class="sl" id="scs" min="0" max="30000" step="1000" value="5000"></div>
-    </div>
-    <div style="flex:1.15">
-      <div class="bars" id="sbars" style="height:170px"></div>
-      <div class="expl" id="snote" style="margin-top:10px;font-size:17px;min-height:0;padding:10px 16px"></div>
-      <table class="cmp" style="margin-top:4px"><tbody id="dtab"></tbody></table>
+  <div class="kick">תחנה 1 · שורת המכירות</div>
+  <h2>מכירות נטו והנחות: הגדרות וטבלאות</h2>
+  <div class="row" style="gap:22px;margin-top:8px">
+    <div style="flex:1.2"><table class="plf st13" id="saldef"></table></div>
+    <div style="flex:.9" class="col" style="gap:10px">
+      <div class="card" style="padding:10px 14px"><b style="color:var(--coral);font-size:17px">איך מחשבים מכירות נטו</b><table class="nt big" id="salcalc" style="margin-top:4px"></table></div>
+      <div class="card" style="padding:10px 14px"><b style="color:var(--coral);font-size:17px">ארבע הנחות, ארבעה מקומות</b><table class="nt big" id="saldisc" style="margin-top:4px"></table></div>
     </div>
   </div>
   <button class="hw" data-ex="2.8">🔗 תרגילים 2.8, 2.9 · שאלות 2.1, 2.7, 2.9</button>
 </section>
 
-<!-- 7 LINES GAME -->
+<!-- 8 LINES GAME -->
 <section class="slide" id="s-lines" data-title="לאיזה סעיף שייך?">
   <div class="kick">תחנה 2 · תרגול</div>
   <h2>לאיזה סעיף ברווח והפסד זה שייך?</h2>
@@ -529,22 +608,25 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
   <button class="hw" data-ex="2.12">🔗 תרגילים 2.9 (א), 2.12 · שאלות 2.2, 2.5, 2.6, 2.8, 2.10</button>
 </section>
 
-<!-- 8 SUBTOTALS -->
-<section class="slide" id="s-sub" data-title="סכומי הביניים">
-  <div class="kick">תחנה 2 · סכומי הביניים</div>
-  <h2>גולמי, תפעולי, לפני מסים, נקי: שרשרת אחת</h2>
-  <p class="sub" style="font-size:17px;margin-top:2px">הזיזו את הסליידרים וראו איך כל סכום ביניים נבנה, ואילו תשובות שגויות מתקבלות כשמדלגים על שורה.</p>
-  <div class="row" style="gap:24px;margin-top:6px">
-    <div style="flex:.8" class="col" id="subctl" style="gap:6px"></div>
-    <div style="flex:1.2"><table class="plf" id="subtab"></table>
-      <div class="card" style="padding:8px 14px;margin-top:6px"><b style="color:var(--coral);font-size:16px">מלכודות נפוצות (אלה התשובות השגויות בשאלות)</b><div id="subtrap" style="font-size:15px;line-height:1.5;margin-top:3px"></div></div></div>
+<!-- 9 BALANCE DEFINITIONS -->
+<section class="slide" id="s-bsdef" data-title="המאזן: מבנה והגדרות">
+  <div class="kick">תחנה 3 · הדוח על המצב הכספי</div>
+  <h2>המאזן: שוטף ולא שוטף, ואיחוד כרטיסים</h2>
+  <div class="row" style="gap:20px;margin-top:6px">
+    <div style="flex:1.3"><table class="plf st13" id="bstab"></table></div>
+    <div style="flex:1" class="col" style="gap:8px">
+      <div class="card" style="padding:8px 14px"><b style="color:var(--coral);font-size:16px">שוטף ולא שוטף</b><div style="font-size:14px;line-height:1.5;margin-top:2px"><b>שוטף:</b> עד שנה מתאריך המאזן. <b>לא שוטף:</b> מעבר לשנה. הקריטריון הוא המועד, ולא גובה הסכום.<br><span class="hint">דוגמה: שיק לפירעון בעוד שנתיים הוא התחייבות לא שוטפת ואינו מצטרף לספקים.</span></div></div>
+      <div class="card" style="padding:8px 14px"><b style="color:var(--coral);font-size:16px">לקוחות ופחת נצבר: דוגמאות</b>
+        <table class="nt" style="margin-top:3px" id="bsex"></table></div>
+      <div class="card" style="padding:8px 14px"><b style="color:var(--coral);font-size:16px">מקורות ושימושים</b><div style="font-size:14px;line-height:1.5;margin-top:2px">הנכסים הם <b>שימושים</b>: היכן הכסף יושב. ההתחייבויות וההון הם <b>מקורות</b>: מאין הכסף הגיע. אותו כסף נספר משני הכיוונים, ולכן הם שווים תמיד.</div></div>
+    </div>
   </div>
-  <button class="hw" data-ex="2.3">🔗 תרגיל 2.3 · שאלות 2.3, 2.4, 2.5, 2.7</button>
+  <button class="hw" data-ex="2.10">🔗 תרגילים 2.10, 2.11, 2.12 (ב) · שאלות 2.11 עד 2.14</button>
 </section>
 
-<!-- 9 BALANCE SHEET GAME -->
-<section class="slide" id="s-bsort" data-title="מיון למאזן">
-  <div class="kick">תחנה 3 · הדוח על המצב הכספי</div>
+<!-- 10 BALANCE GAME -->
+<section class="slide" id="s-bsort" data-title="איפה זה יופיע במאזן?">
+  <div class="kick">תחנה 3 · תרגול</div>
   <h2>איפה זה יופיע במאזן?</h2>
   <p class="sub" style="font-size:17px;margin-top:2px">שוטף: עד שנה מתאריך המאזן, 31.12. לא שוטף: מעבר לשנה.</p>
   <div class="row" style="gap:30px;margin-top:2px">
@@ -563,58 +645,45 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
   <button class="hw" data-q="15">🔗 שאלות 2.15, 2.24, 2.26 · תרגיל 2.12 (א)</button>
 </section>
 
-<!-- 10 AGGREGATION -->
-<section class="slide" id="s-agg" data-title="איחוד סעיפים ופחת">
-  <div class="kick">תחנה 3 · איך מתחברים כמה כרטיסים לשורה אחת</div>
-  <h2>הכרטיסים מתאחדים לשורות המאזן</h2>
-  <div class="ctrl" style="margin-top:8px"><div class="seg" id="aggseg"></div></div>
-  <div id="aggpane" style="margin-top:12px"></div>
-  <button class="hw" data-ex="2.10">🔗 תרגילים 2.10, 2.11, 2.12 (ב) · שאלות 2.11 עד 2.15</button>
+<!-- 11 STEP BY STEP SORTER -->
+<section class="slide" id="s-sort" data-title="מיון פריט אחר פריט">
+  <div class="kick">תחנה 4 · מיון פריט אחר פריט</div>
+  <h2>מיינו כל פריט בשני שלבים</h2>
+  <p class="sub" style="font-size:16px;margin-top:2px"><b id="st-co"></b>. שלב 1: מה זה? שלב 2: איפה זה יופיע בדוחות, ולמה. בסוף מרכזים את הסעיפים ובונים את הדוחות.</p>
+  <div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-sort"></div><span class="hint" id="st-prog" style="font-weight:800"></span></div>
+  <div class="row" style="gap:20px;margin-top:6px;align-items:flex-start">
+    <div style="flex:1.45" id="st-main"></div>
+    <div style="flex:.75"><div class="ledger" id="st-led"></div></div>
+  </div>
 </section>
 
-<!-- 11 EQUITY -->
-<section class="slide" id="s-equity" data-title="הון עצמי והקשר בין הדוחות">
-  <div class="kick">תחנה 4 · הקשר בין רווח והפסד למאזן</div>
-  <h2>הרווח של השנה עובר להון העצמי</h2>
-  <div class="ctrl" style="margin-top:8px"><div class="seg" id="eqseg"></div></div>
-  <div id="eqpane" style="margin-top:12px"></div>
-  <button class="hw" data-ex="2.2">🔗 תרגילים 2.2, 2.3 (ב), 2.7, 2.13 (א) · שאלות 2.16 עד 2.18, 2.25</button>
+<section class="slide" id="s-pl1" data-title="מהמכירות עד הרווח הגולמי"><div class="kick">תחנה 4 · בונים את דוח רווח והפסד (1 מתוך 3)</div><h2>מהמכירות עד הרווח הגולמי</h2><div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-pl1"></div><span class="hint" id="co-pl1" style="font-weight:800"></span></div><div class="row" style="gap:20px;margin-top:6px;align-items:flex-start"><div style="flex:1.2"><table class="plf bw" id="bw-pl1"></table><div class="ctrl noprint" style="margin-top:3px"><button class="btn ghost" id="sh-pl1">הצג פתרון</button><button class="btn ghost" id="cl-pl1">נקה</button><span class="hint" id="sc-pl1"></span></div><div class="srcnote" id="sn-pl1" style="margin-top:4px;font-size:12.5px;padding:3px 10px;display:none">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div></div><div style="flex:.95"><div class="mem" id="mem-pl1"></div></div></div></section><section class="slide" id="s-pl2" data-title="ההוצאות התפעוליות, עד הרווח התפעולי"><div class="kick">תחנה 4 · בונים את דוח רווח והפסד (2 מתוך 3)</div><h2>ההוצאות התפעוליות, עד הרווח התפעולי</h2><div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-pl2"></div><span class="hint" id="co-pl2" style="font-weight:800"></span></div><div class="row" style="gap:20px;margin-top:6px;align-items:flex-start"><div style="flex:1.2"><table class="plf bw" id="bw-pl2"></table><div class="ctrl noprint" style="margin-top:3px"><button class="btn ghost" id="sh-pl2">הצג פתרון</button><button class="btn ghost" id="cl-pl2">נקה</button><span class="hint" id="sc-pl2"></span></div><div class="srcnote" id="sn-pl2" style="margin-top:4px;font-size:12.5px;padding:3px 10px;display:none">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div></div><div style="flex:.95"><div class="mem" id="mem-pl2"></div></div></div></section><section class="slide" id="s-pl3" data-title="מימון, הכנסות אחרות ומסים, עד הרווח הנקי"><div class="kick">תחנה 4 · בונים את דוח רווח והפסד (3 מתוך 3)</div><h2>מימון, הכנסות אחרות ומסים, עד הרווח הנקי</h2><div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-pl3"></div><span class="hint" id="co-pl3" style="font-weight:800"></span></div><div class="row" style="gap:20px;margin-top:6px;align-items:flex-start"><div style="flex:1.2"><table class="plf bw" id="bw-pl3"></table><div class="ctrl noprint" style="margin-top:3px"><button class="btn ghost" id="sh-pl3">הצג פתרון</button><button class="btn ghost" id="cl-pl3">נקה</button><span class="hint" id="sc-pl3"></span></div><div class="srcnote" id="sn-pl3" style="margin-top:4px;font-size:12.5px;padding:3px 10px;display:none">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div></div><div style="flex:.95"><div class="mem" id="mem-pl3"></div></div></div></section><section class="slide" id="s-bs1" data-title="נכסים שוטפים"><div class="kick">תחנה 4 · בונים את המאזן (1 מתוך 4)</div><h2>נכסים שוטפים</h2><div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-bs1"></div><span class="hint" id="co-bs1" style="font-weight:800"></span></div><div class="row" style="gap:20px;margin-top:6px;align-items:flex-start"><div style="flex:1.2"><table class="plf bw" id="bw-bs1"></table><div class="ctrl noprint" style="margin-top:3px"><button class="btn ghost" id="sh-bs1">הצג פתרון</button><button class="btn ghost" id="cl-bs1">נקה</button><span class="hint" id="sc-bs1"></span></div><div class="srcnote" id="sn-bs1" style="margin-top:4px;font-size:12.5px;padding:3px 10px;display:none">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div></div><div style="flex:.95"><div class="mem" id="mem-bs1"></div></div></div></section><section class="slide" id="s-bs2" data-title="נכסים לא שוטפים וסך הנכסים"><div class="kick">תחנה 4 · בונים את המאזן (2 מתוך 4)</div><h2>נכסים לא שוטפים וסך הנכסים</h2><div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-bs2"></div><span class="hint" id="co-bs2" style="font-weight:800"></span></div><div class="row" style="gap:20px;margin-top:6px;align-items:flex-start"><div style="flex:1.2"><table class="plf bw" id="bw-bs2"></table><div class="ctrl noprint" style="margin-top:3px"><button class="btn ghost" id="sh-bs2">הצג פתרון</button><button class="btn ghost" id="cl-bs2">נקה</button><span class="hint" id="sc-bs2"></span></div><div class="srcnote" id="sn-bs2" style="margin-top:4px;font-size:12.5px;padding:3px 10px;display:none">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div></div><div style="flex:.95"><div class="mem" id="mem-bs2"></div></div></div></section><section class="slide" id="s-bs3" data-title="התחייבויות: שוטפות ולא שוטפות"><div class="kick">תחנה 4 · בונים את המאזן (3 מתוך 4)</div><h2>התחייבויות: שוטפות ולא שוטפות</h2><div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-bs3"></div><span class="hint" id="co-bs3" style="font-weight:800"></span></div><div class="row" style="gap:20px;margin-top:6px;align-items:flex-start"><div style="flex:1.2"><table class="plf bw" id="bw-bs3"></table><div class="ctrl noprint" style="margin-top:3px"><button class="btn ghost" id="sh-bs3">הצג פתרון</button><button class="btn ghost" id="cl-bs3">נקה</button><span class="hint" id="sc-bs3"></span></div><div class="srcnote" id="sn-bs3" style="margin-top:4px;font-size:12.5px;padding:3px 10px;display:none">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div></div><div style="flex:.95"><div class="mem" id="mem-bs3"></div></div></div></section><section class="slide" id="s-bs4" data-title="ההון העצמי: עודפי פתיחה ועוד רווח השנה"><div class="kick">תחנה 4 · בונים את המאזן (4 מתוך 4)</div><h2>ההון העצמי: עודפי פתיחה ועוד רווח השנה</h2><div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-bs4"></div><span class="hint" id="co-bs4" style="font-weight:800"></span></div><div class="row" style="gap:20px;margin-top:6px;align-items:flex-start"><div style="flex:1.2"><table class="plf bw" id="bw-bs4"></table><div class="ctrl noprint" style="margin-top:3px"><button class="btn ghost" id="sh-bs4">הצג פתרון</button><button class="btn ghost" id="cl-bs4">נקה</button><span class="hint" id="sc-bs4"></span></div><div class="srcnote" id="sn-bs4" style="margin-top:4px;font-size:12.5px;padding:3px 10px;display:none">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div></div><div style="flex:.95"><div class="mem" id="mem-bs4"></div></div></div></section>
+
+<!-- REPORT -->
+<section class="slide" id="s-report" data-title="הדוחות המלאים">
+  <div class="kick">תחנה 4 · הדוחות המלאים</div>
+  <h2>הדוחות המלאים: לחצו על שורה לראות את הרכבה</h2>
+  <div class="ctrl" style="margin-top:2px"><div class="seg segs" id="dsseg-report"></div><div class="seg segs" id="rp-tabs"></div><span id="rp-act"></span></div>
+  <div class="row" style="gap:20px;margin-top:6px;align-items:flex-start">
+    <div style="flex:1.35" id="rp-main"></div>
+    <div style="flex:.85"><div class="card" id="rp-panel" style="padding:10px 14px;min-height:300px"></div></div>
+  </div>
 </section>
 
-<!-- 12 TRAPS -->
+<!-- TRAPS -->
 <section class="slide" id="s-traps" data-title="מעבדת המלכודות">
   <div class="kick">תחנה 5 · הוצאה אינה תשלום, ועוד</div>
   <h2>מעבדת המלכודות</h2>
-  <p class="sub" style="font-size:17px;margin-top:2px">בחרו אירוע. קודם ענו על השאלה, ואז ראו מה השתנה במאזן ובהון.</p>
-  <div class="lab" style="margin-top:8px">
-    <div><div class="evs" id="tr-evs"></div></div>
-    <div>
-      <div class="quizcard" style="padding:12px 16px" id="tr-box"><div class="hint">בחרו אירוע מהרשימה.</div></div>
-      <div class="bs" id="tr-bs" style="margin-top:8px"></div>
-      <div class="evnote" id="tr-note"></div>
-    </div>
+  <p class="sub" style="font-size:16px;margin-top:2px">בחרו אירוע. קודם ענו על השאלה, ואז ראו מה השתנה במאזן ובהון.</p>
+  <div class="row" style="gap:18px;margin-top:6px;align-items:flex-start">
+    <div style="flex:.85"><div class="evs tr6" id="tr-evs"></div></div>
+    <div style="flex:1.15"><div class="quizcard trbox" id="tr-box"><div class="hint">בחרו אירוע מהרשימה.</div></div></div>
   </div>
-  <button class="hw" data-ex="2.4">🔗 תרגילים 2.4 עד 2.7 · שאלות 2.19 עד 2.22, 2.28</button>
 </section>
 
-<!-- 13 EXAM -->
-<section class="slide" id="s-exam" data-title="במתכונת הבחינה">
-  <div class="kick">תחנה 6 · תרגיל 2.13 (בסגנון הבחינה)</div>
-  <h2>הכול ביחד: ששה צעדים לפתרון</h2>
-  <div class="row" style="gap:22px;margin-top:6px">
-    <div style="flex:.62"><div class="exwrap"><table class="tbl exl" id="ex213"></table></div></div>
-    <div style="flex:1.38">
-      <div class="seg" id="exsteps" style="flex-wrap:wrap"></div>
-      <div class="expl" id="exbody" style="margin-top:8px;min-height:250px;font-size:17px"></div>
-      <div class="ctrl noprint" style="margin-top:6px"><button class="btn ghost" id="ex-prev">→ הקודם</button><button class="btn" id="ex-next">הבא ←</button></div>
-    </div>
-  </div>
-  <button class="hw" data-ex="2.13">🔗 תרגיל 2.13 בבנק התרגילים</button>
-</section>
-
-<!-- 14 EXERCISE BANK -->
+<!-- EXERCISE BANK -->
 <section class="slide" id="s-ex" data-title="בנק התרגילים">
-  <div class="kick">תרגול · חוברת התרגילים, שיעור 2, חלק א</div>
+  <div class="kick">תחנה 6 · חוברת התרגילים, שיעור 2, חלק א</div>
   <h2>כל תרגילי החוברת, עם בדיקה ופתרון מפורט</h2>
   <div class="ctrl" id="exsel" style="margin-top:6px;gap:6px"></div>
   <div class="row" style="gap:18px;margin-top:8px;align-items:flex-start">
@@ -623,9 +692,9 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
   </div>
 </section>
 
-<!-- 15 MCQ BANK -->
+<!-- MCQ BANK -->
 <section class="slide" id="s-mcq" data-title="בנק השאלות האמריקאיות">
-  <div class="kick">תרגול · חוברת התרגילים, שיעור 2, חלק ב</div>
+  <div class="kick">תחנה 6 · חוברת התרגילים, שיעור 2, חלק ב</div>
   <h2>28 השאלות האמריקאיות: ולמה כל תשובה שגויה שגויה</h2>
   <div class="row" style="gap:18px;margin-top:8px;align-items:flex-start">
     <div style="width:200px;flex:none"><div class="qgrid" id="qgrid"></div><div class="hint" id="qscore" style="margin-top:8px"></div><button class="btn ghost noprint" style="margin-top:6px;font-size:14px;padding:5px 12px" id="qreset">איפוס</button></div>
@@ -633,15 +702,15 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
   </div>
 </section>
 
-<!-- 16 HOMEWORK -->
+<!-- HOMEWORK -->
 <section class="slide" id="s-hw" data-title="מפת התרגילים">
   <div class="kick">שיעורי בית</div>
   <h2>איפה לתרגל כל תרגיל וכל שאלה</h2>
-  <p class="sub" style="font-size:16px;margin-top:2px">לחצו על מספר כדי לפתוח אותו בבנק. לחצו על הכפתור כדי לחזור לכלי שמסביר את הנושא.</p>
+  <p class="sub" style="font-size:16px;margin-top:2px">לחצו על מספר כדי לפתוח אותו בבנק. לחצו על הכפתור כדי לחזור לשקף שמסביר את הנושא.</p>
   <table class="hwtbl2" id="hwtbl"></table>
 </section>
 
-<!-- 17 SUMMARY -->
+<!-- SUMMARY -->
 <section class="slide dark" id="s-end" data-title="סיכום">
   <div class="kick" style="color:#ffb199">לסיכום</div>
   <h2>חמישה משפטים לקחת הביתה</h2>
@@ -649,7 +718,7 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
     <div class="card" style="color:var(--ink)"><b>1</b>דוח רווח והפסד נבנה בסדר קבוע: מכירות, עלות המכירות, גולמי, הוצאות, תפעולי, מימון, לפני מסים, נקי.</div>
     <div class="card" style="color:var(--ink)"><b>2</b>מכירות נטו: ברוטו בניכוי החזרות והנחות מסחריות. הנחת מזומן היא סעיף מימון.</div>
     <div class="card" style="color:var(--ink)"><b>3</b>במאזן מפרידים שוטף (עד שנה) מלא שוטף, ומאחדים כרטיסים דומים לשורה אחת.</div>
-    <div class="card" style="color:var(--ink)"><b>4</b>הון בסוף השנה: הון פתיחה, ועוד השקעת בעלים, ועוד רווח נקי.</div>
+    <div class="card" style="color:var(--ink)"><b>4</b>הון עצמי הוא מקור מימון: עודפי פתיחה, ועוד השקעת בעלים, ועוד רווח השנה.</div>
     <div class="card" style="color:var(--ink)"><b>5</b>הוצאה היא שווי השירות שנצרך, והפקדה בפקדון אינה הוצאה.</div>
   </div>
   <div class="row" style="margin-top:26px;gap:12px;align-items:center;flex-wrap:wrap">
@@ -667,7 +736,7 @@ h2{font-size:42px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
 <div id="bar" class="noprint">
   <button id="bNext" title="הבא">← הבא</button>
   <div id="prog"><i id="progi"></i></div>
-  <div id="cnt">1 / 17</div>
+  <div id="cnt">1 / 24</div>
   <button id="bPrev" title="הקודם">הקודם →</button>
   <button id="bMenu">☰ תוכן</button>
   <button id="bGloss">📖 מושגים</button>
@@ -697,11 +766,11 @@ cos:{h:'עלות המכירות',p:'עלות המוצרים שנמכרו בתק�
 gross:{h:'רווח גולמי',p:'מה שנשאר מהמכירות אחרי עלות המוצרים שנמכרו.',f:'מכירות נטו בניכוי עלות המכירות.',ex:'מכירות 900,000, עלות המכירות 540,000: רווח גולמי 360,000.',tr:'ההחזרות וההנחות המסחריות מנוכות לפני חישוב הרווח הגולמי.',rel:['sales','cos']},
 sell:{h:'הוצאות מכירה ושיווק',p:'הוצאות שקשורות לפרסום המוצר, להפצתו ולשיווקו.',f:'עלויות פרסום, שיווק, הפצה, עמלות מכירה ושכר עובדי השיווק.',ex:'פרסום באינטרנט, עמלות לסוכני מכירות, הובלה ללקוחות.',tr:'עמלות בנק וריבית אינן הוצאות שיווק: הן הוצאות מימון.',rel:['ga']},
 ga:{h:'הוצאות הנהלה וכלליות',p:'הוצאות שוטפות של ניהול העסק, שאין להן שיוך ספציפי למכירה או למימון.',f:'הוצאות תפעול שאינן שיווק או מימון: שכר הנהלה, חשמל, טלפון, ארנונה, אחזקה, פחת.',ex:'חשמל 15,000, טלפון 6,000, שכר הנהלה 50,000: סך 71,000.',tr:'שכר המנכ״ל וארנונת משרדי ההנהלה שייכים לכאן.',rel:['sell','depexp']},
-othinc:{h:'הכנסות והוצאות אחרות',p:'פריטים חריגים, שאינם ליבת העיסוק. למשל רווח חד פעמי ממכירת רכוש קבוע.',f:'פריטי הכנסה והוצאה חריגים או חד פעמיים, שאינם מפעילות רגילה.',ex:'רווח הון ממכירת רכב המנכ״ל, הכנסה חד פעמית מייעוץ, הפסד הון ממכירת ציוד.',tr:'רווח ממניות סחירות הוא הכנסת מימון ולא הכנסה אחרת.',rel:['oper']},
-oper:{h:'רווח תפעולי',p:'הרווח מהפעילות העיקרית של העסק, לפני מימון ומס.',f:'רווח גולמי בניכוי הוצאות מכירה ושיווק והנהלה וכלליות, ובניכוי או בתוספת פריטים אחרים.',ex:'גולמי 250,000, מכירה ושיווק 70,000, הנהלה 90,000, הכנסות אחרות 10,000: תפעולי 100,000.',tr:'סעיפי המימון מגיעים אחרי הרווח התפעולי.',rel:['gross','finexp']},
+othinc:{h:'הכנסות והוצאות אחרות',p:'פריטים חריגים, שאינם ליבת העיסוק. למשל רווח חד פעמי ממכירת רכוש קבוע.',f:'פריטי הכנסה והוצאה חריגים או חד פעמיים, שאינם מפעילות רגילה.',ex:'רווח הון ממכירת רכב המנכ״ל, הכנסה חד פעמית מייעוץ, הפסד הון ממכירת ציוד.',tr:'כיום הן נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו. רווח ממניות סחירות הוא הכנסת מימון ולא הכנסה אחרת.',rel:['oper']},
+oper:{h:'רווח תפעולי',p:'הרווח מהפעילות העיקרית של העסק, לפני מימון ומס.',f:'רווח גולמי בניכוי הוצאות מכירה ושיווק והוצאות הנהלה וכלליות. ההכנסות וההוצאות האחרות והמימון באים אחריו.',ex:'גולמי 250,000, מכירה ושיווק 70,000, הנהלה וכלליות 90,000: רווח תפעולי 90,000.',tr:'כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן אחריו.',rel:['gross','finexp']},
 finexp:{h:'הוצאות מימון',p:'מה שעולה לחברה להשתמש בכסף של אחרים: ריבית, עמלות בנק והנחות מזומן שניתנו.',f:'עלויות ריבית, עמלות בנק ועלויות פיננסיות דומות.',ex:'ריבית על הלוואה 9,000 ועמלות בנק 1,000: הוצאות מימון 10,000.',tr:'ריבית נצברת רק בחלוף זמן.',rel:['fininc']},
 fininc:{h:'הכנסות מימון',p:'מה שהחברה מרוויחה מכסף שהיא משקיעה או נותנת: ריבית שהתקבלה, רווחים מניירות ערך והנחת מזומן שהתקבלה.',f:'הכנסות ריבית ורווחים פיננסיים.',ex:'ריבית על פקדון 4,000 ורווח ממניות בבורסה 3,000: הכנסות מימון 7,000.',tr:'הכנסות מימון אינן חלק מהמכירות.',rel:['finexp']},
-pbt:{h:'רווח לפני מסים על ההכנסה',p:'הרווח אחרי המימון ולפני המס.',f:'רווח תפעולי בניכוי הוצאות מימון ובתוספת הכנסות מימון.',ex:'תפעולי 100,000, הוצאות מימון 12,000, הכנסות מימון 4,000: 92,000.',tr:'המס עדיין לא ירד.',rel:['net']},
+pbt:{h:'רווח לפני מסים על ההכנסה',p:'הרווח אחרי המימון ולפני המס.',f:'רווח תפעולי, בניכוי הוצאות מימון, ובתוספת הכנסות מימון והכנסות אחרות (בניכוי הוצאות אחרות).',ex:'תפעולי 90,000, הוצאות מימון 12,000, הכנסות מימון 4,000, הכנסות אחרות 10,000: 92,000.',tr:'המס עדיין לא ירד.',rel:['net']},
 net:{h:'רווח נקי',p:'השורה התחתונה: מה שנשאר אחרי הכול, כולל המס. הוא מצטרף להון העצמי.',f:'רווח לפני מסים בניכוי מסים על ההכנסה.',ex:'לפני מס 92,000, מס 20,000: רווח נקי 72,000.',tr:'הרווח הנקי אינו מזומן.',rel:['pbt','retained']},
 notes:{h:'ביאור',p:'פירוט של סעיף בדוח: מה מרכיב אותו ומה המשמעות שלו.',f:'פירוט הרכב ומשמעות של סעיפים בדוחות הכספיים.',ex:'ביאור להוצאות מכירה ושיווק: פרסום 10,000, עמלות 5,000, שכר 20,000, סך 35,000.',tr:'ביאור מפרט את הדוח ואינו מחליף אותו.',rel:['sell']},
 curasset:{h:'נכס שוטף',p:'נכס שצפוי להפוך למזומן או להיות בשימוש תוך שנה.',f:'נכס המיועד למימוש או לצריכה בתוך שנה ממועד הדוח.',ex:'מזומן, לקוחות, שיקים לקבל, חייבים, מלאי, פקדון לזמן קצר.',tr:'מלאי במאזן הוא תמיד מלאי הסגירה, ל-31.12.',rel:['noncur']},
@@ -714,7 +783,7 @@ ppe:{h:'רכוש קבוע',p:'פריטים מוחשיים שמשרתים את ה
 accdep:{h:'פחת נצבר',p:'סכום השחיקה שהצטבר בפריט מאז שנרכש. הוא מקטין את ערך הפריט במאזן.',f:'סך הפחת שנרשם בפריט רכוש קבוע עד תאריך המאזן, המנוכה מעלותו.',ex:'מכונית ב-50,000 ופחת נצבר 20,000: במאזן 30,000.',tr:'פחת נצבר מוצג במאזן, ואינו הוצאה של השנה.',rel:['ppe','depexp']},
 depexp:{h:'הוצאות פחת',p:'החלק בשחיקה שנרשם בשנה הנוכחית. הוא הוצאה בדוח רווח והפסד.',f:'ההוצאה השנתית בגין שימוש ברכוש קבוע, המוצגת בדרך כלל בהנהלה וכלליות.',ex:'הוצאות פחת השנה 12,000: מתווספות להוצאות ההנהלה והכלליות.',tr:'מוסיפים להנהלה וכלליות, ואין לנכות מהרכוש הקבוע פעם נוספת.',rel:['accdep','ga']},
 intang:{h:'נכסים בלתי מוחשיים',p:'נכסים שאינם פיזיים: פטנטים, זיכיונות, מותגים, זכויות יוצרים.',f:'נכסים לא שוטפים שאינם בעלי מהות פיזית.',ex:'פטנט 60,000 וזיכיון 15,000: נכסים בלתי מוחשיים 75,000.',tr:'מחשבים וריהוט הם רכוש קבוע מוחשי.',rel:['ppe']},
-equity:{h:'הון עצמי',p:'מימון שאינו חוב: מה שהבעלים השקיעו ומה שהחברה צברה מרווחים. הוא שווה לנכסים פחות ההתחייבויות.',f:'הזכות השיורית בנכסי הישות לאחר ניכוי כל התחייבויותיה.',ex:'נכסים 900,000, התחייבויות 350,000: הון עצמי 550,000.',tr:'ההון העצמי אינו כסף שיושב בקופה.',rel:['retained','owners']},
+equity:{h:'הון עצמי',p:'מימון שאינו חוב: מה שהבעלים השקיעו ומה שהחברה צברה מרווחים. הוא שווה לנכסים פחות ההתחייבויות.',f:'הזכות השיורית בנכסי הישות לאחר ניכוי כל התחייבויותיה.',ex:'נכסים 900,000, התחייבויות 350,000: הון עצמי 550,000.',tr:'הון עצמי הוא מקור מימון ולא נכס: הוא מספר מאיפה הגיע הכסף, ולא מה עשינו איתו.',rel:['retained','owners']},
 owners:{h:'השקעת בעלים',p:'כסף שבעלי החברה הכניסו אליה. הוא מגדיל את הנכסים ואת ההון העצמי, ואינו הכנסה.',f:'הון מניות ופרמיה: מקור מימון הוני מבעלים.',ex:'הבעלים השקיעו 80,000: ההון העצמי גדל ב-80,000 והרווח לא משתנה.',tr:'השקעת בעלים אינה רווח.',rel:['equity']},
 retained:{h:'עודפים',p:'הרווחים שהחברה צברה במשך השנים. הרווח הנקי של כל שנה מצטרף אליהם.',f:'רכיב ההון העצמי הצובר רווחים (והפסדים) שלא חולקו.',ex:'עודפים 1.1: 400, רווח נקי 60: עודפים 31.12: 460.',tr:'עודפים אינם מזומן.',rel:['equity','net']},
 unrec:{h:'הוצאה שלא נרשמה',p:'שירות שנצרך ולא נרשם. כשמתקנים, שני דברים משתנים: הרווח (ולכן ההון) יורד, ואם שולם, גם המזומן יורד.',f:'טעות בהכרה בהוצאה, המתקנת את הרווח ואת ההון העצמי, ואת הנכס או ההתחייבות המקבילים.',ex:'שירות של 20,000 ששולם ולא נרשם: ההון יורד ב-20,000 והמזומן יורד ב-20,000.',tr:'תיקון של צד אחד בלבד מפר את המשוואה החשבונאית.',rel:['equity']},
@@ -725,14 +794,36 @@ interest:{h:'ריבית על הלוואה',p:'המחיר של שימוש בכס�
 /* ---------- 2.1 company accounts ---------- */
 /* cat: a asset, l liab, e equity, i income, x expense. sec: P&L line */
 const ACC21=[
-['קופת מזומן סניף המכירות',30000,'a'],['קופת מזומן הנהלה',20000,'a'],['לקוחות',60000,'a'],['שיקים לקבל',15000,'a'],
-['ציוד',900000,'a'],['כלי רכב',240000,'a'],['מחשבים',80000,'a'],['ריהוט משרד המנכ״ל',120000,'a'],['פטנטים',70000,'a'],
-['הכנסות ריבית',10000,'i','fini'],['רווח הון ממכירת רכוש קבוע',20000,'i','othi'],
-['שכר ומשכורות שיווק',50000,'x','sell'],['הוצאות חשמל',20000,'x','ga'],['שכר ומשכורות הנהלה',70000,'x','ga'],['עמלות בנק',2000,'x','fine'],
-['הלוואות לזמן קצר',50000,'l'],['משיכת יתר',25000,'l'],['ספקים',70000,'l'],['שיקים לפירעון',10000,'l'],['זכאים אחרים',20000,'l'],['הלוואות לזמן ארוך',200000,'l'],
-['הון עצמי ליום 1.1.2025',1020000,'e'],['מכירות',1000000,'i','sales'],['עלות המכירות',600000,'x','cos'],
-['הוצאות פרסום באינטרנט',25000,'x','sell'],['עמלות סוכני מכירות',30000,'x','sell'],['הוצאות טלפון',8000,'x','ga'],['הוצאות רכב',35000,'x','ga'],
-['הוצאות ריבית',18000,'x','fine'],['מסים על ההכנסה',32000,'x','tax']
+['קופת מזומן סניף המכירות',30000,'a','','ca','cash'],
+['קופת מזומן הנהלה',20000,'a','','ca','cash'],
+['לקוחות',60000,'a','','ca','cust'],
+['שיקים לקבל',15000,'a','','ca','cust'],
+['ציוד',900000,'a','','na','ppe'],
+['כלי רכב',240000,'a','','na','ppe'],
+['מחשבים',80000,'a','','na','ppe'],
+['ריהוט משרד המנכ״ל',120000,'a','','na','ppe'],
+['פטנטים',70000,'a','','na','intang'],
+['הכנסות ריבית',10000,'i','fini','',''],
+['רווח הון ממכירת רכוש קבוע',20000,'i','othi','',''],
+['שכר ומשכורות שיווק',50000,'x','sell','',''],
+['הוצאות חשמל',20000,'x','ga','',''],
+['שכר ומשכורות הנהלה',70000,'x','ga','',''],
+['עמלות בנק',2000,'x','fine','',''],
+['הלוואות לזמן קצר',50000,'l','','cl','stcredit'],
+['משיכת יתר',25000,'l','','cl','stcredit'],
+['ספקים',70000,'l','','cl','supp'],
+['שיקים לפירעון',10000,'l','','cl','supp'],
+['זכאים אחרים',20000,'l','','cl','cred'],
+['הלוואות לזמן ארוך',200000,'l','','nl','ltcredit'],
+['הון עצמי ליום 1.1.2025',1020000,'e','','','equity'],
+['מכירות',1000000,'i','sales','',''],
+['עלות המכירות',600000,'x','cos','',''],
+['הוצאות פרסום באינטרנט',25000,'x','sell','',''],
+['עמלות סוכני מכירות',30000,'x','sell','',''],
+['הוצאות טלפון',8000,'x','ga','',''],
+['הוצאות רכב',35000,'x','ga','',''],
+['הוצאות ריבית',18000,'x','fine','',''],
+['מסים על ההכנסה',32000,'x','tax','','']
 ];
 
 /* ---------- "which line?" game ---------- */
@@ -790,9 +881,9 @@ const BSITEMS=[
 ['הלוואה ל-5 שנים','nl','הפירעון מעבר לשנה: אשראי לזמן ארוך.'],
 ['הלוואה לזמן ארוך','nl','אשראי לזמן ארוך: התחייבות לא שוטפת.'],
 ['זכאים אחרים שישולמו בתוך חצי שנה','cl','פירעון בתוך שנה: התחייבות שוטפת.'],
-['הון מניות','eq','השקעת בעלים: הון עצמי.'],
-['פרמיה','eq','השקעת בעלים: הון עצמי.'],
-['עודפים','eq','רווחים שנצברו: הון עצמי.']
+['הון מניות','eq','השקעת בעלים (הון מניות ופרמיה) היא מקור מימון הוני: הון עצמי.'],
+['פרמיה','eq','פרמיה היא חלק מהשקעת הבעלים: מקור מימון הוני, הון עצמי.'],
+['עודפים','eq','רווחים שנצברו הם מקור מימון הוני: הון עצמי.']
 ];
 
 /* ---------- trap lab ---------- */
@@ -809,10 +900,10 @@ const TRAPS=[
 /* check types: num {l, a}; ch {l, o:[..], a:index}; each part: q (question text), checks, steps (solution walk) */
 const EXS=[
 {id:'2.1',page:12,title:'סיווג יתרות ועריכת דוחות כספיים מלאים',
- intro:'חברת ״מעדני הגליל״ בע״מ היא חברה מסחרית העוסקת בשיווק נקניקים ומעדנים, ואינה מחזיקה מלאי. נתונים: 30 יתרות (בשקף ״מיון יתרות״). נדרש: (א) למיין לנכסים, התחייבויות, הון, הכנסות והוצאות. (ב) לערוך דוח על המצב הכספי ל-31.12.2025 ודוח רווח והפסד לשנת 2025, כולל ביאורים להוצאות מכירה ושיווק והנהלה וכלליות, וחישוב ההון העצמי לתום השנה.',
- showAcc:true,
+ intro:'חברת ״מעדני הגליל״ בע״מ היא חברה מסחרית העוסקת בשיווק נקניקים ומעדנים, ואינה מחזיקה מלאי. נתונים: 30 יתרות (בטבלה מתחת). נדרש: (א) למיין לנכסים, התחייבויות, הון, הכנסות והוצאות. (ב) לערוך דוח על המצב הכספי ל-31.12.2025 ודוח רווח והפסד לשנת 2025, כולל ביאורים להוצאות מכירה ושיווק והנהלה וכלליות, וחישוב ההון העצמי לתום השנה.',
+ showAcc:true,note:'הערה: בחוברת, הכנסות והוצאות אחרות נכללות ברווח התפעולי (182,000). בסדר הקלאסי, שבו הן אחריו, הרווח התפעולי הוא 162,000. שני הסכומים מתקבלים. הרווח לפני מסים והרווח הנקי זהים.',
  parts:[
- {q:'ב. סכומי הדוחות',checks:[['רווח גולמי',400000],['הוצאות מכירה ושיווק (ביאור א)',105000],['הוצאות הנהלה וכלליות (ביאור ב)',133000],['הוצאות מימון',20000],['רווח תפעולי',182000],['רווח לפני מסים',172000],['רווח נקי',140000],['הון עצמי ליום 31.12.2025',1160000],['סך הנכסים',1535000]],
+ {q:'ב. סכומי הדוחות',checks:[['רווח גולמי',400000],['הוצאות מכירה ושיווק (ביאור א)',105000],['הוצאות הנהלה וכלליות (ביאור ב)',133000],['הוצאות מימון',20000],['רווח תפעולי',182000,162000],['רווח לפני מסים',172000],['רווח נקי',140000],['הון עצמי ליום 31.12.2025',1160000],['סך הנכסים',1535000]],
  steps:['מיון: נכסים 1,535,000, התחייבויות 375,000, הכנסות 1,030,000, הוצאות 890,000, הון עצמי פתיחה 1,020,000.','ביאור א: פרסום 25,000 + עמלות סוכנים 30,000 + שכר שיווק 50,000 = 105,000. ביאור ב: טלפון 8,000 + חשמל 20,000 + רכב 35,000 + שכר הנהלה 70,000 = 133,000.','רווח הון ממכירת רכוש קבוע הוא הכנסה אחרת (20,000), והכנסות הריבית הן הכנסות מימון (10,000). ריבית ועמלות בנק הן הוצאות מימון: 18,000 + 2,000 = 20,000.','גולמי 1,000,000 - 600,000 = 400,000. תפעולי 400,000 - 105,000 - 133,000 + 20,000 = 182,000. לפני מסים 182,000 - 20,000 + 10,000 = 172,000. נקי 172,000 - 32,000 = 140,000.','הון עצמי: 1,020,000 + 0 + 140,000 = 1,160,000.','מאזן: מזומן 50,000, לקוחות 75,000 (כולל שיקים לקבל), רכוש קבוע 1,340,000, פטנטים 70,000. התחייבויות והון: אשראי לזמן קצר 75,000, ספקים 80,000, זכאים 20,000, הלוואות לזמן ארוך 200,000, הון 1,160,000. סך 1,535,000 משני הצדדים.']}
  ]},
 {id:'2.2',page:13,title:'מאזן בתחילת השנה ובסופה',
@@ -823,9 +914,9 @@ const EXS=[
  {q:'ג. עם השקעת בעלים של 50,000',checks:[['הון עצמי',130000],['מזומן',430000]],steps:['הון עצמי: 0 + 50,000 + 80,000 = 130,000. מזומן: 300,000 + 80,000 + 50,000 = 430,000. הלוואות 300,000 + הון 130,000 = 430,000.']},
  {q:'ד. מדוע הנכסים שווים תמיד להתחייבויות ולהון?',ch:{l:'הנימוק הנכון',o:['הנכסים מייצגים היכן הכסף יושב, וההתחייבויות וההון מייצגים מאין הוא הגיע','הרווח השנתי תמיד שווה להון','כל הנכסים נרכשים במזומן'],a:0},steps:['נכסים הם השימושים (היכן הכסף יושב), והתחייבויות והון הם המקורות (מאין הוא הגיע). אותו כסף נספר פעם מכל כיוון, ולכן הם שווים.']}
  ]},
-{id:'2.3',page:13,title:'דוח רווח והפסד והון עצמי לסוף שנה',
+{id:'2.3',page:13,title:'דוח רווח והפסד והון עצמי לסוף שנה',note:'הערה: בחוברת, רווח ההון נכלל ברווח התפעולי (90,000). בסדר הקלאסי הרווח התפעולי הוא 70,000. שני הסכומים מתקבלים. הרווח לפני מסים והרווח הנקי זהים.',
  intro:'חברת ״נקניקי הדרום״ בע״מ, שנת 2025: מכירות 500,000, עלות המכירות 300,000, הוצאות מכירה ושיווק 60,000, הנהלה וכלליות 70,000, רווח הון ממכירת רכוש קבוע 20,000, הוצאות ריבית 10,000, הכנסות ריבית 4,000, מסים על ההכנסה 14,000. ההון העצמי ב-1.1.2025 היה 800,000, ובמהלך 2025 השקיעו הבעלים 100,000. נדרש: (א) דוח רווח והפסד עם סיכומי ביניים. (ב) ההון העצמי ל-31.12.2025.',
- parts:[{q:'סכומי הביניים וההון',checks:[['רווח גולמי',200000],['רווח תפעולי',90000],['רווח לפני מסים',84000],['רווח נקי',70000],['הון עצמי ל-31.12.2025',970000]],
+ parts:[{q:'סכומי הביניים וההון',checks:[['רווח גולמי',200000],['רווח תפעולי',90000,70000],['רווח לפני מסים',84000],['רווח נקי',70000],['הון עצמי ל-31.12.2025',970000]],
  steps:['גולמי: 500,000 - 300,000 = 200,000.','תפעולי: 200,000 - 60,000 - 70,000 + 20,000 = 90,000. רווח ההון הוא הכנסה אחרת ולכן מתווסף.','לפני מסים: 90,000 - 10,000 + 4,000 = 84,000. אחר כך מס: 84,000 - 14,000 = 70,000.','הון עצמי: 800,000 + 100,000 + 70,000 = 970,000. את הרווח מעתיקים מהשורה התחתונה של הדוח.']}]},
 {id:'2.4',page:13,title:'האם הוצאה היא מה ששולם?',
  intro:'חשבת חברת ״הנקניקייה של דני״ נבהלה כשהגיעו לידיה טיוטות הדוחות לשנת 2025. הוצאות ההנהלה והכלליות בטיוטה הן 300,000 ש״ח, ומתוכן 180,000 ש״ח הן הוצאות שכר (12 חודשים, 15,000 ש״ח בחודש). החשבת טוענת: ״משכורת דצמבר משולמת רק ב-10.1.2026, ולכן צריך להקטין את הוצאות השכר ל-165,000 כדי שישקפו את הסכומים ששולמו בפועל״. נדרש: האם הטענה נכונה? אם לא, נמקו. אילו ערכים כספיים יושפעו מהתיקון?',
@@ -865,11 +956,11 @@ const EXS=[
  {q:'ב. סכומי הסעיפים',checks:[['אשראי לזמן קצר',85000],['נכסים בלתי מוחשיים',155000],['הכנסות אחרות',60000],['הכנסות מימון',9000]],steps:['אשראי לזמן קצר: 64,000 + 21,000 = 85,000.','נכסים בלתי מוחשיים: 110,000 + 45,000 = 155,000.','הכנסות אחרות: 30,000 + 12,000 + 18,000 = 60,000.','הכנסות מימון: 9,000.']}
  ]},
 {id:'2.13',page:16,title:'הדוחות הכספיים של חברה מסחרית (בסגנון הבחינה)',
- intro:'חברת ״בשר הגולן״ בע״מ, העוסקת במכירת נקניקים. הערכים באלפי ש״ח וכולם מעודכנים ל-31.12.2025 אלא אם נרשם אחרת. הנתונים בשקף ״תרגיל במתכונת בחינה״. נתונים נוספים: (1) 20% מהזכאים האחרים צפויים להיות משולמים רק בעוד 3 שנים והיתרה בשנה הבאה. (2) השיקים לפירעון הם בעלי תאריך פירעון 1.3.2027. (3) 25% מהוצאות השכירות הם עבור החלק שמשרת את מחלקת השיווק והיתר עבור ההנהלה; החברה זוקפת את הוצאות יחסי הציבור לסעיף הוצאות מכירה ושיווק. נדרש: (א) יתרת העודפים ליום 1.1.2025 (לא הייתה השקעת בעלים נוספת בשנה). (ב) מאזן ל-31.12.2025 ודוח רווח והפסד לשנת 2025.',
- exam:true,
+ intro:'חברת ״בשר הגולן״ בע״מ, העוסקת במכירת נקניקים. הערכים באלפי ש״ח וכולם מעודכנים ל-31.12.2025 אלא אם נרשם אחרת. הנתונים בטבלה. נתונים נוספים: (1) 20% מהזכאים האחרים צפויים להיות משולמים רק בעוד 3 שנים והיתרה בשנה הבאה. (2) השיקים לפירעון הם בעלי תאריך פירעון 1.3.2027. (3) 25% מהוצאות השכירות הם עבור החלק שמשרת את מחלקת השיווק והיתר עבור ההנהלה; החברה זוקפת את הוצאות יחסי הציבור לסעיף הוצאות מכירה ושיווק. נדרש: (א) יתרת העודפים ליום 1.1.2025 (לא הייתה השקעת בעלים נוספת בשנה). (ב) מאזן ל-31.12.2025 ודוח רווח והפסד לשנת 2025.',
+ exam:true,note:'הערה: בחוברת, ההפסד ממכירת הציוד נכלל ברווח התפעולי (167). בסדר הקלאסי הרווח התפעולי הוא 185. שני הסכומים מתקבלים. הרווח לפני מסים והרווח הנקי זהים.',
  parts:[
  {q:'א. העודפים ל-1.1.2025',checks:[['נכסים',1180],['התחייבויות',450],['הון עצמי ל-31.12',730],['הרווח הנקי',135],['עודפים ל-1.1.2025',195]],steps:['נכסים: 100 + 300 - 20 + 40 + 500 - 140 + 600 - 200 = 1,180 (הלקוחות נטו מלח״מ, והציוד והמבנים נטו מפחת נצבר).','התחייבויות: 40 + 70 + 150 + 90 + 50 + 50 = 450. הון עצמי: 1,180 - 450 = 730.','רווח נקי: הכנסות 892 פחות הוצאות 757 = 135.','הון בסוף השנה = עודפים 1.1 + השקעת בעלים 400 + רווח 135. לכן עודפים 1.1: 730 - 400 - 135 = 195.']},
- {q:'ב1. דוח רווח והפסד',checks:[['מכירות נטו',880],['הוצאות מכירה ושיווק',75],['הוצאות הנהלה וכלליות',120],['הוצאות אחרות',18],['רווח תפעולי',167],['רווח לפני מסים',159],['רווח נקי',135]],steps:['מכירות נטו: 900 - 20 = 880. הוצאות מימון: 6 + 14 = 20. הכנסות מימון: 12.','שכירות שיווק: 25% × 80 = 20. שכירות הנהלה: 80 - 20 = 60.','מכירה ושיווק: 20 + 30 (עמלות סוכנים) + 25 (יחסי ציבור) = 75. הנהלה וכלליות: 60 + 60 (שכר הנהלה) = 120.','הפסד ההון ממכירת ציוד (18) הוא הוצאה אחרת.','תפעולי: 880 - 500 - 75 - 120 + 0 - 18 = 167. לפני מסים: 167 - 20 + 12 = 159. נקי: 159 - 24 = 135.']},
+ {q:'ב1. דוח רווח והפסד',checks:[['מכירות נטו',880],['הוצאות מכירה ושיווק',75],['הוצאות הנהלה וכלליות',120],['הוצאות אחרות',18],['רווח תפעולי',167,185],['רווח לפני מסים',159],['רווח נקי',135]],steps:['מכירות נטו: 900 - 20 = 880. הוצאות מימון: 6 + 14 = 20. הכנסות מימון: 12.','שכירות שיווק: 25% × 80 = 20. שכירות הנהלה: 80 - 20 = 60.','מכירה ושיווק: 20 + 30 (עמלות סוכנים) + 25 (יחסי ציבור) = 75. הנהלה וכלליות: 60 + 60 (שכר הנהלה) = 120.','הפסד ההון ממכירת ציוד (18) הוא הוצאה אחרת.','תפעולי: 880 - 500 - 75 - 120 + 0 - 18 = 167. לפני מסים: 167 - 20 + 12 = 159. נקי: 159 - 24 = 135.']},
  {q:'ב2. המאזן',checks:[['לקוחות',320],['סך הנכסים השוטפים',420],['פס ייצור נטו',360],['מבנים נטו',400],['סך הנכסים הלא שוטפים',760],['אשראי לזמן קצר',110],['זכאים שוטפים',40],['סך ההתחייבויות השוטפות',240],['סך ההתחייבויות הלא שוטפות',210],['עודפים ל-31.12',330],['סך ההון העצמי',730]],steps:['לקוחות: 300 + 40 - 20 = 320. מזומן 100. סך הנכסים השוטפים: 420.','פס ייצור נטו: 500 - 140 = 360. מבנים נטו: 600 - 200 = 400. סך הנכסים הלא שוטפים: 760. סך הנכסים: 1,180.','זכאים אחרים: 20% × 50 = 10 לא שוטפים (בעוד 3 שנים), והיתרה, 40, שוטפת.','אשראי לזמן קצר: 40 + 70 = 110. ספקים: 90 (השיקים לפירעון עד 1.3.2027 הם לא שוטפים ואינם מצטרפים).','התחייבויות שוטפות: 110 + 90 + 40 = 240. לא שוטפות: הלוואות 150 + שיקים לפירעון 50 + זכאים 10 = 210.','עודפים ל-31.12: 195 + 135 = 330. הון עצמי: 400 + 330 = 730. סך: 240 + 210 + 730 = 1,180.']}
  ]}
 ];
@@ -879,7 +970,7 @@ const EXS=[
 const QS=[
 {id:1,page:16,topic:'מכירות',q:'חברה מדווחת על מכירות ברוטו בסך 640,000 ש״ח, החזרות מלקוחות בסך 45,000 ש״ח והנחות מסחריות ללקוחות בסך 25,000 ש״ח. מהן המכירות נטו שיוצגו ברווח והפסד?',o:['525,000 ש״ח','570,000 ש״ח','595,000 ש״ח','615,000 ש״ח','640,000 ש״ח'],a:1,r:'מכירות נטו הן ברוטו בניכוי החזרות והנחות מסחריות, כל אחת פעם אחת: 640,000 - 45,000 - 25,000 = 570,000.',why:['ניכה את ההחזרות פעמיים.',null,'שכח את ההנחות המסחריות.','שכח את ההחזרות.','הציג את הברוטו בלי ניכויים.']},
 {id:2,page:17,topic:'סיווג',q:'איזו מההוצאות הבאות תוצג בסעיף הוצאות מכירה ושיווק?',o:['עמלות בנק','ארנונה של משרדי ההנהלה','שכר המנכ״ל','הוצאות ריבית','עמלות לסוכני מכירות'],a:4,r:'הוצאות מכירה ושיווק הן העלויות הקשורות לפרסום המוצר, להפצתו ולשיווקו, כולל עמלות לסוכני מכירות.',why:['עמלות בנק הן הוצאות מימון.','ארנונה של משרדי ההנהלה היא הנהלה וכלליות.','שכר המנכ״ל הוא הנהלה וכלליות.','ריבית היא הוצאת מימון.',null]},
-{id:3,page:17,topic:'סכומי ביניים',q:'בחברה ידועים: רווח גולמי 300,000 ש״ח, הוצאות מכירה ושיווק 80,000 ש״ח, הוצאות הנהלה וכלליות 120,000 ש״ח, הכנסות אחרות 25,000 ש״ח, הוצאות מימון 15,000 ש״ח והכנסות מימון 5,000 ש״ח. מהו הרווח התפעולי?',o:['75,000 ש״ח','100,000 ש״ח','115,000 ש״ח','125,000 ש״ח','140,000 ש״ח'],a:3,r:'הרווח התפעולי כולל הוצאות מכירה ושיווק, הנהלה וכלליות והכנסות והוצאות אחרות. המימון בא אחריו: 300,000 - 80,000 - 120,000 + 25,000 = 125,000.',why:['ניכה את ההכנסות האחרות במקום להוסיף אותן.','שכח את ההכנסות האחרות.','כלל גם את סעיפי המימון, שאינם חלק מהרווח התפעולי.',null,'הוסיף את הוצאות המימון.']},
+{id:3,page:17,topic:'סכומי ביניים',note:'שימו לב: בחוברת, הכנסות אחרות כלולות ברווח התפעולי, ולכן תשובה ד היא הנכונה. בגישה הקלאסית, שבה הן מופיעות אחרי הרווח התפעולי, הרווח התפעולי היה 100,000 (תשובה ב).',q:'בחברה ידועים: רווח גולמי 300,000 ש״ח, הוצאות מכירה ושיווק 80,000 ש״ח, הוצאות הנהלה וכלליות 120,000 ש״ח, הכנסות אחרות 25,000 ש״ח, הוצאות מימון 15,000 ש״ח והכנסות מימון 5,000 ש״ח. מהו הרווח התפעולי?',o:['75,000 ש״ח','100,000 ש״ח','115,000 ש״ח','125,000 ש״ח','140,000 ש״ח'],a:3,r:'הרווח התפעולי כולל הוצאות מכירה ושיווק, הנהלה וכלליות והכנסות והוצאות אחרות. המימון בא אחריו: 300,000 - 80,000 - 120,000 + 25,000 = 125,000.',why:['ניכה את ההכנסות האחרות במקום להוסיף אותן.','בחוברת, הכנסות אחרות כלולות ברווח התפעולי, ולכן זו תשובה שגויה. בגישה הקלאסית זהו הרווח התפעולי.','כלל גם את סעיפי המימון, שאינם חלק מהרווח התפעולי.',null,'הוסיף את הוצאות המימון.']},
 {id:4,page:17,topic:'סכומי ביניים',q:'בחברה ידועים: רווח תפעולי 140,000 ש״ח, הוצאות מימון 20,000 ש״ח, הכנסות מימון 10,000 ש״ח ומסים על ההכנסה 30,000 ש״ח. מהו הרווח הנקי?',o:['80,000 ש״ח','90,000 ש״ח','100,000 ש״ח','120,000 ש״ח','130,000 ש״ח'],a:2,r:'מנכים הוצאות מימון, מוסיפים הכנסות מימון ומנכים מסים: 140,000 - 20,000 + 10,000 - 30,000 = 100,000.',why:['הפך את הסימן של הכנסות המימון.','שכח את הכנסות המימון.',null,'שכח את הוצאות המימון.','שכח את המסים.']},
 {id:5,page:17,topic:'סיווג',q:'בחברה ההוצאות הבאות: טלפון 12,000 ש״ח, חשמל 30,000 ש״ח, פרסום 25,000 ש״ח, עמלות סוכני מכירות 15,000 ש״ח, שכר הנהלה 60,000 ש״ח והוצאות ריבית 10,000 ש״ח. מהן הוצאות ההנהלה והכלליות?',o:['102,000 ש״ח','112,000 ש״ח','117,000 ש״ח','127,000 ש״ח','152,000 ש״ח'],a:0,r:'מסננים לפי תחום: טלפון, חשמל ושכר הנהלה הם הנהלה וכלליות. פרסום ועמלות סוכנים הם מכירה ושיווק, וריבית היא מימון: 12,000 + 30,000 + 60,000 = 102,000.',why:[null,'הוסיף את הריבית, שהיא מימון.','הוסיף את עמלות הסוכנים, שהן מכירה ושיווק.','הוסיף את הפרסום, שהוא מכירה ושיווק.','סיכם את כל ההוצאות ברשימה.']},
 {id:6,page:18,topic:'סיווג',q:'איזה מהפריטים הבאים יוצג בסעיף הכנסות אחרות?',o:['מכירות מוצרים','הכנסות ריבית','הנחת מזומן שהתקבלה מספק','רווח הון ממכירת רכב המנכ״ל','הנחה מסחרית שניתנה ללקוח'],a:3,r:'הכנסות אחרות הן פריטים חריגים שאינם ליבת העיסוק. רווח הון ממכירת רכוש קבוע הוא דוגמה לכך.',why:['מכירות מוצרים הן ליבת העיסוק ומוצגות בשורת המכירות.','הכנסות ריבית הן הכנסות מימון.','הנחת מזומן מספק היא הכנסת מימון.',null,'הנחה מסחרית ללקוח מקטינה את המכירות, והיא אינה הכנסה.']},
@@ -912,19 +1003,92 @@ const ACC213=[['מזומן',100],['לקוחות, ברוטו',300],['הפרשה �
 
 /* ---------- teaching example company (not from the booklet) ---------- */
 const ACC_X=[
-['קופה',15000,'a'],['עו״ש בנק',25000,'a'],['לקוחות',45000,'a'],['שיקים לקבל',5000,'a'],['מכונות',300000,'a'],['כלי רכב',120000,'a'],['פטנט',40000,'a'],
-['הלוואות לזמן קצר',30000,'l'],['משיכת יתר',10000,'l'],['ספקים',50000,'l'],['שיקים לפירעון',5000,'l'],['זכאים אחרים',15000,'l'],['הלוואות לזמן ארוך',100000,'l'],
-['הון עצמי ליום 1.1.2025',225000,'e'],
-['מכירות',700000,'i','sales'],['הכנסות ריבית',6000,'i','fini'],['רווח הון ממכירת ציוד',14000,'i','othi'],
-['עלות המכירות',420000,'x','cos'],['הוצאות פרסום',20000,'x','sell'],['עמלות סוכני מכירות',15000,'x','sell'],['שכר עובדי שיווק',30000,'x','sell'],
-['הוצאות חשמל',12000,'x','ga'],['הוצאות טלפון',6000,'x','ga'],['שכר הנהלה',60000,'x','ga'],['הוצאות רכב',12000,'x','ga'],
-['הוצאות ריבית',8000,'x','fine'],['עמלות בנק',2000,'x','fine'],['מסים על ההכנסה',20000,'x','tax']
+['קופה',15000,'a','','ca','cash'],
+['עו״ש בנק',25000,'a','','ca','cash'],
+['לקוחות',45000,'a','','ca','cust'],
+['שיקים לקבל',5000,'a','','ca','cust'],
+['מכונות',300000,'a','','na','ppe'],
+['כלי רכב',120000,'a','','na','ppe'],
+['פטנט',40000,'a','','na','intang'],
+['הלוואות לזמן קצר',30000,'l','','cl','stcredit'],
+['משיכת יתר',10000,'l','','cl','stcredit'],
+['ספקים',50000,'l','','cl','supp'],
+['שיקים לפירעון',5000,'l','','cl','supp'],
+['זכאים אחרים',15000,'l','','cl','cred'],
+['הלוואות לזמן ארוך',100000,'l','','nl','ltcredit'],
+['הון עצמי ליום 1.1.2025',225000,'e','','','equity'],
+['מכירות',700000,'i','sales','',''],
+['הכנסות ריבית',6000,'i','fini','',''],
+['רווח הון ממכירת ציוד',14000,'i','othi','',''],
+['עלות המכירות',420000,'x','cos','',''],
+['הוצאות פרסום',20000,'x','sell','',''],
+['עמלות סוכני מכירות',15000,'x','sell','',''],
+['שכר עובדי שיווק',30000,'x','sell','',''],
+['הוצאות חשמל',12000,'x','ga','',''],
+['הוצאות טלפון',6000,'x','ga','',''],
+['שכר הנהלה',60000,'x','ga','',''],
+['הוצאות רכב',12000,'x','ga','',''],
+['הוצאות ריבית',8000,'x','fine','',''],
+['עמלות בנק',2000,'x','fine','',''],
+['מסים על ההכנסה',20000,'x','tax','','']
 ];
 const DSETS={x:{n:'דוגמה לתרגול: מעדני השרון',acc:ACC_X,co:'חברת מעדני השרון (דוגמה לתרגול)'},a21:{n:'תרגיל 2.1: מעדני הגליל',acc:ACC21,co:'חברת מעדני הגליל (תרגיל 2.1)'}};
 
-/* ===== lesson 2 engine and modules ===== */
+/* ---------- step-by-step sorter: reasons ---------- */
+const BLN={cash:'מזומן',cust:'לקוחות',ppe:'רכוש קבוע',intang:'נכסים בלתי מוחשיים',stcredit:'אשראי לזמן קצר',supp:'ספקים',cred:'זכאים אחרים',ltcredit:'אשראי לזמן ארוך',equity:'הון עצמי'};
+const TERMN={ca:'נכס שוטף',na:'נכס לא שוטף',cl:'התחייבות שוטפת',nl:'התחייבות לא שוטפת'};
+const CATHINT={a:'נכס הוא משהו שיש לחברה, או שחייבים לה, וצפויה ממנו הטבה.',l:'התחייבות היא חוב של החברה, שהיא תצטרך לשלם.',e:'הון עצמי הוא מימון שמקורו בבעלים או ברווחים שנצברו.',i:'הכנסה היא שווי מכירה או שירות שניתן בשנה.',x:'הוצאה היא שווי שירות או משאב שנצרך בשנה.'};
+const WHY_BL={cash:'מזומן, והוא נכס שוטף. מצטרף לסעיף המזומן.',cust:'חוב של לקוחות שיגבה בתוך שנה: נכס שוטף. מצטרף לסעיף הלקוחות.',ppe:'פריט רכוש שמשרת את החברה שנים רבות: רכוש קבוע, נכס לא שוטף.',intang:'נכס בלתי מוחשי, כלומר אינו פיזי: נכס לא שוטף.',stcredit:'אשראי שיוחזר בתוך שנה: התחייבות שוטפת, בסעיף אשראי לזמן קצר.',supp:'חוב לספקים שישולם בתוך שנה: התחייבות שוטפת, בסעיף ספקים.',cred:'חוב לגורם שאינו ספק, לתשלום בתוך שנה: התחייבות שוטפת.',ltcredit:'הפירעון מעבר לשנה: התחייבות לא שוטפת, בסעיף אשראי לזמן ארוך.',equity:'יתרת הפתיחה של ההון העצמי. אין צורך לסווג אותה לשוטף או לא שוטף.'};
+const WHY_SEC={sales:'מכירת המוצרים העיקריים של החברה: שורת המכירות.',cos:'עלות המוצרים שנמכרו: שורת עלות המכירות.',sell:'קשור לפרסום, להפצה או לשיווק המוצר: הוצאות מכירה ושיווק.',ga:'הוצאה כללית שאין לה שיוך ספציפי: הנהלה וכלליות.',othi:'פריט חריג שאינו ליבת העיסוק: הכנסות אחרות.',othe:'פריט חריג שאינו ליבת העיסוק: הוצאות אחרות.',fine:'עלות מימון: הוצאות מימון.',fini:'הכנסה ממימון: הכנסות מימון.',tax:'מס על הרווח: שורה נפרדת בסוף הדוח.'};
+const WHY_NAME={'שיקים לקבל':'שיק דחוי שקיבלנו הוא חוב של לקוח כלפינו: נכס שוטף שמצטרף ללקוחות.','שיקים לפירעון':'שיק דחוי שנתנו הוא חוב שלנו: מצטרף לספקים כשהפירעון בתוך שנה.','ריהוט משרד המנכ״ל':'ריהוט משרדי הוא רכוש קבוע, גם אם הוא במשרד המנכ״ל: נכס לא שוטף.','עמלות בנק':'שירותי בנק הם עלות מימון, ולא הוצאות הנהלה.','הוצאות ריבית':'ריבית היא עלות מימון.','הכנסות ריבית':'ריבית שהתקבלה היא הכנסת מימון.','הוצאות רכב':'הוצאה כללית של החברה: הנהלה וכלליות.','עמלות סוכני מכירות':'עמלה על מכירות: הוצאות מכירה ושיווק.','רווח הון ממכירת ציוד':'רווח חד פעמי מפריט רכוש קבוע, לא ליבת העיסוק: הכנסה אחרת.','רווח הון ממכירת רכוש קבוע':'רווח חד פעמי מפריט רכוש קבוע, לא ליבת העיסוק: הכנסה אחרת.','מסים על ההכנסה':'מס על הרווח: שורה נפרדת בסוף הדוח, אחרי הרווח לפני מסים.'};
+function whyOf(it){return WHY_NAME[it[0]]||(it[5]?WHY_BL[it[5]]:WHY_SEC[it[3]]);}
+
+const EQ_NOTE='הון עצמי הוא מקור מימון, ולא נכס. הוא מספר מאיפה הגיע הכסף, ולא מה עשינו איתו. לכן הון עצמי מבחינתנו כרגע כולל השקעת בעלים (הון מניות ופרמיה) ורווחים שנצברו (עודפים).';
+WHY_BL.equity='יתרת הפתיחה של ההון העצמי. '+EQ_NOTE;
+
+/* ---------- pipeline datasets: object format ---------- */
+const toItem=r=>({n:r[0],a:r[1],c:r[2],s:r[3]||'',t:r[4]||'',b:r[5]||''});
+const E213=[
+{n:'מזומן',a:100,c:'a',t:'ca',b:'cash'},
+{n:'לקוחות, ברוטו',a:300,c:'a',t:'ca',b:'cust'},
+{n:'הפרשה לחובות מסופקים',a:20,c:'a',t:'ca',b:'cust',neg:true},
+{n:'שיקים לגביה',a:40,c:'a',t:'ca',b:'cust'},
+{n:'פס ייצור',a:500,c:'a',t:'na',b:'ppem'},
+{n:'פחת נצבר פס ייצור',a:140,c:'a',t:'na',b:'ppem',neg:true},
+{n:'מבנים',a:600,c:'a',t:'na',b:'ppeb'},
+{n:'פחת נצבר מבנים',a:200,c:'a',t:'na',b:'ppeb',neg:true},
+{n:'משיכת יתר',a:40,c:'l',t:'cl',b:'stcredit'},
+{n:'הלוואות לזמן קצר',a:70,c:'l',t:'cl',b:'stcredit'},
+{n:'הלוואות לזמן ארוך',a:150,c:'l',t:'nl',b:'ltcredit'},
+{n:'ספקים',a:90,c:'l',t:'cl',b:'supp'},
+{n:'זכאים אחרים (הערה 1)',a:50,c:'l',parts:[{b:'cred',t:'cl',p:0.8},{b:'credlt',t:'nl',p:0.2}]},
+{n:'שיקים לפירעון (הערה 2)',a:50,c:'l',t:'nl',b:'checkslt'},
+{n:'מכירות, ברוטו',a:900,c:'i',s:'sales'},
+{n:'החזרות מלקוחות',a:20,c:'i',s:'sales',neg:true},
+{n:'עלות המכירות',a:500,c:'x',s:'cos'},
+{n:'עמלות סוכני מכירות',a:30,c:'x',s:'sell'},
+{n:'הוצאות יחסי ציבור',a:25,c:'x',s:'sell'},
+{n:'הוצאות שכירות (הערה 3)',a:80,c:'x',parts:[{s:'sell',p:0.25},{s:'ga',p:0.75}]},
+{n:'שכר הנהלה',a:60,c:'x',s:'ga'},
+{n:'הפסד הון ממכירת ציוד',a:18,c:'x',s:'othe'},
+{n:'עמלות בנק',a:6,c:'x',s:'fine'},
+{n:'הוצאות ריבית',a:14,c:'x',s:'fine'},
+{n:'הכנסות ריבית',a:12,c:'i',s:'fini'},
+{n:'מסים על ההכנסה',a:24,c:'x',s:'tax'},
+{n:'השקעת בעלים',a:400,c:'e',b:'owners'}
+];
+const DS3={
+ x:{n:'דוגמה לתרגול: מעדני השרון',co:'חברת מעדני השרון (דוגמה לתרגול)',items:ACC_X.map(toItem),eq:'open',unit:'ש״ח'},
+ a21:{n:'תרגיל 2.1',co:'חברת מעדני הגליל (תרגיל 2.1)',items:ACC21.map(toItem),eq:'open',unit:'ש״ח'},
+ e213:{n:'תרגיל 2.13',co:'חברת בשר הגולן (תרגיל 2.13, באלפי ש״ח)',items:E213,eq:'extract',unit:'אלפי ש״ח'}
+};
+const BLDEF=[['cash','מזומן','ca'],['cust','לקוחות','ca'],['ppe','רכוש קבוע','na'],['ppem','פס ייצור (נטו)','na'],['ppeb','מבנים (נטו)','na'],['intang','נכסים בלתי מוחשיים','na'],['stcredit','אשראי לזמן קצר','cl'],['supp','ספקים','cl'],['cred','זכאים אחרים','cl'],['ltcredit','אשראי לזמן ארוך','nl'],['checkslt','שיקים לפירעון','nl'],['credlt','זכאים אחרים (לא שוטף)','nl']];
+Object.assign(WHY_NAME,{'הפרשה לחובות מסופקים':'החלק מחוב הלקוחות שגבייתו מוטלת בספק. מנכים אותו מהלקוחות: נכס שוטף מנכה.','שיקים לגביה':'שיק דחוי שקיבלנו הוא חוב של לקוח: נכס שוטף שמצטרף ללקוחות.','פחת נצבר פס ייצור':'שחיקה שהצטברה בפס הייצור. מנכים אותה מהרכוש הקבוע: נכס לא שוטף מנכה.','פחת נצבר מבנים':'שחיקה שהצטברה במבנים. מנכים אותה מהרכוש הקבוע: נכס לא שוטף מנכה.','החזרות מלקוחות':'מוצרים שהוחזרו: מנכים אותם מהמכירות.','הוצאות שכירות (הערה 3)':'מתחלקת לפי הערה 3: 25% למכירה ושיווק, ו-75% להנהלה וכלליות.','זכאים אחרים (הערה 1)':'לפי הערה 1: 80% ישולמו בשנה הבאה (שוטף), ו-20% בעוד 3 שנים (לא שוטף).','שיקים לפירעון (הערה 2)':'פירעון ב-1.3.2027, מעבר לשנה מ-31.12.2025: התחייבות לא שוטפת, ואינה מצטרפת לספקים.','הוצאות יחסי ציבור':'לפי ההערה, יחסי ציבור נזקפים למכירה ושיווק.','השקעת בעלים':'השקעת בעלים (הון מניות ופרמיה). '+EQ_NOTE,'הפסד הון ממכירת ציוד':'הפסד חריג מפריט רכוש קבוע, לא ליבת העיסוק: הוצאה אחרת.','מכירות, ברוטו':'מכירת המוצרים העיקריים: שורת המכירות, לפני ניכוי החזרות.','פס ייצור':'ציוד שמשרת את החברה שנים: רכוש קבוע, נכס לא שוטף.','מבנים':'מבנים משרתים שנים רבות: רכוש קבוע, נכס לא שוטף.','הלוואות לזמן ארוך':'הפירעון מעבר לשנה: התחייבות לא שוטפת.'});
+
+/* ===== lesson 2 engine and modules (v3) ===== */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const fmt=n=>(n<0?'-':'')+Math.abs(n).toLocaleString('en-US');
+const fmt=n=>{n=Math.round(n*100)/100;return (n<0?'-':'')+Math.abs(n).toLocaleString('en-US');};
+const fmtp=n=>n<0?'('+fmt(-n)+')':fmt(n);
 const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const parseN=s=>{s=String(s).replace(/[,\s]/g,'').replace(/[−–]/g,'-');return /^-?\d+(\.\d+)?$/.test(s)?+s:NaN;};
 function store(k,v){try{if(v===undefined){return JSON.parse(localStorage.getItem('l2-'+k)||'null');}localStorage.setItem('l2-'+k,JSON.stringify(v));}catch(e){return null;}}
@@ -965,7 +1129,6 @@ $('#bFull').onclick=()=>{if(!document.fullscreenElement)document.documentElement
 function typing(e){const t=e.target; return t&&(t.tagName==='INPUT'&&t.type!=='range'||t.tagName==='SELECT'||t.tagName==='TEXTAREA');}
 document.addEventListener('keydown',e=>{
  if(typing(e))return;
- if(e.target.tagName==='INPUT'&&e.target.type==='range'&&(e.key.startsWith('Arrow')))return;
  if(e.key==='ArrowLeft'||e.key==='PageDown'||e.key===' '||e.key==='Enter'){if(e.target.tagName==='BUTTON'&&e.key!=='ArrowLeft'&&e.key!=='PageDown')return;e.preventDefault();next();}
  else if(e.key==='ArrowRight'||e.key==='PageUp'){e.preventDefault();prev();}
  else if(e.key==='Escape'){closeOverlays();}
@@ -980,7 +1143,7 @@ function confetti(n=26){const em=['🌭','⭐','🎉','💚','🧡'];for(let i=0
 document.addEventListener('click',e=>{
   if(e.target.closest('a[href="#"]'))e.preventDefault();
   const t=e.target.closest('[data-t]'); if(t&&t.dataset.t&&G[t.dataset.t]){e.stopPropagation();openTerm(t.dataset.t);return;}
-  const dsb=e.target.closest('[data-ds]'); if(dsb){dsSort=dsb.dataset.ds;dsPlb=dsb.dataset.ds;renderSort();renderPlb();$$('#dsseg-sort button').forEach(b=>b.classList.toggle('on',b.dataset.k===dsSort));$$('#dsseg-plb button').forEach(b=>b.classList.toggle('on',b.dataset.k===dsPlb));}
+  const dsb=e.target.closest('[data-ds]'); if(dsb){setDS(dsb.dataset.ds);}
   const g=e.target.closest('[data-go]'); if(g){go(g.dataset.go);return;}
   const x=e.target.closest('[data-ex]'); if(x){openEx(x.dataset.ex);return;}
   const q=e.target.closest('[data-q]'); if(q){openQ(+q.dataset.q);return;}
@@ -992,7 +1155,7 @@ const RC=[['חמש אבני בניין','נכסים, התחייבויות, הו�
 $('#recap').innerHTML=RC.map(r=>`<a class="rc" href="../lecture-1/presentation.html#${r[2]}" target="_blank" rel="noopener"><b>${r[0]}</b><span>${r[1]}</span><em>לשקף בשיעור 1 ←</em></a>`).join('');
 const MQ=[['חברה סיפקה שירות בשווי 70,000 ש״ח וטרם גבתה. מה נרשם?',['הכנסה של 70,000 ונכס לקוחות','הכנסה רק בעת הגבייה','התחייבות של 70,000'],0,'הכנסה נרשמת לפי השירות שניתן, והחוב של הלקוח הוא נכס לקוחות.'],
  ['מכונה שמשרתת את החברה שנים רבות היא:',['נכס','הוצאה','התחייבות'],0,'פריטים שמשרתים את החברה תקופה ממושכת הם נכסים.'],
- ['הון עצמי שווה:',['נכסים פחות התחייבויות','נכסים ועוד התחייבויות','המזומן שבקופה'],0,'ההון העצמי הוא ההפרש בין הנכסים להתחייבויות.'],
+ ['הון עצמי שווה:',['נכסים פחות התחייבויות','נכסים ועוד התחייבויות','המזומן שבקופה'],0,'ההון העצמי הוא ההפרש בין הנכסים להתחייבויות. הוא מקור מימון ולא נכס.'],
  ['שכר שנצרך בדצמבר ושולם בינואר הוא:',['הוצאה של השנה שבה נצרך השירות','הוצאה של השנה שבה שולם','אינו הוצאה'],0,'הוצאה היא שווי השירות שנצרך, בלי תלות בעיתוי התשלום.'],
  ['העברה מעו״ש לפקדון בנקאי:',['אינה הוצאה: המרה של נכס בנכס','היא הוצאה שמקטינה את הרווח','יוצרת התחייבות'],0,'הפקדה אינה צריכה משאב, ולכן אינה הוצאה.']];
 (function(){let i=0,sc=0,ans=false;
@@ -1004,150 +1167,227 @@ const MQ=[['חברה סיפקה שירות בשווי 70,000 ש״ח וטרם ג�
  draw();})();
 
 /* ---------- slide 3: route ---------- */
-const RT=[['1','מיון יתרות','הצעד הראשון בכל תרגיל: כל כרטיס לקטגוריה.','s-sort'],['2','בניית רווח והפסד','מכירות נטו, סעיפים וסכומי ביניים.','s-plb'],['3','המאזן','שוטף ולא שוטף, איחוד כרטיסים, פחת נצבר.','s-bsort'],['4','הון עצמי','הרווח עובר להון, וחילוץ עודפי פתיחה.','s-equity'],['5','מלכודות','הוצאה אינה תשלום, פקדון, הלוואה.','s-traps'],['6','במתכונת הבחינה','תרגיל מלא בשישה צעדים, ואחריו בנקי התרגילים.','s-exam']];
+const RT=[['1','מבנה הדוח והגדרות','הסעיפים לפי הסדר, מכירות נטו והנחות.','s-struct'],['2','משחק סיווג לסעיפי הדוח','לאיזה סעיף שייך כל פריט.','s-lines'],['3','המאזן והגדרותיו','שוטף ולא שוטף, איחוד כרטיסים, משחק סיווג.','s-bsdef'],['4','מיון ובניית הדוחות','פריט אחר פריט, ואז כל דוח לאט לאט.','s-sort'],['5','מלכודות','הוצאה אינה תשלום, פקדון, הלוואה.','s-traps'],['6','בנק תרגילים ושאלות','כל תרגילי החוברת וכל השאלות האמריקאיות.','s-ex']];
 $('#routegrid').innerHTML=RT.map(r=>`<button class="rcard" data-go="${r[3]}"><div class="n">${r[0]}</div><b>${r[1]}</b><span>${r[2]}</span></button>`).join('');
 
-/* ---------- slides 4 and 5: datasets (practice example, or booklet exercise 2.1) ---------- */
-let dsSort='x',dsPlb='x';
-const CT=[['a','נכס'],['l','התחייבות'],['e','הון'],['i','הכנסה'],['x','הוצאה']];
-const CTN={a:'נכסים',l:'התחייבויות',e:'הון עצמי',i:'הכנסות',x:'הוצאות'};
-function dsSeg(id,get,set){const el=$('#'+id);el.innerHTML=Object.keys(DSETS).map(k=>`<button data-k="${k}">${DSETS[k].n}</button>`).join('');
- const mark=()=>$$('button',el).forEach(b=>b.classList.toggle('on',b.dataset.k===get()));mark();el.onclick=e=>{const b=e.target.closest('button');if(!b)return;set(b.dataset.k);mark();};return mark;}
-const sel={};
-function renderSort(){const acc=DSETS[dsSort].acc,box=$('#cl30');Object.keys(sel).forEach(k=>delete sel[k]);
- box.innerHTML=acc.map((g,k)=>`<div class="r" data-k="${k}"><span>${g[0]}</span><span class="a">${fmt(g[1])}</span><span class="c">${CT.map(c=>`<button data-c="${c[0]}">${c[1]}</button>`).join('')}</span></div>`).join('');
- $('#cl30-sc').textContent='';$('#cl30-sum').className='cl4sum';$('#cl30-co').textContent=DSETS[dsSort].co;}
-(function(){const box=$('#cl30');
- box.onclick=ev=>{const b=ev.target.closest('button');if(!b)return;const r=b.closest('.r');const k=+r.dataset.k;sel[k]=b.dataset.c;$$('button',r).forEach(x=>x.classList.toggle('on',x===b));r.classList.remove('ok','bad');$$('button',r).forEach(x=>x.classList.remove('right'));};
- $('#cl30-chk').onclick=()=>{const acc=DSETS[dsSort].acc;let ok=0;$$('.r',box).forEach(r=>{const k=+r.dataset.k;const good=sel[k]===acc[k][2];r.classList.remove('ok','bad');r.classList.add(good?'ok':'bad');if(good)ok++;else $$('button',r).find(x=>x.dataset.c===acc[k][2]).classList.add('right');});
-  $('#cl30-sc').textContent=`${ok} מתוך ${acc.length} נכונים`;
-  const s={};acc.forEach(g=>s[g[2]]=(s[g[2]]||0)+g[1]);const p=s.i-s.x;
-  const sm=$('#cl30-sum');sm.className='cl4sum show';sm.innerHTML=['a','l','e','i','x'].map(c=>`<span>${CTN[c]}: <b class="num">${fmt(s[c])}</b></span>`).join('')+`<span>רווח נקי: <b class="num">${fmt(p)}</b></span><span>בדיקה: <b class="num">${fmt(s.a)} = ${fmt(s.l)} + ${fmt(s.e)} + ${fmt(p)}</b></span>`;
-  if(ok===acc.length){confetti();toast('כל המיון נכון!');}};
- $('#cl30-rst').onclick=()=>renderSort();
- dsSeg('dsseg-sort',()=>dsSort,k=>{dsSort=k;renderSort();});renderSort();})();
+/* ---------- slide 4: flow ---------- */
+(function(){const FT=[
+ `<b>אירוע.</b> קורה משהו בעסק שיש לו ערך בכסף: מכירה, קנייה, תשלום משכורת.`,
+ `<b>רישום.</b> מתחילים ממסמכים חשבונאיים, ורושמים מה שקרה בפועל.`,
+ `<b>מיון.</b> הסכומים נאספים לכרטיסי חשבון. <b>בשיעור 1</b> מיינו כל כרטיס לאחת מחמש קבוצות. <b>היום</b> ממשיכים לרמה השנייה: איזה סעיף בדוח.`,
+ `<b>דוחות.</b> הכרטיסים מתרכזים לסעיפים, והסעיפים הם השורות בדוח רווח והפסד ובמאזן. הדוחות מתחברים דרך ההון העצמי: הרווח של השנה מצטרף אליו.`,
+ `<b>החלטות.</b> משקיעים, בנקים והנהלה קוראים את הדוחות ומחליטים. בשביל זה כל השרשרת קיימת.`];
+ let k=0,timer=null;const set=i=>{k=i;$$('#fpipe .pstage').forEach((s,j)=>s.classList.toggle('on',j===i));$('#fline').style.width=(i/4*100)+'%';$('#fbox').innerHTML=FT[i];};
+ $$('#fpipe .pstage').forEach((s,i)=>s.onclick=()=>{clearInterval(timer);set(i);});
+ hooks['s-flow']=()=>{clearInterval(timer);set(0);timer=setInterval(()=>{if(slides[cur].id!=='s-flow'){clearInterval(timer);return;}set((k+1)%5);},4200);};
+ set(2);})();
 
-/* ---------- slide 5: P&L ladder ---------- */
-const sumS=(acc,sec)=>acc.filter(a=>a[3]===sec).reduce((s,a)=>s+a[1],0);
-let PLR=[];
-function plrBuild(){const acc=DSETS[dsPlb].acc;const V={};['sales','cos','sell','ga','othi','fine','fini','tax'].forEach(k=>V[k]=sumS(acc,k));
- V.gp=V.sales-V.cos;V.op=V.gp-V.sell-V.ga+V.othi;V.pbt=V.op-V.fine+V.fini;V.net=V.pbt-V.tax;
- PLR=[['מכירות','+',V.sales,'l',''],['עלות המכירות','(-)',V.cos,'l',''],['רווח גולמי','=',V.gp,'sub','מכירות פחות עלות המכירות'],['הוצאות מכירה ושיווק','(-)',V.sell,'l','סכום ביאור א: פרסום, עמלות סוכנים, שכר שיווק ודומיהם'],['הוצאות הנהלה וכלליות','(-)',V.ga,'l','סכום ביאור ב: טלפון, חשמל, רכב, שכר הנהלה ודומיהם'],['הכנסות אחרות','+',V.othi,'l','רווח ההון ממכירת רכוש קבוע'],['רווח תפעולי','=',V.op,'sub','גולמי, פחות מכירה ושיווק, פחות הנהלה וכלליות, ועוד הכנסות אחרות'],['הוצאות מימון','(-)',V.fine,'l','ריבית ועמלות בנק'],['הכנסות מימון','+',V.fini,'l','הכנסות ריבית'],['רווח לפני מסים על ההכנסה','=',V.pbt,'sub','תפעולי, פחות הוצאות מימון, ועוד הכנסות מימון'],['מסים על ההכנסה','(-)',V.tax,'l',''],['רווח נקי','=',V.net,'tot','לפני מסים פחות מסים']];}
-function renderPlb(){plrBuild();const tb=$('#plb'),acc=DSETS[dsPlb].acc;
- tb.innerHTML=PLR.map((r,i)=>`<tr class="${r[3]==='l'?'':r[3]}" data-i="${i}"><td>${r[0]}</td><td class="sg">${r[1]}</td><td><input inputmode="numeric" autocomplete="off" data-i="${i}" placeholder="?"></td><td class="q">${r[4]?`<button data-h="${i}">?</button>`:''}</td></tr>`).join('');
- $('#plb-sc').textContent='';$('#plb-co').textContent=DSETS[dsPlb].co;
- const nt=(title,sec)=>{const it=acc.filter(a=>a[3]===sec);return `<div style="font-weight:800;font-size:14px;margin-top:4px">${title}</div><table class="nt">${it.map(a=>`<tr><td>${a[0]}</td><td>${fmt(a[1])}</td></tr>`).join('')}<tr class="t"><td>סך הכול</td><td>${fmt(sumS(acc,sec))}</td></tr></table>`;};
- $('#plb-notes').innerHTML=nt('ביאור א: מכירה ושיווק','sell')+nt('ביאור ב: הנהלה וכלליות','ga')+nt('הוצאות מימון','fine');}
-(function(){const tb=$('#plb');
- const sc=()=>{const ok=$$('input',tb).filter(x=>x.classList.contains('ok')).length;$('#plb-sc').textContent=`${ok} מתוך ${PLR.length}`;if(ok===PLR.length){confetti();toast('הדוח הושלם!');}};
- function chk(inp){const v=parseN(inp.value);if(inp.value.trim()===''){inp.className='';return;}inp.className=(v===PLR[+inp.dataset.i][2])?'ok':'bad';sc();}
- tb.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'&&e.key==='Enter'){e.preventDefault();e.stopPropagation();chk(e.target);const n=$$('input',tb);const j=n.indexOf(e.target);if(n[j+1])n[j+1].focus();}});
- tb.addEventListener('change',e=>{if(e.target.tagName==='INPUT')chk(e.target);});
- tb.addEventListener('click',e=>{const b=e.target.closest('button[data-h]');if(!b)return;const tr=b.closest('tr');const nx=tr.nextElementSibling;if(nx&&nx.classList.contains('hintrow')){nx.remove();return;}const h=document.createElement('tr');h.className='hintrow';h.innerHTML=`<td colspan="4">${PLR[+b.dataset.h][4]}</td>`;tr.after(h);});
- $('#plb-show').onclick=()=>{$$('input',tb).forEach(i=>{i.value=fmt(PLR[+i.dataset.i][2]);i.className='ok';});sc();};
- $('#plb-clear').onclick=()=>renderPlb();
- dsSeg('dsseg-plb',()=>dsPlb,k=>{dsPlb=k;renderPlb();});renderPlb();})();
+/* ---------- slide 5: hierarchy ---------- */
+(function(){const H=[
+ ['נכסים','a',[['שוטפים',[['מזומן','קופה ועו״ש בנק.'],['לקוחות','חוב של לקוחות, ועוד שיקים לקבל, בניכוי הפרשה לחובות מסופקים.'],['חייבים','חוב כלפי החברה שאינו של לקוח.'],['השקעות לזמן קצר','פקדונות וניירות ערך לזמן קצר.'],['מלאי','מלאי הסגירה ל-31.12.']]],['לא שוטפים',[['השקעות לזמן ארוך','פקדונות וניירות ערך לזמן ארוך.'],['רכוש קבוע','מכונות, ציוד, רכב, מבנים, ריהוט: עלות פחות פחת נצבר.'],['נכסים בלתי מוחשיים','פטנטים, זיכיונות, מותגים.']]]]],
+ ['התחייבויות','l',[['שוטפות',[['אשראי לזמן קצר','הלוואות לזמן קצר ומשיכת יתר.'],['ספקים','חוב לספקים, ועוד שיקים לפירעון עד שנה.'],['זכאים','חוב לגורמים שאינם ספקים: שכר, מסים, ארנונה.']]],['לא שוטפות',[['אשראי לזמן ארוך','הלוואות שהפירעון שלהן מעבר לשנה.']]]]],
+ ['הון עצמי','e',[['מקור מימון',[['הון מניות ופרמיה','השקעת הבעלים בחברה.'],['עודפים','הרווחים שנצברו מאז הקמת החברה.']]]]],
+ ['הכנסות','i',[['בדוח רווח והפסד',[['מכירות (נטו)','המכירות העיקריות, אחרי החזרות והנחות מסחריות.'],['הכנסות מימון','ריבית שהתקבלה, רווחים מניירות ערך, הנחות מזומן שהתקבלו.'],['הכנסות אחרות','פריטים חריגים, כמו רווח ממכירת רכוש קבוע.']]]]],
+ ['הוצאות','x',[['בדוח רווח והפסד',[['עלות המכירות','עלות המוצרים שנמכרו.'],['מכירה ושיווק','פרסום, הפצה, עמלות סוכנים, שכר שיווק.'],['הנהלה וכלליות','שכר הנהלה, חשמל, טלפון, ארנונה, פחת.'],['הוצאות מימון','ריבית, עמלות בנק, הנחות מזומן שניתנו.'],['הוצאות אחרות','פריטים חריגים, כמו הפסד ממכירת ציוד.'],['מסים על ההכנסה','המס על הרווח.']]]]]];
+ const col={a:['var(--assetbg)','#087469'],l:['var(--liabbg)','#4f33c9'],e:['var(--eqbg)','#a86703'],i:['var(--incbg)','#167a43'],x:['var(--expbg)','#b3262f']};
+ $('#hier').innerHTML=H.map(c=>`<div class="hcol"><div class="hh" style="background:${col[c[1]][0]};color:${col[c[1]][1]}">${c[0]}</div>${c[2].map(g=>`<div class="hg"><div class="hgt">${g[0]}</div>${g[1].map(p=>`<button class="hp" data-d="${esc(p[1])}" data-n="${esc(p[0])}">${p[0]}</button>`).join('')}</div>`).join('')}</div>`).join('');
+ $('#hier').onclick=e=>{const b=e.target.closest('.hp');if(!b)return;$$('#hier .hp').forEach(x=>x.classList.toggle('sel',x===b));$('#hierbox').innerHTML=`<b>${b.dataset.n}:</b> ${b.dataset.d}`;};})();
 
-/* ---------- slide 6: sales ---------- */
-(function(){const ids=['sg','sr','st1','sc'];const sl=['sgs','srs','sts','scs'];
- function up(){const g=+$('#sgs').value,r=+$('#srs').value,t=+$('#sts').value,c=+$('#scs').value;ids.forEach((id,i)=>$('#'+id).textContent=fmt(+$('#'+sl[i]).value));
-  const net=g-r-t;const mx=1000000;
-  const bars=[['ברוטו',g,'var(--asset)'],['החזרות',r,'var(--exp)'],['הנחות מסחריות',t,'var(--exp)'],['מכירות נטו',net,'var(--inc)'],['הנחת מזומן',c,'var(--liab)']];
-  $('#sbars').innerHTML=bars.map(b=>`<div style="flex:1"><div class="bar" style="height:${Math.max(4,Math.abs(b[1])/mx*150)}px;background:${b[2]}"><span class="num" style="font-size:15px">${fmt(b[1])}</span></div><div class="barl" style="font-size:13px">${b[0]}</div></div>`).join('');
-  $('#snote').innerHTML=`${T('sales','מכירות נטו')} = <b class="num">${fmt(g)} - ${fmt(r)} - ${fmt(t)} = ${fmt(net)}</b>. ${T('cashd','הנחת מזומן')} של <b class="num">${fmt(c)}</b> אינה מנוכה מהמכירות: היא נרשמת בהוצאות מימון.`;}
- sl.forEach(id=>$('#'+id).oninput=up);up();
- const DT=[['הנחה מסחרית ללקוח','מכירות','הקטנה'],['הנחת מזומן ללקוח','הוצאות מימון','הגדלה'],['הנחה מסחרית מספק','קניות','הקטנה'],['הנחת מזומן מספק','הכנסות מימון','הגדלה']];
- $('#dtab').innerHTML=DT.map(r=>`<tr><td style="font-size:15px;width:170px;padding:4px 12px">${r[0]}</td><td style="font-size:15px;padding:4px 12px">${r[1]}: <b>${r[2]}</b></td></tr>`).join('');
-})();
+/* ---------- slide 6: structure ---------- */
+(function(){const R=[['מכירות (נטו)','+','מכירת המוצרים העיקריים, אחרי ניכוי החזרות והנחות מסחריות.',''],['עלות המכירות','(-)','עלות המוצרים שנמכרו.',''],['רווח גולמי','=','מכירות פחות עלות המכירות.','sub'],['הוצאות מכירה ושיווק','(-)','פרסום, הפצה, עמלות סוכנים, שכר עובדי השיווק.',''],['הוצאות הנהלה וכלליות','(-)','שכר הנהלה, חשמל, טלפון, ארנונה, אחזקה, פחת.',''],['רווח תפעולי *','=','גולמי פחות מכירה ושיווק פחות הנהלה וכלליות.','sub'],['הוצאות מימון','(-)','ריבית, עמלות בנק, הנחות מזומן שניתנו.',''],['הכנסות מימון','+','ריבית שהתקבלה, רווחים מניירות ערך, הנחות מזומן שהתקבלו.',''],['הכנסות אחרות','+','פריטים חריגים, כמו רווח הון ממכירת רכוש קבוע.',''],['הוצאות אחרות','(-)','פריטים חריגים, כמו הפסד הון ממכירת ציוד.',''],['רווח לפני מסים על ההכנסה','=','תפעולי, בניכוי הוצאות מימון והוצאות אחרות, ובתוספת הכנסות מימון והכנסות אחרות.','sub'],['מסים על ההכנסה','(-)','המס שהחברה חייבת על הרווח.',''],['רווח נקי','=','לפני מסים פחות מסים. מצטרף להון העצמי.','tot']];
+ $('#strtab').innerHTML=R.map(r=>`<tr class="${r[3]}"><td>${r[0]}</td><td class="sg">${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+ $('#strform').innerHTML=['<b>גולמי</b> = מכירות נטו - עלות המכירות','<b>תפעולי</b> = גולמי - מכירה ושיווק - הנהלה וכלליות','<b>לפני מסים</b> = תפעולי - הוצאות מימון + הכנסות מימון + הכנסות אחרות - הוצאות אחרות','<b>נקי</b> = לפני מסים - מסים'].map(x=>`<div>${x}</div>`).join('');})();
+
+/* ---------- slide 7: sales ---------- */
+(function(){const D=[['מכירות ברוטו','סך המכירות שבוצעו, לפני ניכויים. קרוב לסך החשבוניות.','הוצאנו חשבוניות בסך 800,000.'],['החזרות מלקוחות','מוצרים שלקוחות החזירו, והמכירה שלהם בוטלה.','הוחזרו מוצרים בשווי 12,000.'],['הנחה מסחרית','הנחה כללית במחיר, כמו הנחת כמות. מקטינה את המכירות אצל הלקוח, ואת הקניות אצל הספק.','נתנו ללקוח הנחה של 15,000.'],['מכירות נטו','ברוטו בניכוי החזרות והנחות מסחריות. זה הסכום שמוצג בדוח.','800,000 - 12,000 - 15,000 = 773,000.'],['הנחת מזומן','הנחה בעד תשלום מוקדם, כלומר בעד אשראי. דומה לריבית, ולכן היא סעיף מימון.','נתנו ללקוח 1,500 בעד תשלום מוקדם: הוצאת מימון.']];
+ $('#saldef').innerHTML='<tr><th style="text-align:right;font-size:14px;color:var(--mut)">מונח</th><th style="text-align:right;font-size:14px;color:var(--mut)">הגדרה פשוטה</th><th style="text-align:right;font-size:14px;color:var(--mut)">דוגמה</th></tr>'+D.map(r=>`<tr><td style="width:130px;font-weight:800">${r[0]}</td><td style="font-size:15px">${r[1]}</td><td style="font-size:14px;color:var(--ink2)"><span class="num">${r[2]}</span></td></tr>`).join('');
+ $('#salcalc').innerHTML=[['מכירות ברוטו','500,000'],['(-) החזרות מלקוחות','30,000'],['(-) הנחות מסחריות ללקוחות','20,000']].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'<tr class="t"><td>מכירות נטו</td><td>450,000</td></tr><tr><td colspan="2" style="font-size:13px;color:var(--mut)">הנחת מזומן של 5,000 אינה מנוכה: היא הוצאת מימון.</td></tr>';
+ $('#saldisc').innerHTML=[['הנחה מסחרית ללקוח','מכירות: הקטנה'],['הנחת מזומן ללקוח','הוצאות מימון: הגדלה'],['הנחה מסחרית מספק','קניות: הקטנה'],['הנחת מזומן מספק','הכנסות מימון: הגדלה']].map(r=>`<tr><td style="font-weight:700">${r[0]}</td><td style="text-align:right;direction:rtl">${r[1]}</td></tr>`).join('');})();
+
+/* ---------- slide 9: balance sheet definitions ---------- */
+(function(){const R=[['מזומן','קופה ועו״ש בנק','שוטף'],['לקוחות','לקוחות, ועוד שיקים לקבל, בניכוי הפרשה לחובות מסופקים','שוטף'],['השקעות לזמן קצר','פקדונות לזמן קצר, ניירות ערך לזמן קצר','שוטף'],['מלאי','מלאי הסגירה ל-31.12','שוטף'],['רכוש קבוע','מכונות, ציוד, רכב, מבנים, ריהוט: עלות פחות פחת נצבר','לא שוטף'],['נכסים בלתי מוחשיים','פטנטים, זיכיונות, מותגים','לא שוטף'],['אשראי לזמן קצר','הלוואות לזמן קצר ומשיכת יתר','שוטפת'],['ספקים','ספקים, ועוד שיקים לפירעון עד שנה','שוטפת'],['זכאים','התחייבויות לגורמים שאינם ספקים','לפי המועד'],['אשראי לזמן ארוך','הלוואות שהפירעון שלהן מעבר לשנה','לא שוטפת'],['הון עצמי','הון מניות ופרמיה (השקעת בעלים), ועודפים. מקור מימון, לא נכס','מקור מימון']];
+ $('#bstab').innerHTML=R.map(r=>`<tr><td style="width:150px;font-weight:800">${r[0]}</td><td style="font-size:14px">${r[1]}</td><td style="width:90px;font-size:13px;color:var(--coral);font-weight:800;text-align:center">${r[2]}</td></tr>`).join('');
+ $('#bsex').innerHTML=[['לקוחות ברוטו','100,000'],['(+) שיקים לקבל','20,000'],['(-) הפרשה לחובות מסופקים','(8,000)']].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'<tr class="t"><td>לקוחות במאזן</td><td>112,000</td></tr>'+[['מכונה בעלות','200,000'],['(-) פחת נצבר','(50,000)']].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'<tr class="t"><td>מכונה במאזן</td><td>150,000</td></tr><tr><td colspan="2" style="font-size:12.5px;color:var(--mut)">הוצאות הפחת של השנה נכללות בהנהלה וכלליות.</td></tr>';})();
 
 /* ---------- generic classification game ---------- */
-function mkGame(p,cats,items,names,cb){
+function mkGame(p,cats,items,names,extra){
  const R=n=>$('#'+p+'-'+n);let q=[],sc=0,st=0,done=0,cu=null;const ROUND=12;
  R('cats').innerHTML=cats.map(c=>`<button data-c="${c[0]}" style="background:${c[2]};color:#fff">${c[1]}</button>`).join('');
  function nx(){if(q.length===0){R('nm').textContent='סיימתם את הסבב!';R('am').textContent='ניקוד סופי: '+sc;R('fb').className='fb';confetti();return;}cu=q[0];R('nm').textContent=cu[0];R('am').textContent='';R('ro').textContent=(done+1)+' מתוך '+ROUND;R('fb').className='fb';}
  function fresh(){q=[...items].sort(()=>Math.random()-.5).slice(0,ROUND);sc=0;st=0;done=0;R('sc').textContent=0;R('st').textContent=0;nx();}
  $$('#'+p+'-cats button').forEach(b=>b.onclick=()=>{if(!cu||q.length===0)return;const card=R('card'),fb=R('fb');
   if(b.dataset.c===cu[1]){const it=cu;st++;sc+=10+Math.min(st,5)*2;q.shift();done++;card.classList.remove('pop');void card.offsetWidth;card.classList.add('pop');R('sc').textContent=sc;R('st').textContent=st;nx();fb.className='fb show ok';fb.innerHTML='<b>נכון: '+names[it[1]]+'.</b> '+it[2];}
-  else{st=0;R('st').textContent=0;card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');fb.className='fb show bad';fb.innerHTML='<b>כמעט.</b> '+cu[0]+' אינו '+names[b.dataset.c]+'. '+cu[2];q.push(q.shift());setTimeout(()=>{cu=q[0];if(q.length)R('nm').textContent=cu[0];},1100);}});
+  else{st=0;R('st').textContent=0;card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');fb.className='fb show bad';const ex=extra?extra(b.dataset.c,cu):'';fb.innerHTML='<b>כמעט.</b> '+cu[0]+' אינו '+names[b.dataset.c]+'. '+cu[2]+(ex?' <br>'+ex:'');q.push(q.shift());setTimeout(()=>{cu=q[0];if(q.length)R('nm').textContent=cu[0];},ex?2600:1100);}});
  R('re').onclick=fresh;fresh();}
 mkGame('ln',LINECATS,LINEITEMS,LINEN);
-mkGame('bs',BSCATS,BSITEMS,BSN);
+mkGame('bs',BSCATS,BSITEMS,BSN,(chosen,item)=>(chosen==='eq'||item[1]==='eq')?EQ_NOTE:'');
 
-/* ---------- slide 8: subtotals ---------- */
-(function(){const C=[['g','רווח גולמי',250000,0,600000,10000],['s','הוצאות מכירה ושיווק',70000,0,200000,5000],['a','הוצאות הנהלה וכלליות',90000,0,300000,5000],['oi','הכנסות אחרות',10000,0,100000,5000],['oe','הוצאות אחרות',0,0,100000,5000],['fe','הוצאות מימון',12000,0,80000,1000],['fi','הכנסות מימון',4000,0,80000,1000],['tx','מסים על ההכנסה',20000,0,100000,5000]];
- $('#subctl').innerHTML=C.map(c=>`<div class="card" style="padding:3px 14px;display:grid;grid-template-columns:150px 1fr 80px;gap:8px;align-items:center"><span style="font-size:14.5px;font-weight:700">${c[1]}</span><input type="range" class="sl" style="height:22px" id="sub_${c[0]}" min="${c[3]}" max="${c[4]}" step="${c[5]}" value="${c[2]}"><b class="num" style="font-size:15px" id="subv_${c[0]}"></b></div>`).join('');
- function up(){const v={};C.forEach(c=>{v[c[0]]=+$('#sub_'+c[0]).value;$('#subv_'+c[0]).textContent=fmt(v[c[0]]);});
-  const op=v.g-v.s-v.a+v.oi-v.oe,pbt=op-v.fe+v.fi,net=pbt-v.tx;
-  const rows=[['רווח גולמי','',v.g,'sub'],['הוצאות מכירה ושיווק','(-)',v.s,''],['הוצאות הנהלה וכלליות','(-)',v.a,''],['הכנסות אחרות','+',v.oi,''],['הוצאות אחרות','(-)',v.oe,''],['רווח תפעולי','=',op,'sub'],['הוצאות מימון','(-)',v.fe,''],['הכנסות מימון','+',v.fi,''],['רווח לפני מסים','=',pbt,'sub'],['מסים על ההכנסה','(-)',v.tx,''],['רווח נקי','=',net,'tot']];
-  $('#subtab').innerHTML=rows.map(r=>`<tr class="${r[3]}"><td style="padding:1px 14px;font-size:14px">${r[0]}</td><td class="sg" style="width:34px;text-align:center;padding:1px">${r[1]}</td><td class="am" style="padding:1px 14px;font-size:15px">${fmt(r[2])}</td></tr>`).join('');
-  $('#subtrap').innerHTML=`<div><b>תפעולי</b> (נכון ${fmt(op)}): ${fmt(v.g-v.s-v.a-v.oe)} שכחו את ההכנסות האחרות · ${fmt(v.g-v.s-v.a-v.oi-v.oe)} ניכו אותן במקום להוסיף · ${fmt(op-v.fe+v.fi)} כללו מימון</div><div style="margin-top:3px"><b>נקי</b> (נכון ${fmt(net)}): ${fmt(op-v.fe-v.tx)} שכחו את הכנסות המימון · ${fmt(op+v.fi-v.tx)} שכחו את הוצאות המימון · ${fmt(op-v.fe+v.fi)} שכחו את המסים · ${fmt(op-v.fe-v.fi-v.tx)} הפכו סימן להכנסות המימון</div>`;}
- C.forEach(c=>$('#sub_'+c[0]).oninput=up);up();})();
+/* ======================================================================
+   pipeline: datasets, step-by-step sorter, build slides, full report
+   ====================================================================== */
+let dsCur='x';
+const DSK=Object.keys(DS3);
+const D=()=>DS3[dsCur];
+const ITEMS=()=>D().items;
+const partsOf=(it,kind)=>it.parts?it.parts.filter(p=>p[kind]):(it[kind]?[{[kind]:it[kind],p:1,t:it.t}]:[]);
+function contribs(key,kind){const out=[];ITEMS().forEach(it=>partsOf(it,kind).forEach(p=>{if(p[kind]===key)out.push({it,amt:Math.round(it.a*p.p*(it.neg?-1:1)*100)/100,p:p.p});}));return out;}
+const val=(key,kind)=>Math.round(contribs(key,kind).reduce((s,c)=>s+c.amt,0)*100)/100;
+const hasC=(key,kind)=>contribs(key,kind).length>0;
+const LBL=Object.fromEntries(BLDEF.map(b=>[b[0],b[1]]));
+const LNAME={sales:'מכירות (נטו)',cos:'עלות המכירות',sell:'הוצאות מכירה ושיווק',ga:'הוצאות הנהלה וכלליות',fine:'הוצאות מימון',fini:'הכנסות מימון',othi:'הכנסות אחרות',othe:'הוצאות אחרות',tax:'מסים על ההכנסה'};
 
-/* ---------- slide 10: aggregation ---------- */
-(function(){const TABS=[['cust','לקוחות'],['ppe','רכוש קבוע ופחת'],['st','אשראי לזמן קצר'],['cur','נכסים שוטפים']];let tab='cust';
- $('#aggseg').innerHTML=TABS.map(t=>`<button data-k="${t[0]}">${t[1]}</button>`).join('');
- const P={
-  cust(){return `<div class="aggp"><div class="col" style="gap:8px">
-   ${[['ag_g','לקוחות ברוטו',150000,0,600000,10000],['ag_c','שיקים לקבל',20000,0,150000,5000],['ag_a','הפרשה לחובות מסופקים (הלח״מ)',10000,0,100000,2000]].map(c=>`<div class="card" style="padding:6px 16px"><div class="hint">${c[1]}</div><div style="font-size:21px;font-weight:800"><span class="num" id="${c[0]}v"></span></div><input type="range" class="sl" id="${c[0]}" min="${c[3]}" max="${c[4]}" step="${c[5]}" value="${c[2]}"></div>`).join('')}</div>
-   <div><div class="expl" id="ag_n" style="font-size:19px;min-height:150px"></div><div class="hint" style="margin-top:8px">${T('checksrec','שיק לקבל')} הוא חוב של לקוח, ולכן הוא חלק מהלקוחות. ${T('allow','הלח״מ')} מנוכה.</div></div></div>`;},
-  ppe(){const IT=[['מחשבים',40000,10000],['ציוד',300000,0],['ריהוט משרדי',60000,12000]];
-   return `<div class="aggp"><div><table class="tbl"><thead><tr><th>פריט</th><th>עלות</th><th>פחת נצבר</th><th>נטו</th></tr></thead><tbody>${IT.map((r,i)=>`<tr><td style="font-size:16px">${r[0]}</td><td><input class="ni" id="pp_c${i}" value="${r[1]}"></td><td><input class="ni" id="pp_a${i}" value="${r[2]}"></td><td class="num" id="pp_n${i}"></td></tr>`).join('')}<tr><td colspan="3" style="font-weight:800">רכוש קבוע במאזן</td><td class="num" id="pp_t" style="font-weight:800"></td></tr></tbody></table></div>
-   <div><div class="card" style="padding:8px 16px"><div class="hint">הוצאות הנהלה וכלליות לפני פחת</div><input class="ni" id="pp_b" value="80000" style="width:150px"> <div class="hint" style="margin-top:6px">הוצאות פחת של השנה (ברווח והפסד)</div><input class="ni" id="pp_d" value="15000" style="width:150px"></div>
-   <div class="expl" id="pp_n2" style="margin-top:8px;font-size:17px;min-height:110px"></div></div></div>`;},
-  st(){return `<div class="aggp"><div>${[['ל','הלוואות לזמן קצר',40000,1],['ל','משיכת יתר',12000,1],['ל','הלוואות לזמן ארוך',150000,0]].map((r,i)=>`<label class="chk" data-i="${i}"><input type="checkbox" data-v="${r[2]}" data-ok="${r[3]}"><span style="flex:1">${r[1]}</span><b class="num">${fmt(r[2])}</b></label>`).join('')}<div class="hint">סמנו את מה שנכלל בסעיף ״אשראי לזמן קצר״.</div></div><div><div class="expl" id="st_n" style="font-size:19px;min-height:160px"></div></div></div>`;},
-  cur(){return `<div class="aggp"><div>${[['קופה',25000,1],['עו״ש',15000,1],['לקוחות',40000,1],['שיקים לקבל',10000,1],['פטנטים',50000,0],['ציוד',300000,0]].map(r=>`<label class="chk"><input type="checkbox" data-v="${r[1]}" data-ok="${r[2]}"><span style="flex:1">${r[0]}</span><b class="num">${fmt(r[1])}</b></label>`).join('')}<div class="hint">סמנו את הנכסים השוטפים.</div></div><div><div class="expl" id="cu_n" style="font-size:19px;min-height:160px"></div></div></div>`;}};
- function render(){$$('#aggseg button').forEach(b=>b.classList.toggle('on',b.dataset.k===tab));$('#aggpane').innerHTML=P[tab]();
-  if(tab==='cust'){const up=()=>{const g=+$('#ag_g').value,c=+$('#ag_c').value,a=+$('#ag_a').value;$('#ag_gv').textContent=fmt(g);$('#ag_cv').textContent=fmt(c);$('#ag_av').textContent=fmt(a);$('#ag_n').innerHTML=`הלקוחות במאזן: <b class="num">${fmt(g)} + ${fmt(c)} - ${fmt(a)} = ${fmt(g+c-a)}</b>`;};$$('#aggpane input').forEach(i=>i.oninput=up);up();}
-  if(tab==='ppe'){const up=()=>{let t=0;for(let i=0;i<3;i++){const c=parseN($('#pp_c'+i).value)||0,a=parseN($('#pp_a'+i).value)||0;$('#pp_n'+i).textContent=fmt(c-a);t+=c-a;}$('#pp_t').textContent=fmt(t);const b=parseN($('#pp_b').value)||0,d=parseN($('#pp_d').value)||0;$('#pp_n2').innerHTML=`${T('accdep','פחת נצבר')} מנוכה מהרכוש הקבוע במאזן. ${T('depexp','הוצאות הפחת')} של השנה מתווספות להנהלה וכלליות: <b class="num">${fmt(b)} + ${fmt(d)} = ${fmt(b+d)}</b>. אין לנכות אותן מהרכוש הקבוע פעם נוספת.`;};$$('#aggpane input.ni').forEach(i=>i.oninput=up);up();}
-  if(tab==='st'||tab==='cur'){const out=tab==='st'?'#st_n':'#cu_n';const up=()=>{let s=0,okAll=true,right=0;$$('#aggpane input[type=checkbox]').forEach(c=>{const on=c.checked;c.closest('.chk').classList.toggle('on',on);if(on)s+=+c.dataset.v;if((on?1:0)!==+c.dataset.ok)okAll=false;if(+c.dataset.ok)right+=+c.dataset.v;});
-    const nm=tab==='st'?'אשראי לזמן קצר':'הנכסים השוטפים';$(out).innerHTML=`הסכום שסימנתם: <b class="num">${fmt(s)}</b><br>${okAll?'<b style="color:#167a43">נכון.</b> '+nm+': <b class="num">'+fmt(right)+'</b>. '+(tab==='st'?'הלוואה לזמן ארוך אינה שוטפת.':'פטנטים וציוד אינם נכסים שוטפים.'):'<span class="hint">עדיין לא. בדקו מה נכלל בסעיף.</span>'}`;};
-    $$('#aggpane input[type=checkbox]').forEach(c=>c.onchange=up);up();}}
- $('#aggseg').onclick=e=>{const b=e.target.closest('button');if(!b)return;tab=b.dataset.k;render();};render();})();
+function plV(){const g=k=>val(k,'s');const V={};['sales','cos','sell','ga','fine','fini','othi','othe','tax'].forEach(k=>V[k]=g(k));V.gp=V.sales-V.cos;V.op=V.gp-V.sell-V.ga;V.pbt=V.op-V.fine+V.fini+V.othi-V.othe;V.net=V.pbt-V.tax;return V;}
+function plRows(){const V=plV();
+ const nz=(...xs)=>xs.filter(x=>x[1]!==null);
+ const num=(a,...rest)=>a;
+ const F={gp:`${fmt(V.sales)} - ${fmt(V.cos)}`,op:`${fmt(V.gp)} - ${fmt(V.sell)} - ${fmt(V.ga)}`,pbt:`${fmt(V.op)} - ${fmt(V.fine)} + ${fmt(V.fini)}`+(hasC('othi','s')?` + ${fmt(V.othi)}`:'')+(hasC('othe','s')?` - ${fmt(V.othe)}`:''),net:`${fmt(V.pbt)} - ${fmt(V.tax)}`};
+ const R=[['sales','מכירות (נטו)','+',V.sales,'l'],['cos','עלות המכירות','(-)',V.cos,'l'],['gp','רווח גולמי','=',V.gp,'sub','מכירות נטו פחות עלות המכירות'],['sell','הוצאות מכירה ושיווק','(-)',V.sell,'l'],['ga','הוצאות הנהלה וכלליות','(-)',V.ga,'l'],['op','רווח תפעולי *','=',V.op,'sub','גולמי, פחות מכירה ושיווק, פחות הנהלה וכלליות'],['fine','הוצאות מימון','(-)',V.fine,'l'],['fini','הכנסות מימון','+',V.fini,'l'],['othi','הכנסות אחרות','+',V.othi,'l'],['othe','הוצאות אחרות','(-)',V.othe,'l'],['pbt','רווח לפני מסים על ההכנסה','=',V.pbt,'sub','תפעולי, פחות הוצאות מימון, ועוד הכנסות מימון והכנסות אחרות, פחות הוצאות אחרות'],['tax','מסים על ההכנסה','(-)',V.tax,'l'],['net','רווח נקי','=',V.net,'tot','רווח לפני מסים פחות מסים']];
+ return R.map(r=>({id:r[0],l:r[1],sg:r[2],v:r[3],k:r[4],f:r[5]||'',nf:F[r[0]]||'',kind:'s'})).filter(r=>r.k!=='l'||hasC(r.id,'s'));}
+function bsV(){const V={};BLDEF.forEach(b=>V[b[0]]=val(b[0],'b'));const sT=t=>BLDEF.filter(b=>b[2]===t).reduce((s,b)=>s+V[b[0]],0);V.CA=sT('ca');V.NA=sT('na');V.A=V.CA+V.NA;V.CL=sT('cl');V.NL=sT('nl');V.L=V.CL+V.NL;V.net=plV().net;
+ if(D().eq==='open'){V.eqOpen=val('equity','b');V.E=V.eqOpen+V.net;}else{V.owners=val('owners','b');V.E=V.A-V.L;V.reOpen=V.E-V.owners-V.net;}
+ V.LE=V.L+V.E;return V;}
+function bsRows(){const V=bsV();const row=(id,sg,v,k,f,nf)=>({id,l:LBL[id]||'',sg,v,k,f,nf,kind:'b'});
+ const L=BLDEF.filter(b=>hasC(b[0],'b')).map(b=>row(b[0],'',V[b[0]],'l','',''));
+ const ids=(t)=>L.filter(r=>BLDEF.find(b=>b[0]===r.id)[2]===t);
+ const sum=(rs)=>rs.map(r=>fmt(V[r.id])).join(' + ')||'0';
+ return {V,lines:L,
+  tca:{id:'tca',l:'סך נכסים שוטפים',sg:'=',v:V.CA,k:'sub',f:'סכום הנכסים השוטפים',nf:sum(ids('ca'))},
+  tna:{id:'tna',l:'סך נכסים לא שוטפים',sg:'=',v:V.NA,k:'sub',f:'סכום הנכסים הלא שוטפים',nf:sum(ids('na'))},
+  ta:{id:'ta',l:'סך הנכסים',sg:'=',v:V.A,k:'tot',f:'שוטפים ועוד לא שוטפים',nf:`${fmt(V.CA)} + ${fmt(V.NA)}`},
+  tcl:{id:'tcl',l:'סך התחייבויות שוטפות',sg:'=',v:V.CL,k:'sub',f:'סכום ההתחייבויות השוטפות',nf:sum(ids('cl'))},
+  tnl:{id:'tnl',l:'סך התחייבויות לא שוטפות',sg:'=',v:V.NL,k:'sub',f:'סכום ההתחייבויות הלא שוטפות',nf:sum(ids('nl'))},
+  tl:{id:'tl',l:'סך ההתחייבויות',sg:'=',v:V.L,k:'tot',f:'שוטפות ועוד לא שוטפות',nf:`${fmt(V.CL)} + ${fmt(V.NL)}`}};}
 
-/* ---------- slide 11: equity ---------- */
-(function(){const TABS=[['roll','גלגול ההון'],['open','חילוץ עודפי פתיחה'],['src','מקורות ושימושים']];let tab='roll';
- $('#eqseg').innerHTML=TABS.map(t=>`<button data-k="${t[0]}">${t[1]}</button>`).join('');
- const sld=(id,l,v,mn,mx,st)=>`<div class="card" style="padding:6px 16px"><div class="hint">${l}</div><div style="font-size:21px;font-weight:800"><span class="num" id="${id}v"></span></div><input type="range" class="sl" id="${id}" min="${mn}" max="${mx}" step="${st}" value="${v}"></div>`;
- const P={
-  roll(){return `<div class="aggp"><div class="col" style="gap:8px">${sld('eq_o','הון עצמי בתחילת השנה',900000,0,3000000,50000)}${sld('eq_i','השקעת בעלים השנה',100000,0,1000000,10000)}${sld('eq_p','רווח נקי השנה',200000,-500000,1000000,10000)}</div><div><div class="bars" id="eq_b" style="height:200px"></div><div class="expl" id="eq_n" style="margin-top:8px;font-size:18px;min-height:0"></div></div></div>`;},
-  open(){return `<div class="aggp"><div class="col" style="gap:8px">${sld('op_a','סך נכסים 31.12',700000,0,3000000,50000)}${sld('op_l','סך התחייבויות 31.12',300000,0,2000000,50000)}${sld('op_i','השקעת בעלים',200000,0,1000000,10000)}${sld('op_p','רווח נקי השנה',50000,-300000,600000,10000)}</div><div><div class="expl" id="op_n" style="font-size:18px;line-height:1.8;min-height:200px"></div></div></div>`;},
-  src(){return `<div class="aggp"><div class="col" style="gap:8px"><div class="card" style="padding:8px 16px"><div class="hint">נקודת המוצא: 200,000 במזומן, כולו מהלוואות</div></div>${sld('sr_i','השקעת בעלים',0,0,200000,10000)}${sld('sr_p','רווח נקי שהתקבל במזומן',40000,-100000,300000,10000)}</div><div><div class="bs" id="sr_b"></div><div class="expl" id="sr_n" style="margin-top:8px;font-size:17px;min-height:0"></div></div></div>`;}};
- function render(){$$('#eqseg button').forEach(b=>b.classList.toggle('on',b.dataset.k===tab));$('#eqpane').innerHTML=P[tab]();
-  const lab=(id)=>$('#'+id+'v').textContent=fmt(+$('#'+id).value);
-  if(tab==='roll'){const up=()=>{['eq_o','eq_i','eq_p'].forEach(lab);const o=+$('#eq_o').value,i=+$('#eq_i').value,p=+$('#eq_p').value,e=o+i+p;const bars=[['פתיחה',o,'var(--eq)'],['השקעה',i,'var(--asset)'],['רווח',p,p>=0?'var(--inc)':'var(--exp)'],['סגירה',e,'var(--navy2)']];$('#eq_b').innerHTML=bars.map(b=>`<div style="flex:1"><div class="bar" style="height:${Math.max(4,Math.abs(b[1])/3500000*190)}px;background:${b[2]}"><span class="num" style="font-size:15px">${fmt(b[1])}</span></div><div class="barl">${b[0]}</div></div>`).join('');$('#eq_n').innerHTML=`${T('equity','הון עצמי')} ל-31.12: <b class="num">${fmt(o)} + ${fmt(i)} + ${fmt(p)} = ${fmt(e)}</b>. ${T('owners','השקעת בעלים')} אינה רווח.`;};$$('#eqpane input').forEach(x=>x.oninput=up);up();}
-  if(tab==='open'){const up=()=>{['op_a','op_l','op_i','op_p'].forEach(lab);const a=+$('#op_a').value,l=+$('#op_l').value,i=+$('#op_i').value,p=+$('#op_p').value,e=a-l,r=e-i-p;$('#op_n').innerHTML=`<b>שלב 1.</b> הון עצמי ל-31.12 = נכסים פחות התחייבויות:<br><span class="num">${fmt(a)} - ${fmt(l)} = ${fmt(e)}</span><br><b>שלב 2.</b> עודפי פתיחה = הון בסוף, פחות השקעת בעלים, פחות רווח השנה:<br><span class="num">${fmt(e)} - ${fmt(i)} - ${fmt(p)} = ${fmt(r)}</span>`;};$$('#eqpane input').forEach(x=>x.oninput=up);up();}
-  if(tab==='src'){const up=()=>{['sr_i','sr_p'].forEach(lab);const i=+$('#sr_i').value,p=+$('#sr_p').value,cash=200000+i+p,eqv=i+p;const row=(n,v)=>`<div class="bsr"><span>${n}</span><span class="v">${fmt(v)}</span></div>`;$('#sr_b').innerHTML=`<div class="side"><h5>נכסים (היכן הכסף יושב)</h5>${row('מזומן',cash)}<div class="bst"><span>סך נכסים</span><span class="num">${fmt(cash)}</span></div></div><div class="side"><h5>התחייבויות והון (מאין הגיע)</h5>${row('הלוואות',200000)}${row('הון עצמי',eqv)}<div class="bst"><span>סך מקורות</span><span class="num">${fmt(200000+eqv)}</span></div></div>`;$('#sr_n').innerHTML=`הנכסים הם השימושים, וההתחייבויות וההון הם המקורות. אותו כסף נספר משני הכיוונים, ולכן ${cash===200000+eqv?'<b style="color:#167a43">הם שווים תמיד</b>':'הם שווים'}.`;};$$('#eqpane input').forEach(x=>x.oninput=up);up();}}
- $('#eqseg').onclick=e=>{const b=e.target.closest('button');if(!b)return;tab=b.dataset.k;render();};render();})();
+/* ---------- datasets switch ---------- */
+const SEGIDS=['sort','pl1','pl2','pl3','bs1','bs2','bs3','bs4','report'];
+function markSegs(){SEGIDS.forEach(id=>$$('#dsseg-'+id+' button').forEach(b=>b.classList.toggle('on',b.dataset.k===dsCur)));}
+function setDS(k){if(!DS3[k])return;dsCur=k;stInit();Object.keys(BUILD).forEach(renderBuild);renderReport();markSegs();}
+SEGIDS.forEach(id=>{const el=$('#dsseg-'+id);if(!el)return;el.innerHTML=DSK.map(k=>`<button data-k="${k}">${DS3[k].n}</button>`).join('');el.onclick=e=>{const b=e.target.closest('button');if(b)setDS(b.dataset.k);};});
 
-/* ---------- slide 12: traps lab ---------- */
-(function(){let ci=-1;
+/* ---------- step-by-step sorter ---------- */
+const CATB=[['a','נכס','var(--asset)'],['l','התחייבות','var(--liab)'],['e','הון עצמי','var(--eq)'],['i','הכנסה','var(--inc)'],['x','הוצאה','var(--exp)']];
+const LINES9=LINECATS.concat([['tax','מסים על ההכנסה','#5d6a86']]);
+const CATNAME={a:'נכס',l:'התחייבות',e:'הון עצמי',i:'הכנסה',x:'הוצאה'};
+const stp={q:[],i:0,err:0,led:[]};
+const hash=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h;};
+function splitInfo(it){return it.parts.map(p=>p.s?`${Math.round(p.p*100)}% ל${LNAME[p.s]}`:`${Math.round(p.p*100)}% ב${LBL[p.b]} (${TERMN[p.t]})`).join(', ');}
+function finalTag(it){if(it.c==='e')return 'הון עצמי';if(it.parts)return splitInfo(it);if(it.c==='a'||it.c==='l')return TERMN[it.t]+' · '+LBL[it.b];return LNAME[it.s];}
+function stInit(){stp.q=ITEMS().slice().sort((a,b)=>hash(a.n+dsCur)-hash(b.n+dsCur));stp.i=0;stp.err=0;stp.led=[];stRender();}
+function stRender(){const n=stp.q.length;$('#st-co').textContent=D().co;$('#st-prog').textContent=stp.i<n?`פריט ${stp.i+1} מתוך ${n} · טעויות: ${stp.err}`:`הושלם · טעויות: ${stp.err}`;
+ $('#st-led').innerHTML='<div class="lh">מה כבר מוינו</div>'+(stp.led.length?stp.led.slice().reverse().map(l=>`<div class="lr"><b>${l.n}</b><span>${l.t}</span></div>`).join(''):'<div class="hint" style="padding:6px">הפריטים שתמיינו יופיעו כאן.</div>');
+ const m=$('#st-main');
+ if(stp.i>=n){m.innerHTML=`<div class="card" style="padding:18px 22px"><div style="font-size:26px;font-weight:800">סיימתם למיין ${n} פריטים</div><p style="font-size:18px;margin-top:8px;line-height:1.5">מספר הטעויות: <b>${stp.err}</b>. עכשיו בונים את הדוחות: קודם דוח רווח והפסד בשלושה שקפים, ואז המאזן בארבעה. בכל שקף מופיעים הכרטיסים הרלוונטיים, כך שלא צריך לחזור אחורה.</p><div class="ctrl" style="margin-top:12px"><button class="btn coral" data-go="s-pl1">לבניית דוח רווח והפסד ←</button><button class="btn ghost" id="st-re">מיון מחדש</button></div></div>`;$('#st-re').onclick=stInit;confetti();return;}
+ const it=stp.q[stp.i];
+ m.innerHTML=`<div class="gcard" id="st-card"><div class="nm" style="font-size:32px">${it.n}</div><div class="am">${fmt(it.a)} ${D().unit}${it.neg?' · פריט מנכה: מקטין את הסעיף שלו':''}</div></div>
+ <div class="stlab">שלב 1 · מה זה?</div><div class="gamecat g5" id="st-c1">${CATB.map(c=>`<button data-c="${c[0]}" style="background:${c[2]};color:#fff">${c[1]}</button>`).join('')}</div>
+ <div id="st-s2"></div><div class="fb" id="st-fb"></div><div id="st-nx" style="margin-top:8px"></div>`;
+ const fb=$('#st-fb');
+ $$('#st-c1 button').forEach(b=>b.onclick=()=>{
+  if(b.dataset.c===it.c){$$('#st-c1 button').forEach(x=>x.disabled=true);fb.className='fb show ok';fb.innerHTML='<b>נכון: '+CATNAME[it.c]+'.</b> עכשיו שלב 2.';stStep2(it);}
+  else{const card=$('#st-card');card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');stp.err++;$('#st-prog').textContent=`פריט ${stp.i+1} מתוך ${n} · טעויות: ${stp.err}`;fb.className='fb show bad';fb.innerHTML='<b>כמעט.</b> '+it.n+' אינו '+CATNAME[b.dataset.c]+'. '+CATHINT[it.c]+((b.dataset.c==='e'||it.c==='e')?'<br>'+EQ_NOTE:'');}});}
+function stStep2(it){const box=$('#st-s2'),fb=$('#st-fb');
+ const finish=()=>{fb.className='fb show ok';fb.innerHTML='<b>ההיגיון:</b> '+whyOf(it)+(it.parts?' <br><b>הפיצול:</b> '+splitInfo(it)+'.':'');stp.led.push({n:it.n,t:finalTag(it)});$('#st-nx').innerHTML='<button class="btn coral" id="st-go">הפריט הבא ←</button>';$('#st-go').onclick=()=>{stp.i++;stRender();};$('#st-prog').textContent=`פריט ${stp.i+1} מתוך ${stp.q.length} · טעויות: ${stp.err}`;};
+ const info=(txt)=>{box.innerHTML=`<div class="stlab">שלב 2 · ${txt}</div><button class="btn" id="st-ok">הבנתי, להסבר ←</button>`;$('#st-ok').onclick=()=>{box.innerHTML='';finish();};};
+ if(it.c==='e'){info('הון עצמי: מקור מימון, אין שוטף ולא שוטף');return;}
+ if(it.parts){info('הפריט מתחלק בין כמה סעיפים לפי ההערה');return;}
+ const wrong=(msg)=>{const card=$('#st-card');card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');stp.err++;$('#st-prog').textContent=`פריט ${stp.i+1} מתוך ${stp.q.length} · טעויות: ${stp.err}`;fb.className='fb show bad';fb.innerHTML=msg;};
+ if(it.c==='a'||it.c==='l'){const opts=it.c==='a'?[['ca','נכס שוטף'],['na','נכס לא שוטף']]:[['cl','התחייבות שוטפת'],['nl','התחייבות לא שוטפת']];
+  box.innerHTML=`<div class="stlab">שלב 2 · שוטף או לא שוטף?</div><div class="gamecat" style="grid-template-columns:1fr 1fr">${opts.map(o=>`<button data-c="${o[0]}" style="background:var(--navy2);color:#fff">${o[1]}</button>`).join('')}</div>`;
+  $$('#st-s2 button').forEach(b=>b.onclick=()=>{if(b.dataset.c===it.t){$$('#st-s2 button').forEach(x=>x.disabled=true);finish();}else wrong('<b>כמעט.</b> לפי מועד הפירעון או השימוש ביחס ל-31.12. '+whyOf(it));});return;}
+ box.innerHTML=`<div class="stlab">שלב 2 · לאיזה סעיף נזקוף?</div><div class="gamecat g9" style="margin-top:6px">${LINES9.map(c=>`<button data-c="${c[0]}" style="background:${c[2]};color:#fff">${c[1]}</button>`).join('')}</div>`;
+ $$('#st-s2 button').forEach(b=>b.onclick=()=>{if(b.dataset.c===it.s){$$('#st-s2 button').forEach(x=>x.disabled=true);finish();}else wrong('<b>כמעט.</b> '+it.n+' אינו שייך ל'+LNAME[b.dataset.c]+'. '+whyOf(it));});}
+
+/* ---------- build slides (memory panel + locked rows) ---------- */
+const BUILD={
+ pl1:{st:'pl',from:0,ids:['sales','cos','gp'],kick:'תחנה 4 · בונים את דוח רווח והפסד (1 מתוך 3)',h:'מהמכירות עד הרווח הגולמי'},
+ pl2:{st:'pl',ids:['sell','ga','op'],kick:'תחנה 4 · בונים את דוח רווח והפסד (2 מתוך 3)',h:'ההוצאות התפעוליות, עד הרווח התפעולי'},
+ pl3:{st:'pl',ids:['fine','fini','othi','othe','pbt','tax','net'],kick:'תחנה 4 · בונים את דוח רווח והפסד (3 מתוך 3)',h:'מימון, הכנסות אחרות ומסים, עד הרווח הנקי'},
+ bs1:{st:'bs',ids:['cash','cust','tca'],kick:'תחנה 4 · בונים את המאזן (1 מתוך 4)',h:'נכסים שוטפים'},
+ bs2:{st:'bs',ids:['ppe','ppem','ppeb','intang','tna','ta'],kick:'תחנה 4 · בונים את המאזן (2 מתוך 4)',h:'נכסים לא שוטפים וסך הנכסים'},
+ bs3:{st:'bs',ids:['stcredit','supp','cred','tcl','ltcredit','checkslt','credlt','tnl','tl'],kick:'תחנה 4 · בונים את המאזן (3 מתוך 4)',h:'התחייבויות: שוטפות ולא שוטפות'},
+ bs4:{st:'bs4',ids:[],kick:'תחנה 4 · בונים את המאזן (4 מתוך 4)',h:'ההון העצמי: עודפי פתיחה ועוד רווח השנה'}
+};
+
+
+function formulaOf(cs){return cs.map((c,i)=>(i===0?(c.amt<0?'-':''):(c.amt<0?' - ':' + '))+fmt(Math.abs(c.amt))).join('')+' = '+fmt(cs.reduce((s,c)=>s+c.amt,0));}
+function memGroup(r){const cs=contribs(r.id,r.kind);return `<div class="mg" data-g="${r.id}"><div class="mgh">${r.l}</div>${cs.map(c=>`<div class="mi ${c.amt<0?'ng':''}"><span>${c.it.n}${c.p<1?` <small>(${Math.round(c.p*100)}% מ-${fmt(c.it.a)})</small>`:''}</span><b class="num">${fmtp(c.amt)}</b></div>`).join('')}<div class="mf" style="display:none"><span class="num">${formulaOf(cs)}</span></div></div>`;}
+function chip(l,v){return `<div class="mchip"><span>${l}</span><b class="num">${fmt(v)}</b></div>`;}
+function buildRowsFor(sid){const cfg=BUILD[sid];
+ if(cfg.st==='pl'){const all=plRows();const cur=all.filter(r=>cfg.ids.includes(r.id));const i0=all.findIndex(r=>r.id===cur[0].id);return {prior:all.slice(0,i0),cur,chips:[]};}
+ const B=bsRows();const get=id=>B.lines.find(r=>r.id===id)||B[id];
+ const cur=cfg.ids.map(get).filter(Boolean);
+ if(sid==='bs2')return {prior:['cash','cust','tca'].map(get).filter(Boolean),cur,chips:[]};
+ if(sid==='bs3')return {prior:[],cur,chips:[['סך הנכסים (משקף קודם)',B.V.A]]};
+ return {prior:[],cur,chips:[]};}
+function bs4Rows(){const V=bsV();const lk=(id,l,sg,v)=>({id,l,sg,v,k:'',lock:true});
+ if(D().eq==='open')return {rows:[lk('eo','הון עצמי בפתיחה (עודפי פתיחה)','',V.eqOpen),lk('np','רווח נקי של השנה (מדוח רווח והפסד)','+',V.net),{id:'E',l:'הון עצמי ל-31.12 = ?',sg:'=',v:V.E,k:'sub',f:'עודפי פתיחה ועוד רווח השנה',nf:`${fmt(V.eqOpen)} + ${fmt(V.net)}`},{id:'LE',l:'סך התחייבויות והון עצמי',sg:'=',v:V.LE,k:'tot',f:'התחייבויות ועוד הון עצמי',nf:`${fmt(V.L)} + ${fmt(V.E)}`}],chips:[['סך הנכסים',V.A],['סך ההתחייבויות',V.L],['רווח נקי',V.net]],V};
+ return {rows:[{id:'E',l:'הון עצמי = ?  (נכסים פחות התחייבויות)',sg:'=',v:V.E,k:'sub',f:'נכסים פחות התחייבויות',nf:`${fmt(V.A)} - ${fmt(V.L)}`},lk('ow','השקעת בעלים','',V.owners),lk('np','רווח נקי של השנה','',V.net),{id:'re',l:'עודפי פתיחה = הון פחות השקעת בעלים פחות רווח',sg:'=',v:V.reOpen,k:'sub',f:'הון עצמי, פחות השקעת בעלים, פחות רווח השנה',nf:`${fmt(V.E)} - ${fmt(V.owners)} - ${fmt(V.net)}`},{id:'LE',l:'סך התחייבויות והון עצמי',sg:'=',v:V.LE,k:'tot',f:'התחייבויות ועוד הון עצמי',nf:`${fmt(V.L)} + ${fmt(V.E)}`}],chips:[['סך הנכסים',V.A],['סך ההתחייבויות',V.L],['רווח נקי',V.net]],V};}
+function renderBuild(sid){const cfg=BUILD[sid];const tb=$('#bw-'+sid),mem=$('#mem-'+sid);$('#co-'+sid).textContent=D().co;$('#sc-'+sid).textContent='';
+ let prior=[],cur=[],chips=[],extra='';
+ if(cfg.st==='bs4'){const b=bs4Rows();cur=b.rows;chips=b.chips;extra=`<div class="mg"><div class="mgh">הון עצמי: הגדרה</div><div style="font-size:13.5px;line-height:1.5;padding:2px 4px">${EQ_NOTE}</div></div>`;}
+ else{const b=buildRowsFor(sid);prior=b.prior;cur=b.cur;chips=b.chips;}
+ const rowH=(r,locked)=>{const isIn=!locked&&!r.lock;const q=(r.f||r.nf)?`<button data-h="${r.id}">?</button>`:'';const bi=isIn&&r.k==='l'?`<button data-n="${r.id}" class="bn">ביאור</button>`:'';
+  return `<tr class="${r.k==='l'?'':r.k} ${locked||r.lock?'lk':''}" data-id="${r.id}"><td>${r.l}</td><td class="sg">${r.sg}</td><td>${isIn?`<input inputmode="numeric" autocomplete="off" data-id="${r.id}" placeholder="?">`:`<span class="lv num">${fmt(r.v)}</span>`}</td><td class="q">${isIn?(bi||q):''}</td></tr>`;};
+ tb.innerHTML=(prior.length?`<tr class="sep"><td colspan="4">מה שנבנה עד כה</td></tr>`:'')+prior.map(r=>rowH(r,true)).join('')+(prior.length?`<tr class="sep"><td colspan="4">בשקף הזה</td></tr>`:'')+cur.map(r=>rowH(r,false)).join('');
+ mem.innerHTML=`<div class="mh">זיכרון: הכרטיסים הרלוונטיים</div>`+(chips.length?`<div class="mchips">${chips.map(c=>chip(c[0],c[1])).join('')}</div>`:'')+cur.filter(r=>r.k==='l').map(memGroup).join('')+extra+(cur.filter(r=>r.k==='l').length||cfg.st==='bs4'?'':'<div class="hint" style="padding:6px">בשקף הזה כל השורות הן סכומי ביניים: מחשבים אותם מהשורות שנבנו עד כה.</div>')+(cfg.st==='pl'&&sid!=='pl1'?'<div class="srcnote" style="margin-top:6px;font-size:12.5px;padding:4px 10px">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div>':'');
+  const sc=()=>{const ins=$$('input',tb);const ok=ins.filter(x=>x.classList.contains('ok')).length;$('#sc-'+sid).textContent=`${ok} מתוך ${ins.length}`;if(ins.length&&ok===ins.length){toast('השקף הושלם!');}};
+ const valOf=id=>{const r=cur.find(x=>x.id===id);return r?r.v:NaN;};
+ const chk=inp=>{if(inp.value.trim()===''){inp.className='';return;}inp.className=(Math.abs(parseN(inp.value)-valOf(inp.dataset.id))<0.005)?'ok':'bad';sc();};
+ tb.onkeydown=e=>{if(e.target.tagName==='INPUT'&&e.key==='Enter'){e.preventDefault();e.stopPropagation();chk(e.target);const n=$$('input',tb);const j=n.indexOf(e.target);if(n[j+1])n[j+1].focus();}};
+ tb.onchange=e=>{if(e.target.tagName==='INPUT')chk(e.target);};
+ tb.onclick=e=>{const h=e.target.closest('button[data-h]');if(h){const tr=h.closest('tr');const nx=tr.nextElementSibling;if(nx&&nx.classList.contains('hintrow')){nx.remove();return;}const r=cur.find(x=>x.id===h.dataset.h);const t=document.createElement('tr');t.className='hintrow';t.innerHTML=`<td colspan="4">${r.f}${r.nf?`: <span class="num">${r.nf}</span>`:''}</td>`;tr.after(t);return;}
+  const n=e.target.closest('button[data-n]');if(n){const g=$('.mg[data-g="'+n.dataset.n+'"]',mem);if(g){$$('.mg',mem).forEach(x=>x.classList.remove('hl'));g.classList.add('hl');const f=$('.mf',g);f.style.display=f.style.display==='none'?'block':'none';g.scrollIntoView({block:'nearest'});}}};
+ $('#sh-'+sid).onclick=()=>{$$('input',tb).forEach(i=>{i.value=fmt(valOf(i.dataset.id));i.className='ok';});sc();};
+ $('#cl-'+sid).onclick=()=>renderBuild(sid);}
+
+/* ---------- full report ---------- */
+let rpTab='pl',rpSel=null,rpEq=false;
+function renderReport(){const m=$('#rp-main'),panel=$('#rp-panel');
+ $('#rp-tabs').innerHTML=[['pl','דוח רווח והפסד'],['bs','דוח על המצב הכספי (מאזן)']].map(t=>`<button data-k="${t[0]}" class="${t[0]===rpTab?'on':''}">${t[1]}</button>`).join('');
+ const showPanel=id=>{rpSel=id;$$('[data-rid]',m).forEach(x=>x.classList.toggle('sel',x.dataset.rid===id));
+  let html='';
+  if(rpTab==='pl'){const r=plRows().find(x=>x.id===id);if(!r)return;
+   html=r.k==='l'?`<h4 class="ph4">${r.l}</h4><div class="hint">ההרכב:</div>`+contribs(id,'s').map(c=>`<div class="mi ${c.amt<0?'ng':''}"><span>${c.it.n}${c.p<1?` <small>(${Math.round(c.p*100)}% מ-${fmt(c.it.a)})</small>`:''}</span><b class="num">${fmtp(c.amt)}</b></div>`).join('')+`<div class="mi tt"><span>סך הכול</span><b class="num">${fmt(r.v)}</b></div>`:`<h4 class="ph4">${r.l.replace(' *','')}</h4><div>${r.f}</div><div class="mi tt" style="margin-top:8px"><span class="num">${r.nf}</span><b class="num">= ${fmt(r.v)}</b></div>`;}
+  else{const B=bsRows();const r=B.lines.find(x=>x.id===id)||B[id];
+   if(id==='E'||id==='eqr'){const V=B.V;html=rpEq?(D().eq==='open'?`<h4 class="ph4">הון עצמי</h4><div>${EQ_NOTE}</div><div class="mi tt" style="margin-top:8px"><span>עודפי פתיחה + רווח השנה</span><b class="num">${fmt(V.eqOpen)} + ${fmt(V.net)} = ${fmt(V.E)}</b></div>`:`<h4 class="ph4">הון עצמי</h4><div>${EQ_NOTE}</div><div class="mi"><span>נכסים פחות התחייבויות</span><b class="num">${fmt(V.A)} - ${fmt(V.L)} = ${fmt(V.E)}</b></div><div class="mi"><span>השקעת בעלים</span><b class="num">${fmt(V.owners)}</b></div><div class="mi"><span>עודפי פתיחה (מחולצים)</span><b class="num">${fmt(V.reOpen)}</b></div><div class="mi"><span>רווח השנה</span><b class="num">${fmt(V.net)}</b></div>`):`<h4 class="ph4">הון עצמי: ?</h4><div>${EQ_NOTE}</div><div style="margin-top:6px">${D().eq==='open'?'מחשבים אותו כעודפי פתיחה ועוד רווח השנה.':'עודפי הפתיחה אינם נתונים, ולכן מחשבים את ההון כנכסים פחות התחייבויות, ומחלצים את העודפים.'}</div><div class="hint" style="margin-top:6px">לחצו על ״חשבו את ההון העצמי״ למעלה.</div>`;}
+   else if(r&&r.k==='l')html=`<h4 class="ph4">${r.l}</h4><div class="hint">ההרכב:</div>`+contribs(id,'b').map(c=>`<div class="mi ${c.amt<0?'ng':''}"><span>${c.it.n}${c.p<1?` <small>(${Math.round(c.p*100)}% מ-${fmt(c.it.a)})</small>`:''}</span><b class="num">${fmtp(c.amt)}</b></div>`).join('')+`<div class="mi tt"><span>סך הכול</span><b class="num">${fmt(r.v)}</b></div>`;
+   else if(r)html=`<h4 class="ph4">${r.l}</h4><div>${r.f}</div><div class="mi tt" style="margin-top:8px"><span class="num">${r.nf}</span><b class="num">= ${fmt(r.v)}</b></div>`;}
+  panel.innerHTML=html;};
+ $('#rp-act').innerHTML='';
+ if(rpTab==='pl'){const rows=plRows();m.innerHTML=`<table class="plf rp"><tbody>${rows.map(r=>`<tr class="${r.k==='l'?'':r.k} click" data-rid="${r.id}"><td>${r.l}</td><td class="sg">${r.sg}</td><td class="am">${fmt(r.v)}</td></tr>`).join('')}</tbody></table><div class="srcnote" style="margin-top:6px;font-size:13px;padding:4px 10px">* כיום הכנסות והוצאות אחרות נרשמות לפני הרווח התפעולי. אנו מציגים את הגישה הקלאסית, שבה הן מופיעות אחריו.</div>`;
+  panel.innerHTML='<div class="hint">לחצו על שורה כדי לראות את הרכבה.</div>';}
+ else{const B=bsRows(),V=B.V;const L=t=>B.lines.filter(r=>BLDEF.find(b=>b[0]===r.id)[2]===t);
+  const rl=r=>`<div class="rl" data-rid="${r.id}"><span>${r.l}</span><span class="v">${fmt(r.v)}</span></div>`;
+  const rt=(r)=>`<div class="rt click" data-rid="${r.id}"><span>${r.l}</span><span class="num">${fmt(r.v)}</span></div>`;
+  const eqv=rpEq?fmt(V.E):'?';const lev=rpEq?fmt(V.LE):'?';
+  m.innerHTML=`<div class="rep"><div class="hdr">${D().co}: דוח על המצב הכספי</div><div class="cols"><div><div class="rg" style="font-size:15px;color:var(--ink)">נכסים</div><div class="rg">נכסים שוטפים</div>${L('ca').map(rl).join('')}${rt(B.tca)}<div class="rg">נכסים לא שוטפים</div>${L('na').map(rl).join('')}${rt(B.tna)}${rt(B.ta)}</div><div><div class="rg" style="font-size:15px;color:var(--ink)">התחייבויות והון עצמי</div><div class="rg">התחייבויות שוטפות</div>${L('cl').map(rl).join('')}${rt(B.tcl)}<div class="rg">התחייבויות לא שוטפות</div>${L('nl').map(rl).join('')}${rt(B.tnl)}${rt(B.tl)}<div class="rg">הון עצמי</div><div class="rl eqr" data-rid="E"><span>הון עצמי</span><span class="v">${eqv}</span></div><div class="rt"><span>סך התחייבויות והון עצמי</span><span class="num">${lev}</span></div></div></div></div></div>`;
+  $('#rp-act').innerHTML=`<button class="btn" id="rp-eq" style="padding:4px 14px;font-size:15px">${rpEq?'הסתר את החישוב':'חשבו את ההון העצמי'}</button><span class="hint" style="margin-right:8px">${rpEq?`בדיקה: ${fmt(V.A)} = ${fmt(V.LE)}`:'ההון העצמי בסימן שאלה עד שמחשבים אותו'}</span>`;
+  $('#rp-eq').onclick=()=>{rpEq=!rpEq;renderReport();showPanel('E');};
+  panel.innerHTML='<div class="hint">לחצו על שורה כדי לראות את הרכבה. ההון העצמי מוצג בסימן שאלה עד שמחשבים אותו.</div>';}
+ m.onclick=e=>{const t=e.target.closest('[data-rid]');if(t)showPanel(t.dataset.rid);};
+ if(rpSel&&$('[data-rid="'+rpSel+'"]',m))showPanel(rpSel);}
+$('#rp-tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;rpTab=b.dataset.k;rpSel=null;renderReport();};
+
+/* ---------- traps lab ---------- */
+(function(){
  $('#tr-evs').innerHTML=TRAPS.map((e,i)=>`<button class="ev" data-i="${i}"><span class="k">${i+1}</span><span>${e.t}<br><small style="color:var(--mut);font-weight:700">${e.ref}</small></span></button>`).join('');
- function bsRender(e){const d=e.d,pf=v=>v===0?'0':(v>0?'+':'-')+fmt(Math.abs(v));const row=(n,v)=>`<div class="bsr ${v?'flash':''}"><span>${n}</span><span class="v">${pf(v)}</span></div>`;
-  const A=d.cash+d.cust+d.dep,LE=d.liab+d.eq;
-  $('#tr-bs').innerHTML=`<div class="side"><h5>שינוי בנכסים</h5>${row('מזומן',d.cash)}${row('לקוחות',d.cust)}${row('פקדון',d.dep)}<div class="bst"><span>סך</span><span class="num">${pf(A)}</span></div></div><div class="side"><h5>שינוי בהתחייבויות ובהון</h5>${row('התחייבויות',d.liab)}${row('הון עצמי (רווח)',d.eq)}<div class="bst"><span>סך</span><span class="num">${pf(LE)}</span></div></div>`;
-  $('#tr-note').innerHTML=e.n+` <span class="hint">המאזן נשאר מאוזן: ${pf(A)} = ${pf(LE)}.</span>`;}
- function pick(i){ci=i;$$('#tr-evs .ev').forEach((b,j)=>b.classList.toggle('done',j===i));const e=TRAPS[i];$('#tr-bs').innerHTML='';$('#tr-note').textContent='';
+ const pf=v=>v===0?'0':(v>0?'+':'-')+fmt(Math.abs(v));
+ function pick(i){$$('#tr-evs .ev').forEach((b,j)=>b.classList.toggle('done',j===i));const e=TRAPS[i];
   const opts=e.mc?e.mc:['כן','לא'];const ai=e.mc?e.ai:(e.a?0:1);
-  $('#tr-box').innerHTML=`<div class="hint" style="font-weight:700;color:var(--coral)">${e.ref}</div><div style="font-size:18px;font-weight:800;margin:3px 0 6px;line-height:1.35">${e.t}</div><div style="font-size:16px;font-weight:700;margin-bottom:4px">${e.q}</div><div class="vsbtn" style="margin-top:4px">${opts.map((o,j)=>`<button class="btn ${j===ai?'':'ghost'}" style="flex:1;padding:6px" data-j="${j}">${o}</button>`).join('')}</div><div class="fb" id="tr-fb"></div>`;
-  $$('#tr-box .vsbtn button').forEach(b=>b.onclick=()=>{const ok=+b.dataset.j===ai;const fb=$('#tr-fb');fb.className='fb show '+(ok?'ok':'bad');fb.innerHTML=ok?'<b>נכון.</b>':'<b>לא בדיוק.</b> התשובה: '+opts[ai]+'.';$$('#tr-box .vsbtn button').forEach(x=>x.disabled=true);bsRender(e);});}
+  $('#tr-box').innerHTML=`<div class="hint" style="font-weight:700;color:var(--coral)">${e.ref}</div><div style="font-size:16px;font-weight:800;margin:2px 0 4px;line-height:1.35">${e.t}</div><div style="font-size:15px;font-weight:700;margin-bottom:3px">${e.q}</div><div class="vsbtn" style="margin-top:3px">${opts.map((o,j)=>`<button class="btn ghost" style="flex:1;padding:5px;font-size:15px" data-j="${j}">${o}</button>`).join('')}</div><div class="fb" id="tr-fb" style="font-size:14px;padding:6px 10px"></div><div id="tr-res"></div>`;
+  $$('#tr-box .vsbtn button').forEach(b=>b.onclick=()=>{const ok=+b.dataset.j===ai;const fb=$('#tr-fb');fb.className='fb show '+(ok?'ok':'bad');fb.innerHTML=ok?'<b>נכון.</b>':'<b>לא בדיוק.</b> התשובה: '+opts[ai]+'.';$$('#tr-box .vsbtn button').forEach(x=>x.disabled=true);
+   const d=e.d,A=d.cash+d.cust+d.dep,LE=d.liab+d.eq;const row=(n,v)=>`<div class="bsr ${v?'flash':''}" style="font-size:14px;padding:2px 6px"><span>${n}</span><span class="v">${pf(v)}</span></div>`;
+   $('#tr-res').innerHTML=`<div class="bs" style="margin-top:6px"><div class="side" style="padding:6px 10px"><h5 style="font-size:14px">שינוי בנכסים</h5>${row('מזומן',d.cash)}${row('לקוחות',d.cust)}${row('פקדון',d.dep)}<div class="bst" style="font-size:14px"><span>סך</span><span class="num">${pf(A)}</span></div></div><div class="side" style="padding:6px 10px"><h5 style="font-size:14px">שינוי בהתחייבויות ובהון</h5>${row('התחייבויות',d.liab)}${row('הון עצמי (רווח)',d.eq)}<div class="bst" style="font-size:14px"><span>סך</span><span class="num">${pf(LE)}</span></div></div></div><div class="evnote" style="font-size:14px;padding:6px 10px;min-height:0;margin-top:6px">${e.n} <span class="hint">המאזן נשאר מאוזן: ${pf(A)} = ${pf(LE)}.</span></div>`;});}
  $('#tr-evs').onclick=e=>{const b=e.target.closest('.ev');if(b)pick(+b.dataset.i);};})();
 
-/* ---------- slide 13: exam stepper ---------- */
-(function(){const ex=EXS.find(x=>x.id==='2.13');
- $('#ex213').innerHTML=ACC213.map(r=>`<tr><td>${r[0]}</td><td>${fmt(r[1])}</td></tr>`).join('');
- const S=[['חילוץ העודפים לפתיחה',ex.parts[0].steps],['מכירות, מימון ושכירות',ex.parts[1].steps.slice(0,2)],['הסעיפים בדוח רווח והפסד',ex.parts[1].steps.slice(2,4)],['סכומי הביניים',ex.parts[1].steps.slice(4)],['הנכסים וההתחייבויות במאזן',ex.parts[2].steps.slice(0,5)],['ההון והבדיקה',ex.parts[2].steps.slice(5)]];
- let k=0;$('#exsteps').innerHTML=S.map((s,i)=>`<button data-i="${i}">${i+1}</button>`).join('');
- function draw(){$$('#exsteps button').forEach((b,i)=>b.classList.toggle('on',i===k));$('#exbody').innerHTML=`<b style="color:var(--coral);font-size:19px">צעד ${k+1}: ${S[k][0]}</b><ol style="margin:6px 20px 0 0;line-height:1.6">${S[k][1].map(t=>`<li>${esc(t).replace(/(\d[\d,.]*(?: [-+×=] \d[\d,.]*)+)/g,'<span class="num">$1</span>')}</li>`).join('')}</ol><div class="hint" style="margin-top:8px">נתונים נוספים: (1) 20% מהזכאים האחרים ישולמו בעוד 3 שנים. (2) השיקים לפירעון הם עד 1.3.2027. (3) 25% משכירות עבור מחלקת השיווק, והיתר עבור ההנהלה. יחסי ציבור נזקפים למכירה ושיווק.</div>`;}
- $('#exsteps').onclick=e=>{const b=e.target.closest('button');if(b){k=+b.dataset.i;draw();}};
- $('#ex-next').onclick=()=>{if(k<S.length-1){k++;draw();}};$('#ex-prev').onclick=()=>{if(k>0){k--;draw();}};draw();})();
-
-/* ---------- slide 14: exercise bank ---------- */
+/* ---------- exercise bank ---------- */
 let exCur='2.1';
 const exDone=store('exdone')||{};
 function renderExSel(){$('#exsel').innerHTML=EXS.map(e=>`<button class="exchip ${e.id===exCur?'on':''} ${exDone[e.id]?'dn':''}" data-id="${e.id}">${e.id}</button>`).join('');}
 function renderEx(){const e=EXS.find(x=>x.id===exCur);renderExSel();
  const acc=e.showAcc?`<table class="acct">${ACC21.map(a=>`<tr><td>${a[0]}</td><td>${fmt(a[1])}</td></tr>`).join('')}</table><div class="hint" style="margin-top:4px">הון עצמי: יתרת פתיחה ל-1.1.2025.</div>`:(e.exam?`<table class="acct">${ACC213.map(a=>`<tr><td>${a[0]}</td><td>${fmt(a[1])}</td></tr>`).join('')}</table><div class="hint" style="margin-top:4px">הערכים באלפי ש״ח.</div>`:'');
- $('#ex-left').innerHTML=`<div class="exbox"><h4>תרגיל ${e.id}: ${e.title}</h4>${esc(e.intro)}${acc}<div class="exlinks"><a href="../../materials/exercise-booklet.pdf#page=${e.page}" target="_blank" rel="noopener">בחוברת התרגילים, עמוד ${e.page}</a><a href="../../materials/detailed-solutions.pdf#page=22" target="_blank" rel="noopener">חוברת הפתרונות (לאחר ניסיון)</a>${e.exam?'<a href="#" data-go="s-exam">להדרכה בשישה צעדים</a>':''}${e.showAcc?'<a href="#" data-ds="a21" data-go="s-sort">לכלי המיון</a><a href="#" data-ds="a21" data-go="s-plb">לבניית הדוח</a>':''}</div></div>`;
+ const dsl=e.showAcc?'a21':(e.exam?'e213':'');
+ $('#ex-left').innerHTML=`<div class="exbox"><h4>תרגיל ${e.id}: ${e.title}</h4>${esc(e.intro)}${acc}${e.note?`<div class="srcnote" style="margin-top:6px;font-size:13px">${esc(e.note)}</div>`:''}<div class="exlinks"><a href="../../materials/exercise-booklet.pdf#page=${e.page}" target="_blank" rel="noopener">בחוברת התרגילים, עמוד ${e.page}</a><a href="../../materials/detailed-solutions.pdf#page=22" target="_blank" rel="noopener">חוברת הפתרונות (לאחר ניסיון)</a>${dsl?`<a href="#" data-ds="${dsl}" data-go="s-sort">לפתרון שלב אחר שלב</a>`:''}</div></div>`;
  const parts=e.parts.map((p,pi)=>{let h=`<div class="part"><h5>${p.q}</h5>`;
   if(p.ch)h+=`<div class="chrow" data-pi="${pi}"><div style="font-size:14.5px;font-weight:800">${p.ch.l}</div>${p.ch.o.map((o,j)=>`<label data-j="${j}"><input type="radio" name="ch${pi}" style="margin-top:3px"> <span>${o}</span></label>`).join('')}</div>`;
   if(p.match)h+=p.match.map((m,mi)=>`<div class="mrow"><span>${m[0]}</span><select data-pi="${pi}" data-mi="${mi}"><option value="">בחרו</option>${m[1].map((o,j)=>`<option value="${j}">${o}</option>`).join('')}</select><span class="s"></span></div>`).join('');
@@ -1157,7 +1397,7 @@ function renderEx(){const e=EXS.find(x=>x.id===exCur);renderExSel();
 function exProgress(){const e=EXS.find(x=>x.id===exCur);const total=$$('#ex-right input[data-ci]').length+$$('#ex-right select').length+$$('#ex-right .chrow').length;const ok=$$('#ex-right input.ok').length+$$('#ex-right select.ok').length+$$('#ex-right .chrow.done').length;if(total&&ok===total&&!exDone[e.id]){exDone[e.id]=1;store('exdone',exDone);renderExSel();confetti();toast('תרגיל '+e.id+' הושלם!');}}
 $('#exsel').onclick=e=>{const b=e.target.closest('.exchip');if(b){exCur=b.dataset.id;renderEx();}};
 $('#ex-right').addEventListener('change',e=>{const t=e.target,ex=EXS.find(x=>x.id===exCur);
- if(t.matches('input[data-ci]')){const p=ex.parts[+t.dataset.pi],c=p.checks[+t.dataset.ci];const v=parseN(t.value);const row=t.closest('.ckrow');if(t.value.trim()===''){t.className='';row.querySelector('.s').textContent='';return;}const ok=v===c[1];t.className=ok?'ok':'bad';row.querySelector('.s').textContent=ok?'✓':'✗';exProgress();}
+ if(t.matches('input[data-ci]')){const p=ex.parts[+t.dataset.pi],c=p.checks[+t.dataset.ci];const v=parseN(t.value);const row=t.closest('.ckrow');if(t.value.trim()===''){t.className='';row.querySelector('.s').textContent='';return;}const main=v===c[1],alt=c[2]!==undefined&&v===c[2];const ok=main||alt;t.className=ok?'ok':'bad';row.querySelector('.s').textContent=ok?(alt?'✓*':'✓'):'✗';exProgress();}
  if(t.matches('select')){const p=ex.parts[+t.dataset.pi],m=p.match[+t.dataset.mi];const row=t.closest('.mrow');if(t.value===''){t.className='';row.querySelector('.s').textContent='';return;}const ok=+t.value===m[2];t.className=ok?'ok':'bad';row.querySelector('.s').textContent=ok?'✓':'✗';exProgress();}
  if(t.matches('input[type=radio]')){const box=t.closest('.chrow'),p=ex.parts[+box.dataset.pi],j=+t.closest('label').dataset.j;$$('label',box).forEach(l=>l.classList.remove('ok','bad'));const ok=j===p.ch.a;t.closest('label').classList.add(ok?'ok':'bad');box.classList.toggle('done',ok);if(!ok){$$('label',box)[p.ch.a].classList.add('ok');box.classList.add('done');}exProgress();}});
 $('#ex-right').addEventListener('keydown',e=>{if(e.target.matches('input[data-ci]')&&e.key==='Enter'){e.preventDefault();e.stopPropagation();e.target.dispatchEvent(new Event('change',{bubbles:true}));const n=$$('#ex-right input[data-ci]');const j=n.indexOf(e.target);if(n[j+1])n[j+1].focus();}});
@@ -1167,36 +1407,35 @@ function openEx(id){const ex=EXS.find(x=>x.id===id);if(!ex)return;exCur=id;rende
 hooks['s-ex']=()=>renderEx();
 renderEx();
 
-/* ---------- slide 15: MCQ bank ---------- */
+/* ---------- MCQ bank ---------- */
 let qCur=1;const qAns=store('qans')||{};
 function renderQGrid(){$('#qgrid').innerHTML=QS.map(q=>`<button data-n="${q.id}" class="${q.id===qCur?'on':''} ${qAns[q.id]!==undefined?(qAns[q.id]===q.a?'ok':'bad'):''}">${q.id}</button>`).join('');
  const done=Object.keys(qAns).length,ok=QS.filter(q=>qAns[q.id]===q.a).length;$('#qscore').textContent=`נענו ${done} מתוך ${QS.length}. נכונות: ${ok}.`;}
+function qFeedback(q,ans){const ok=ans===q.a;return (ok?'<b>נכון.</b> ':'<b>לא בדיוק.</b> '+(q.why[ans]?'התשובה שבחרתם: '+q.why[ans]+' ':''))+q.r+(q.note?' <br><span class="hint">'+esc(q.note)+'</span>':'');}
 function renderQ(){const q=QS.find(x=>x.id===qCur);const ans=qAns[q.id];renderQGrid();
  $('#qcard').innerHTML=`<div class="qc"><div class="qh">שאלה 2.${q.id} · ${q.topic} · <a href="../../materials/exercise-booklet.pdf#page=${q.page}" target="_blank" rel="noopener" style="color:#b8391f">עמוד ${q.page} בחוברת</a></div><div class="qt">${esc(q.q)}</div><div class="opts">${q.o.map((o,j)=>`<button class="opt ${ans!==undefined?(j===q.a?'ok':(j===ans?'bad':'')):''}" data-j="${j}"><span class="l">${'אבגדה'[j]}</span><span>${esc(o)}</span></button>`).join('')}</div><div class="fb ${ans!==undefined?'show '+(ans===q.a?'ok':'bad'):''}" id="qfb">${ans!==undefined?qFeedback(q,ans):''}</div><div class="qnav noprint"><button class="btn ghost" style="padding:5px 12px;font-size:14px" id="qprev">→ הקודמת</button><button class="btn" style="padding:5px 12px;font-size:14px" id="qnext">הבאה ←</button><button class="btn ghost" style="padding:5px 12px;font-size:14px" id="qall">למה כל תשובה?</button></div><div class="why" id="qwhy"></div></div>`;}
-function qFeedback(q,ans){const ok=ans===q.a;return (ok?'<b>נכון.</b> ':'<b>לא בדיוק.</b> '+(q.why[ans]?'התשובה שבחרתם: '+q.why[ans]+' ':''))+q.r;}
 $('#qgrid').onclick=e=>{const b=e.target.closest('button');if(b){qCur=+b.dataset.n;renderQ();}};
 $('#qcard').addEventListener('click',e=>{const q=QS.find(x=>x.id===qCur);
  const o=e.target.closest('.opt');if(o&&qAns[q.id]===undefined){const j=+o.dataset.j;qAns[q.id]=j;store('qans',qAns);renderQ();if(j===q.a)toast('נכון!');return;}
  if(e.target.closest('#qnext')){qCur=qCur%QS.length+1;renderQ();}
  if(e.target.closest('#qprev')){qCur=(qCur+QS.length-2)%QS.length+1;renderQ();}
- if(e.target.closest('#qall')){$('#qwhy').innerHTML=q.o.map((t,j)=>`<div class="${j===q.a?'w-ok':'w-bad'}"><b>${'אבגדה'[j]}.</b> ${j===q.a?'התשובה הנכונה. '+esc(q.r):esc(q.why[j]||'')}</div>`).join('');}});
+ if(e.target.closest('#qall')){$('#qwhy').innerHTML=q.o.map((t,j)=>`<div class="${j===q.a?'w-ok':'w-bad'}"><b>${'אבגדה'[j]}.</b> ${j===q.a?'התשובה הנכונה. '+esc(q.r):esc(q.why[j]||'')}</div>`).join('')+(q.note?`<div class="w-bad"><b>הערה:</b> ${esc(q.note)}</div>`:'');}});
 $('#qreset').onclick=()=>{Object.keys(qAns).forEach(k=>delete qAns[k]);store('qans',qAns);renderQ();};
 function openQ(n){qCur=n;renderQ();go('s-mcq');}
 hooks['s-mcq']=()=>renderQ();
 renderQ();
 
-/* ---------- slide 16: homework map ---------- */
+/* ---------- homework map ---------- */
 const HWM=[
 ['מיון יתרות',[['ex','2.1']],'s-sort','למיון'],
-['בניית רווח והפסד',[['ex','2.1'],['ex','2.3'],['ex','2.13']],'s-plb','לבנייה'],
-['מכירות נטו והנחות',[['ex','2.8'],['ex','2.9'],['q',1],['q',7],['q',8],['q',9],['q',10]],'s-sales','למכירות'],
-['איזה סעיף בדוח',[['ex','2.9'],['ex','2.12'],['q',2],['q',5],['q',6],['q',23],['q',27]],'s-lines','למשחק הסיווג'],
-['סכומי ביניים',[['ex','2.3'],['q',3],['q',4],['q',7]],'s-sub','למחשבון'],
-['שוטף ולא שוטף',[['ex','2.12'],['q',15],['q',24],['q',26]],'s-bsort','למשחק המאזן'],
-['איחוד סעיפים ופחת',[['ex','2.10'],['ex','2.11'],['ex','2.12'],['q',11],['q',12],['q',13],['q',14]],'s-agg','לכלי האיחוד'],
-['הון עצמי',[['ex','2.2'],['ex','2.3'],['ex','2.7'],['ex','2.13'],['q',16],['q',17],['q',18],['q',25]],'s-equity','להון עצמי'],
+['בניית רווח והפסד ומאזן',[['ex','2.1'],['ex','2.3'],['ex','2.13']],'s-pl1','לבנייה'],
+['מבנה הדוח וסכומי ביניים',[['ex','2.3'],['q',3],['q',4],['q',7]],'s-struct','להגדרות'],
+['מכירות נטו והנחות',[['ex','2.8'],['ex','2.9'],['q',1],['q',7],['q',8],['q',9],['q',10]],'s-sales','להגדרות'],
+['לאיזה סעיף שייך',[['ex','2.9'],['ex','2.12'],['q',2],['q',5],['q',6],['q',23],['q',27]],'s-lines','למשחק הסיווג'],
+['שוטף ולא שוטף, איחוד ופחת',[['ex','2.10'],['ex','2.11'],['ex','2.12'],['q',11],['q',12],['q',13],['q',14],['q',15],['q',24],['q',26]],'s-bsdef','להגדרות'],
+['הון עצמי',[['ex','2.2'],['ex','2.3'],['ex','2.7'],['ex','2.13'],['q',16],['q',17],['q',18],['q',25]],'s-bs4','להון העצמי'],
 ['הוצאה אינה תשלום',[['ex','2.4'],['ex','2.5'],['ex','2.6'],['ex','2.7'],['q',19],['q',20],['q',21],['q',22],['q',28]],'s-traps','למעבדה'],
-['במתכונת הבחינה',[['ex','2.13']],'s-exam','לשישה הצעדים']];
+['במתכונת הבחינה',[['ex','2.13']],'s-sort','לפתרון שלב אחר שלב']];
 $('#hwtbl').innerHTML=HWM.map(r=>`<tr><td>${r[0]}</td><td>${r[1].map(i=>i[0]==='ex'?`<button class="ch" data-ex="${i[1]}">תרגיל ${i[1]}</button>`:`<button class="ch" data-q="${i[1]}">שאלה 2.${i[1]}</button>`).join('')}</td><td><button class="pl" data-go="${r[2]}">${r[3]} ←</button></td></tr>`).join('');
 
 /* ---------- footers, print, boot ---------- */
@@ -1205,9 +1444,10 @@ $('#hwtbl').innerHTML=HWM.map(r=>`<tr><td>${r[0]}</td><td>${r[1].map(i=>i[0]==='
  pr.innerHTML='<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px 14px">'+QS.map(q=>`<div style="break-inside:avoid;background:#fff;border-radius:8px;padding:5px 9px"><b>2.${q.id}.</b> ${esc(q.q)}<br>${q.o.map((o,j)=>`<span style="${j===q.a?'font-weight:800;color:#167a43':''}">${'אבגדה'[j]}. ${esc(o)}</span>`).join(' · ')}</div>`).join('')+'</div>';
  $('#qcard').parentElement.appendChild(pr);$('#qcard').classList.add('screen-only');
 })();
+setDS('x');
 slides.forEach((s,i)=>{ if(s.id==='s-title')return; const f=document.createElement('div');f.className='ft';f.innerHTML='<span>יסודות החשבונאות א׳ · שיעור 2 · עריכת דוחות כספיים מלאים</span><span><b>ד״ר שי צבאן</b> · '+(i+1)+'</span>';s.appendChild(f);});
 (function(){const h=location.hash.slice(1);const m=h.match(/^ex=(.+)$/),q=h.match(/^q=(\d+)$/);
- if(m&&EXS.find(x=>x.id===m[1])){exCur=m[1];renderEx();const i=slides.findIndex(s=>s.id==='s-ex');show(i);return;}
+ if(m&&EXS.find(x=>x.id===m[1])){exCur=m[1];renderEx();show(slides.findIndex(s=>s.id==='s-ex'));return;}
  if(q){qCur=+q[1];renderQ();show(slides.findIndex(s=>s.id==='s-mcq'));return;}
  const hi=slides.findIndex(s=>s.id===h);show(hi>=0?hi:0);})();
 
