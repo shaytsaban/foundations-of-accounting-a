@@ -529,6 +529,33 @@ button.ch:hover{background:var(--coral);color:#fff}
 #s-rbs h2{font-size:34px}
 
 /* ===== lesson 3 ===== */
+.wtabs{display:flex;gap:8px;margin:4px 0 6px}
+.wtabs button{background:#fff;border-radius:99px;padding:5px 16px;font-weight:800;font-size:15px;box-shadow:0 1px 0 var(--line);border:2px solid transparent}
+.wtabs button.on{background:var(--navy2);color:#fff}
+.wpane{display:none}.wpane.on{display:block}
+.wfx{background:#fff;border-radius:18px;box-shadow:0 2px 0 var(--line),0 12px 28px rgba(22,33,58,.07);padding:10px 16px 6px}
+.wfc{position:relative;height:262px;display:flex;align-items:flex-end;gap:10px;border-bottom:2px solid #cfd6e4;padding:0 4px}
+.wb{position:relative;flex:1;height:100%}
+.wb .wfbar{position:absolute;left:0;right:0;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;opacity:.07;transition:opacity .45s,transform .45s;transform:scaleY(.4);transform-origin:bottom}
+.wb.on .wfbar{opacity:1;transform:none}
+.wb .wfbar.fl{background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.18) 0 6px,transparent 6px 12px)}
+.wb .wfbar.out{background:#fff!important;border:3px dashed #e8960c;color:#a86703}
+.wsep{width:2px;align-self:stretch;background:repeating-linear-gradient(#cfd6e4 0 6px,transparent 6px 12px);flex:none;margin:0 4px}
+.wfl{display:flex;gap:10px;padding:5px 4px 0}
+.wfl div{flex:1;text-align:center;font-size:13px;font-weight:800;line-height:1.2;color:var(--ink2);opacity:.25;transition:opacity .4s}
+.wfl div.on{opacity:1}
+.wfl .wsep{opacity:0}
+.weq{display:flex;align-items:stretch;gap:6px;margin-top:8px;flex-wrap:nowrap}
+.weq .t{flex:1;background:#fff;border-radius:12px;padding:6px 8px;text-align:center;box-shadow:0 1px 0 var(--line);opacity:.3;transition:opacity .4s,box-shadow .4s}
+.weq .t.on{opacity:1;box-shadow:0 0 0 2px var(--c) inset}
+.weq .t b{display:block;font-size:14.5px;color:var(--c)}
+.weq .t span{font-size:19px;font-weight:800}
+.weq .op{align-self:center;font-size:24px;font-weight:800;color:var(--ink2)}
+.fxsum tr.hid td{visibility:hidden}
+@media print{.fxsum tr.hid td{visibility:visible}.wb .wfbar,.weq .t,.wfl div{opacity:1!important;transform:none!important}}
+.fxctl{display:flex;gap:10px;align-items:center;margin-top:8px}
+.qqtabs{flex-wrap:wrap}
+.qqtabs button{padding:3px 10px}
 .shelf{display:flex;gap:30px;align-items:flex-end;height:372px;padding:14px 26px 10px;background:#fff;border-radius:18px;box-shadow:0 2px 0 var(--line),0 12px 28px rgba(22,33,58,.07)}
 .scol{flex:1;display:flex;flex-direction:column-reverse;align-items:stretch;height:100%}
 .scol .sl{font-size:15px;font-weight:800;text-align:center;color:var(--ink2);padding-top:6px;line-height:1.25}
@@ -651,18 +678,29 @@ ol.qqs-l li{margin-bottom:3px}
 <section class="slide" id="s-shelf" data-title="המחסן במספרים">
   <div class="kick">מבוא · המחשה</div>
   <h2>המחסן של החברה במספרים</h2>
-  <p class="sub" style="font-size:17px;margin-top:2px">לחצו ״השלב הבא״ וראו איך הסחורה הופכת לעלות המכירות ולרווח הגולמי.</p>
-  <div class="row" style="gap:22px;margin-top:8px;align-items:stretch">
-    <div style="flex:1.25"><div class="shelf" id="shelf"></div></div>
-    <div style="flex:.85" class="col">
-      <div class="card" id="shelfbox" style="padding:10px 16px;font-size:16px;line-height:1.5;min-height:118px"></div>
+  <div class="wtabs noprint" id="shtabs"><button class="on" data-pane="0">המחשה: מהמלאי לעלות המכירות</button><button data-pane="1">שאלות בדיקה (5)</button></div>
+  <div class="wpane on" id="shp0">
+  <div class="row" style="gap:20px;align-items:flex-start">
+    <div style="flex:1.32;min-width:0">
+      <div class="wfx"><div class="wfc" id="wfc"></div><div class="wfl" id="wfl"></div></div>
+      <div class="weq" id="weq1">
+        <div class="t" data-st="3" style="--c:#e0454f"><b>עלות המכירות</b><span class="num">280</span></div><span class="op">=</span>
+        <div class="t" data-st="0" style="--c:#0f9d90"><b>מלאי פתיחה</b><span class="num">100</span></div><span class="op">+</span>
+        <div class="t" data-st="1" style="--c:#6d4df2"><b>קניות נטו</b><span class="num">300</span></div><span class="op">-</span>
+        <div class="t" data-st="2" style="--c:#e8960c"><b>מלאי סגירה</b><span class="num">120</span></div></div>
+      <div class="weq" id="weq2" style="margin-top:6px">
+        <div class="t" data-st="4" style="--c:#25a65f"><b>רווח גולמי</b><span class="num">170</span></div><span class="op">=</span>
+        <div class="t" data-st="4" style="--c:#2a5bd7"><b>מכירות נטו</b><span class="num">450</span></div><span class="op">-</span>
+        <div class="t" data-st="4" style="--c:#e0454f"><b>עלות המכירות</b><span class="num">280</span></div></div>
+    </div>
+    <div style="flex:.78;min-width:0" class="col">
+      <div class="card" style="padding:10px 16px"><div class="hint" id="shelfn" style="font-size:13.5px;font-weight:800"></div><div id="shelfbox" style="font-size:16.5px;line-height:1.55;min-height:150px;margin-top:4px"></div></div>
       <div class="row noprint" style="gap:10px"><button class="btn coral" id="shelfnx">השלב הבא ←</button><button class="btn ghost" id="shelfre">מהתחלה</button></div>
-      <div class="card" style="padding:9px 14px;border-top:5px solid var(--asset);font-size:15px;line-height:1.5"><b style="color:#087469">היה לי, מצאתי, בזבזתי, חזרתי עם.</b> היה לי 50 ש״ח, מצאתי עוד 100, וחזרתי הביתה עם 20. כמה בזבזתי? 50 + 100 - 20 = 130. עלות המכירות מחושבת בדיוק כך.</div>
-      <div class="card" style="padding:10px 14px;border-top:5px solid var(--eq)"><b style="color:#a86703;font-size:16px">מלאי הסגירה מופיע פעמיים</b>
-        <table class="nt" style="margin-top:4px"><tr><td>במאזן: מלאי, נכס שוטף</td><td>120</td></tr><tr><td>ברווח והפסד: (-) מלאי סגירה, בחישוב עלות המכירות</td><td>120</td></tr></table>
-        <div style="font-size:13.5px;color:var(--mut);margin-top:3px">זה לא כפל: אותה סחורה, משני צדדים. היא לא נמכרה, ולכן היא נכס ולא הוצאה.</div></div>
+      <div class="card" style="padding:9px 14px;border-top:5px solid var(--eq);font-size:14.5px;line-height:1.5"><b style="color:#a86703">מלאי הסגירה מופיע פעמיים.</b> במאזן: מלאי 120, נכס שוטף. בחישוב עלות המכירות: מופחת 120. זו אותה סחורה משני צדדים, ולא כפל.</div>
     </div>
   </div>
+  </div>
+  <div class="wpane" id="shp1"><div class="qq" data-set="shelf"></div></div>
 </section>
 
 <!-- 6 PURCHASES -->
@@ -808,7 +846,7 @@ ol.qqs-l li{margin-bottom:3px}
 </section>
 
 <section class="slide qqs" id="q-re" data-title="ההון העצמי וחילוץ העודפים"><div class="kick">תחנה 4 · שאלות מהירות בסגנון מבחן</div><h2>ההון העצמי וחילוץ העודפים</h2><div class="qq" data-set="re"></div></section>
-<section class="slide" id="s-fx0" data-title="השפעת אירועים על הדוחות"><div class="kick">תחנה 5 · השפעת אירועים על הדוחות</div><h2>אירוע אחד, ומה הוא משנה בעלות המכירות וברווח</h2><div class="row" style="gap:20px;margin-top:8px;align-items:flex-start"><div style="flex:1.1" class="col"><div class="card" style="padding:12px 16px;font-size:17px;line-height:1.55">כמו בשיעור 2, המטרה אינה רק לבנות דוחות, אלא להבין איך <b>אירוע או עסקה</b> משפיעים עליהם. בבחינות רבות, אחרי עריכת הדוחות, יש סעיפי המשך שבוחנים בדיוק את זה. היום נתמקד באירועים שנוגעים לסחורה: קנייה, ספירת מלאי, הובלות, הנחות, ומכירה של רכוש קבוע.</div><div class="card" style="padding:10px 16px"><b style="color:var(--coral);font-size:17px">ארבע שאלות לכל אירוע</b><ol style="margin:4px 20px 0 0;padding:0;font-size:15.5px;line-height:1.55"><li>מה קרה בפועל?</li><li>האם הסחורה נמכרה, או שהיא עדיין במחסן?</li><li>מה משתנה: מזומן, נכס אחר (מלאי, ציוד), התחייבויות, הון מניות ופרמיה, עודפים (דרך הרווח), ודוח רווח והפסד?</li><li>באיזו שורה בדוח: עלות המכירות, מכירה ושיווק, מימון או הכנסות אחרות?</li></ol></div></div><div style="flex:.9" class="col"><div class="eqbox" style="margin:0"><div class="b" style="background:var(--assetbg);color:#087469;font-size:19px;padding:8px 12px">נכסים</div><span class="op">=</span><div class="b" style="background:var(--liabbg);color:#4f33c9;font-size:19px;padding:8px 12px">התחייבויות</div><span class="op">+</span><div class="b" style="background:var(--eqbg);color:#a86703;font-size:19px;padding:8px 12px">הון עצמי</div></div><div class="card" style="padding:8px 14px;font-size:15px;line-height:1.5"><b>הון עצמי</b> = הון מניות ופרמיה (השקעת בעלים) + עודפים.<br>הרווח הנקי של השנה מצטרף <b>לעודפים בלבד</b>.</div><div class="fxgo" id="fxgo"></div></div></div></section><section class="slide" id="s-fx1" data-title="השפעה 1: קנייה שנשארה במלאי"><div class="kick">תחנה 5 · השפעה 1 מתוך 6</div><h2>קנייה של סחורה אינה הוצאה</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> ב-20.12.2025 קנתה החברה בהקפה סחורה בעלות 30,000 ש״ח. בספירה ב-31.12 כל הסחורה הזו עדיין במחסן.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-1"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-1">בדיקה</button><button class="btn ghost" id="fxsh-1">הצג הסבר</button><span class="hint" id="fxsc-1"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-1"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx2" data-title="השפעה 2: מלאי סגירה שנספר בחסר"><div class="kick">תחנה 5 · השפעה 2 מתוך 6</div><h2>מלאי סגירה ועלות המכירות נעים בכיוונים הפוכים</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> בביקורת התברר שמלאי הסגירה ששימש בדוחות, 90,000 ש״ח, נמוך ב-10,000 ש״ח מהמלאי בפועל. מה משתנה כשמתקנים את הדוחות?</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-2"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-2">בדיקה</button><button class="btn ghost" id="fxsh-2">הצג הסבר</button><span class="hint" id="fxsc-2"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-2"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx3" data-title="השפעה 3: הובלה למחסן"><div class="kick">תחנה 5 · השפעה 3 מתוך 6</div><h2>הובלה למחסן היא חלק מעלות המכירות</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה שילמה במזומן 6,000 ש״ח על הובלת סחורה מהספק למחסן שלה. כל הסחורה נמכרה עד סוף השנה.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-3"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-3">בדיקה</button><button class="btn ghost" id="fxsh-3">הצג הסבר</button><span class="hint" id="fxsc-3"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-3"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx4" data-title="השפעה 4: הובלה ללקוחות"><div class="kick">תחנה 5 · השפעה 4 מתוך 6</div><h2>הובלה ללקוחות אינה עלות המכירות</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה שילמה במזומן 4,000 ש״ח על הובלת מוצרים שנמכרו ללקוחות.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-4"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-4">בדיקה</button><button class="btn ghost" id="fxsh-4">הצג הסבר</button><span class="hint" id="fxsc-4"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-4"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx5" data-title="השפעה 5: הנחת מזומן מספק"><div class="kick">תחנה 5 · השפעה 5 מתוך 6</div><h2>הנחת מזומן מספק היא הכנסת מימון</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה פרעה חוב של 50,000 ש״ח לספק לפני המועד, וקיבלה הנחת מזומן של 1,000 ש״ח. היא שילמה 49,000 ש״ח.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-5"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-5">בדיקה</button><button class="btn ghost" id="fxsh-5">הצג הסבר</button><span class="hint" id="fxsc-5"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-5"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx6" data-title="השפעה 6: מכירת מכונה ברווח"><div class="kick">תחנה 5 · השפעה 6 מתוך 6</div><h2>רווח הון הוא הכנסה אחרת, ולא מכירות</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה מכרה במזומן מכונה ישנה ב-42,000 ש״ח. עלות המכונה 100,000 ש״ח, והפחת הנצבר עליה 70,000 ש״ח.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-6"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-6">בדיקה</button><button class="btn ghost" id="fxsh-6">הצג הסבר</button><span class="hint" id="fxsc-6"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-6"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fxsum" data-title="סיכום ההשפעות"><div class="kick">תחנה 5 · סיכום</div><h2>שש ההשפעות בטבלה אחת</h2><p class="sub" style="font-size:16px;margin-top:2px">חץ למעלה הוא עלייה וחץ למטה הוא ירידה. בכל שורה שינוי הנכסים שווה לשינוי ההתחייבויות וההון. לחצו על אירוע כדי לחזור להסבר.</p><table class="fxsum" id="fxsum"></table></section>
+<section class="slide" id="s-fx0" data-title="השפעת אירועים על הדוחות"><div class="kick">תחנה 5 · השפעת אירועים על הדוחות</div><h2>אירוע אחד, ומה הוא משנה בעלות המכירות וברווח</h2><div class="row" style="gap:20px;margin-top:8px;align-items:flex-start"><div style="flex:1.1" class="col"><div class="card" style="padding:12px 16px;font-size:17px;line-height:1.55">כמו בשיעור 2, המטרה אינה רק לבנות דוחות, אלא להבין איך <b>אירוע או עסקה</b> משפיעים עליהם. בבחינות רבות, אחרי עריכת הדוחות, יש סעיפי המשך שבוחנים בדיוק את זה. היום נתמקד באירועים שנוגעים לסחורה: קנייה, ספירת מלאי, הובלות, הנחות, ומכירה של רכוש קבוע.</div><div class="card" style="padding:10px 16px"><b style="color:var(--coral);font-size:17px">ארבע שאלות לכל אירוע</b><ol style="margin:4px 20px 0 0;padding:0;font-size:15.5px;line-height:1.55"><li>מה קרה בפועל?</li><li>האם הסחורה נמכרה, או שהיא עדיין במחסן?</li><li>מה משתנה: מזומן, נכס אחר (מלאי, ציוד), התחייבויות, הון מניות ופרמיה, עודפים (דרך הרווח), ודוח רווח והפסד?</li><li>באיזו שורה בדוח: עלות המכירות, מכירה ושיווק, מימון או הכנסות אחרות?</li></ol></div></div><div style="flex:.9" class="col"><div class="eqbox" style="margin:0"><div class="b" style="background:var(--assetbg);color:#087469;font-size:19px;padding:8px 12px">נכסים</div><span class="op">=</span><div class="b" style="background:var(--liabbg);color:#4f33c9;font-size:19px;padding:8px 12px">התחייבויות</div><span class="op">+</span><div class="b" style="background:var(--eqbg);color:#a86703;font-size:19px;padding:8px 12px">הון עצמי</div></div><div class="card" style="padding:8px 14px;font-size:15px;line-height:1.5"><b>הון עצמי</b> = הון מניות ופרמיה (השקעת בעלים) + עודפים.<br>הרווח הנקי של השנה מצטרף <b>לעודפים בלבד</b>.</div><div class="fxgo" id="fxgo"></div></div></div></section><section class="slide" id="s-fx1" data-title="השפעה 1: קנייה שנשארה במלאי"><div class="kick">תחנה 5 · השפעה 1 מתוך 6</div><h2>קנייה של סחורה אינה הוצאה</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> ב-20.12.2025 קנתה החברה בהקפה סחורה בעלות 30,000 ש״ח. בספירה ב-31.12 כל הסחורה הזו עדיין במחסן.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-1"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-1">בדיקה</button><button class="btn ghost" id="fxsh-1">הצג הסבר</button><span class="hint" id="fxsc-1"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-1"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx2" data-title="השפעה 2: מלאי סגירה שנספר בחסר"><div class="kick">תחנה 5 · השפעה 2 מתוך 6</div><h2>מלאי סגירה ועלות המכירות נעים בכיוונים הפוכים</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> בביקורת התברר שמלאי הסגירה ששימש בדוחות, 90,000 ש״ח, נמוך ב-10,000 ש״ח מהמלאי בפועל. מה משתנה כשמתקנים את הדוחות?</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-2"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-2">בדיקה</button><button class="btn ghost" id="fxsh-2">הצג הסבר</button><span class="hint" id="fxsc-2"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-2"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx3" data-title="השפעה 3: הובלה למחסן"><div class="kick">תחנה 5 · השפעה 3 מתוך 6</div><h2>הובלה למחסן היא חלק מעלות המכירות</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה שילמה במזומן 6,000 ש״ח על הובלת סחורה מהספק למחסן שלה. כל הסחורה נמכרה עד סוף השנה.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-3"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-3">בדיקה</button><button class="btn ghost" id="fxsh-3">הצג הסבר</button><span class="hint" id="fxsc-3"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-3"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx4" data-title="השפעה 4: הובלה ללקוחות"><div class="kick">תחנה 5 · השפעה 4 מתוך 6</div><h2>הובלה ללקוחות אינה עלות המכירות</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה שילמה במזומן 4,000 ש״ח על הובלת מוצרים שנמכרו ללקוחות.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-4"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-4">בדיקה</button><button class="btn ghost" id="fxsh-4">הצג הסבר</button><span class="hint" id="fxsc-4"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-4"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx5" data-title="השפעה 5: הנחת מזומן מספק"><div class="kick">תחנה 5 · השפעה 5 מתוך 6</div><h2>הנחת מזומן מספק היא הכנסת מימון</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה פרעה חוב של 50,000 ש״ח לספק לפני המועד, וקיבלה הנחת מזומן של 1,000 ש״ח. היא שילמה 49,000 ש״ח.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-5"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-5">בדיקה</button><button class="btn ghost" id="fxsh-5">הצג הסבר</button><span class="hint" id="fxsc-5"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-5"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fx6" data-title="השפעה 6: מכירת מכונה ברווח"><div class="kick">תחנה 5 · השפעה 6 מתוך 6</div><h2>רווח הון הוא הכנסה אחרת, ולא מכירות</h2><div class="row" style="gap:18px;margin-top:6px;align-items:flex-start"><div style="flex:1"><div class="card" style="padding:10px 14px;font-size:16.5px;line-height:1.5"><b style="color:var(--coral)">האירוע:</b> החברה מכרה במזומן מכונה ישנה ב-42,000 ש״ח. עלות המכונה 100,000 ש״ח, והפחת הנצבר עליה 70,000 ש״ח.</div><div style="font-size:15px;font-weight:800;margin:8px 0 3px">מה משתנה? בחרו לכל פריט, ולחצו בדיקה.</div><table class="fxt" id="fxt-6"></table><div class="ctrl noprint" style="margin-top:4px"><button class="btn" id="fxchk-6">בדיקה</button><button class="btn ghost" id="fxsh-6">הצג הסבר</button><span class="hint" id="fxsc-6"></span></div></div><div style="flex:1.05"><div class="card fxx" id="fxx-6"><div class="hint">ההסבר המלא יופיע אחרי הבדיקה.</div></div></div></div></section><section class="slide" id="s-fxsum" data-title="סיכום ההשפעות"><div class="kick">תחנה 5 · סיכום</div><h2>שש ההשפעות בטבלה אחת</h2><p class="sub" style="font-size:16px;margin-top:2px">חץ למעלה הוא עלייה וחץ למטה הוא ירידה. בכל שורה שינוי הנכסים שווה לשינוי ההתחייבויות וההון. כל לחיצה על ״השורה הבאה״ (או מקש החץ) חושפת אירוע אחד. לחצו על שם האירוע כדי לחזור להסבר.</p><table class="fxsum" id="fxsum"></table><div class="fxctl noprint"><button class="btn coral" id="fxnx">השורה הבאה ←</button><button class="btn ghost" id="fxall">הצג הכול</button><button class="btn ghost" id="fxre">מהתחלה</button><span class="hint" id="fxn"></span></div></section>
 
 <section class="slide qqs" id="q-fx" data-title="עסקאות שלא נרשמו: מה משתנה בדוחות?"><div class="kick">תחנה 5 · מקבץ שאלות בסגנון מבחן</div><h2>עסקאות שלא נרשמו: מה משתנה בדוחות?</h2><div class="qq" data-set="fx"></div></section>
 <!-- PRACTICE QUESTIONS -->
@@ -1244,7 +1282,36 @@ purch:{title:'שלוש שאלות מהירות: קניות נטו, הובלות 
  steps:['טענה 1 נכונה: הובלת הסחורה למחסן היא חלק מעלותה.','טענה 2 שגויה: הנחת מזומן נובעת מאשראי (תשלום מוקדם). היא הכנסת מימון, ואינה נוגעת לעלות המכירות.','טענה 3 נכונה: החזרה לספק מבטלת חלק מהקנייה.'],
  refs:[['q',16],['q',17],['ex','3.4']]}]},
 
+shelf:{title:'שאלות בדיקה: עלות המכירות מתוך המלאי',qs:[
+{lv:1,q:'מלאי פתיחה 40,000 ש״ח; קניות נטו 260,000 ש״ח; מלאי סגירה 55,000 ש״ח. מהי עלות המכירות?',
+ o:[['205,000 ש״ח','מלאי הפתיחה הושמט: 260,000 - 55,000. גם הסחורה שהייתה במחסן ב-1.1 זמינה למכירה.'],['245,000 ש״ח',null],['275,000 ש״ח','היפוך הסימנים של המלאים: 260,000 + 55,000 - 40,000.'],['300,000 ש״ח','זו הסחורה הזמינה למכירה. מלאי הסגירה לא הופחת.'],['355,000 ש״ח','מלאי הסגירה נוסף במקום להיות מופחת.']],
+ steps:['עלות המכירות = מלאי פתיחה + קניות נטו - מלאי סגירה.','סחורה זמינה למכירה: 40,000 + 260,000 = 300,000.','מפחיתים את מה שנשאר במחסן: 300,000 - 55,000 = 245,000.'],
+ refs:[['ex','3.3'],['q',19]]},
+{lv:2,q:'מכירות נטו 380,000 ש״ח; מלאי פתיחה 30,000 ש״ח; קניות נטו 210,000 ש״ח; מלאי סגירה 45,000 ש״ח. מהו הרווח הגולמי?',
+ o:[['95,000 ש״ח','מלאי הסגירה נוסף לעלות המכירות: 30,000 + 210,000 + 45,000 = 285,000.'],['140,000 ש״ח','מלאי הסגירה לא הופחת: עלות המכירות חושבה כ-240,000.'],['170,000 ש״ח','הקניות נטו שימשו כעלות המכירות, בלי שני המלאים.'],['185,000 ש״ח',null],['215,000 ש״ח','מלאי הפתיחה הושמט: עלות המכירות חושבה כ-165,000.']],
+ steps:['עלות המכירות: 30,000 + 210,000 - 45,000 = 195,000.','רווח גולמי = מכירות נטו - עלות המכירות.','380,000 - 195,000 = 185,000.'],
+ refs:[['ex','3.5'],['q',21]]},
+{lv:2,q:'בספירת המלאי ב-31.12 נכללה בטעות סחורה בעלות 10,000 ש״ח שכבר נמכרה. מה ההשפעה של הטעות על הדוחות?',
+ o:[['עלות המכירות נמוכה מדי ב-10,000, והרווח הגולמי גבוה מדי ב-10,000',null],['עלות המכירות גבוהה מדי ב-10,000, והרווח הגולמי נמוך מדי ב-10,000','מלאי סגירה גבוה מדי מופחת ביותר מדי, ולכן עלות המכירות נמוכה מדי.'],['המלאי במאזן גבוה מדי, ואין השפעה על הרווח','מלאי הסגירה מופיע גם בחישוב עלות המכירות, ולכן הרווח מושפע.'],['המכירות גבוהות מדי ב-10,000','המכירה נרשמה כראוי. הטעות היא רק בספירה.'],['הקניות גבוהות מדי ב-10,000','הקניות לא נוגעות לספירה. הטעות היא במלאי הסגירה.']],
+ steps:['מלאי הסגירה גבוה מדי ב-10,000: במאזן המלאי גבוה מדי.','בחישוב עלות המכירות מפחיתים 10,000 יותר מדי, ולכן עלות המכירות נמוכה מדי ב-10,000.','לכן הרווח הגולמי והנקי, וגם העודפים, גבוהים מדי ב-10,000.'],
+ refs:[['q',20],['ex','3.6']]},
+{lv:3,q:'עלות המכירות בשנה 300,000 ש״ח; מלאי פתיחה 50,000 ש״ח; מלאי סגירה 70,000 ש״ח. מהן הקניות נטו?',
+ o:[['180,000 ש״ח','שני המלאים הופחתו מעלות המכירות.'],['280,000 ש״ח','היפוך התפקידים: מלאי הפתיחה נוסף ומלאי הסגירה הופחת.'],['300,000 ש״ח','קניות שוות לעלות המכירות רק כשהמלאי לא משתנה. כאן הוא גדל ב-20,000.'],['320,000 ש״ח',null],['420,000 ש״ח','שני המלאים נוספו לעלות המכירות.']],
+ steps:['מתחילים מהנוסחה: עלות המכירות = מלאי פתיחה + קניות נטו - מלאי סגירה.','מציבים: 300,000 = 50,000 + קניות נטו - 70,000.','מחלצים: קניות נטו = 300,000 - 50,000 + 70,000 = 320,000.','בדיקה: 50,000 + 320,000 - 70,000 = 300,000.'],
+ refs:[['ex','3.7'],['q',22]]},
+{lv:3,q:'בדוגמה של המחסן: מלאי פתיחה 100, קניות נטו 300, מלאי סגירה 120 ומכירות נטו 450. איזה היגד נכון?',
+ o:[['הסחורה הזמינה למכירה, 400, היא עלות המכירות','ממנה עדיין יש להפחית את מה שנשאר במחסן.'],['מלאי הסגירה, 120, מופיע במאזן כנכס שוטף ומופחת בחישוב עלות המכירות',null],['מלאי הסגירה מוצג פעמיים, ולכן הנכסים במאזן כוללים 240','במאזן הוא מוצג פעם אחת. ההפחתה היא בחישוב עלות המכירות, בדוח רווח והפסד.'],['הרווח הגולמי הוא 150: מכירות נטו פחות קניות נטו','הרווח הגולמי מחושב מעלות המכירות, לא מהקניות: 450 - 280 = 170.'],['מלאי הפתיחה מופיע במאזן של סוף השנה','מלאי הפתיחה הוא המלאי ב-1.1. במאזן ל-31.12 מוצג מלאי הסגירה.']],
+ steps:['עלות המכירות: 100 + 300 - 120 = 280.','הסחורה שנשארה, 120, לא נמכרה: היא נכס שוטף במאזן.','אותה סחורה מופחתת מהזמין למכירה, ולכן אינה הוצאה. זה לא כפל: אותה סחורה משני צדדים.'],
+ refs:[['q',19],['ex','3.6']]}]},
 cogs:{title:'מקבץ שאלות: נתונים רבים, ושואלים רק דבר אחד',data:[['מכירות ברוטו','900,000'],['החזרות מלקוחות','30,000'],['הנחות מסחריות ללקוחות','20,000'],['הנחות מזומן ללקוחות','6,000'],['מלאי 1.1','70,000'],['קניות ברוטו','480,000'],['הובלה למחסן','15,000'],['החזרות לספקים','25,000'],['מלאי 31.12','85,000'],['הובלה ללקוחות','12,000'],['פרסום','48,000'],['הנהלה וכלליות','96,000'],['רווח הון ממכירת ציוד','10,000'],['הכנסות ריבית','4,000']],qs:[
+{lv:1,q:'על בסיס הנתונים שבטבלה (ש״ח), מהן המכירות נטו?',
+ o:[['844,000 ש״ח','ניכוי גם של הנחות המזומן ללקוחות. הן הוצאות מימון.'],['850,000 ש״ח',null],['870,000 ש״ח','שכחה של ההנחות המסחריות ללקוחות.'],['880,000 ש״ח','שכחה של ההחזרות מלקוחות.'],['900,000 ש״ח','אלה המכירות ברוטו.']],
+ steps:['מכירות נטו = מכירות ברוטו - החזרות מלקוחות - הנחות מסחריות ללקוחות.','900,000 - 30,000 - 20,000 = 850,000.','הנחות מזומן ללקוחות הן הוצאות מימון, ואינן מקטינות את המכירות.'],
+ refs:[['q',13],['q',14]]},
+{lv:1,q:'על בסיס הנתונים שבטבלה (ש״ח), מהן הקניות נטו?',
+ o:[['440,000 ש״ח','ההובלה למחסן הופחתה במקום להתווסף.'],['455,000 ש״ח','זו עלות המכירות, אחרי שני המלאים.'],['470,000 ש״ח',null],['482,000 ש״ח','נוספה גם ההובלה ללקוחות, שהיא הוצאת מכירה ושיווק.'],['495,000 ש״ח','שכחה של ההחזרות לספקים.']],
+ steps:['קניות נטו = קניות ברוטו + הובלה למחסן - החזרות לספקים - הנחות מסחריות מספקים.','480,000 + 15,000 - 25,000 = 470,000.','ההובלה ללקוחות אינה חלק מהקניות.'],
+ refs:[['ex','3.2'],['q',17]]},
 {lv:2,q:'על בסיס הנתונים שבטבלה (ש״ח), מהי עלות המכירות?',
  o:[['440,000 ש״ח','שכחה של ההובלה למחסן: 70,000 + 455,000 - 85,000.'],['455,000 ש״ח',null],['470,000 ש״ח','זו הקניות נטו. היא הוצגה כעלות המכירות, בלי שינויי המלאי.'],['485,000 ש״ח','היפוך הסימנים: הוספה של מלאי הסגירה והפחתה של מלאי הפתיחה.'],['625,000 ש״ח','חיבור של שני המלאים לקניות.']],
  steps:['קניות נטו: 480,000 + 15,000 - 25,000 = 470,000.','סחורה זמינה למכירה: 70,000 + 470,000 = 540,000.','עלות המכירות: 540,000 - 85,000 = 455,000.','שאר הנתונים (מכירות, הנחות מזומן, הובלה ללקוחות, פרסום) אינם שייכים לחישוב.'],
@@ -1271,6 +1338,10 @@ bs:{title:'מקבץ שאלות: סיכומי המאזן',data:[['קופה','18,0
  o:[['280,000 ש״ח','שכחה של הפקדון לשלוש שנים.'],['320,000 ש״ח','שכחה של הפטנטים, שהם נכס בלתי מוחשי.'],['360,000 ש״ח',null],['390,000 ש״ח','הכללה של הפקדון לחצי שנה, שהוא נכס שוטף.'],['470,000 ש״ח','הצגת המכונות בעלות, בלי ניכוי הפחת הנצבר.']],
  steps:['מכונות, נטו: 350,000 - 110,000 = 240,000.','פקדון לשלוש שנים 80,000, ופטנטים 40,000.','סך הנכסים הלא שוטפים: 80,000 + 240,000 + 40,000 = 360,000.'],
  refs:[['q',2],['q',11]]},
+{lv:2,q:'על בסיס הנתונים שבטבלה (ש״ח), מהו סך הנכסים במאזן?',
+ o:[['516,000 ש״ח','שכחה של הפקדון לשלוש שנים, שהוא נכס לא שוטף.'],['556,000 ש״ח','שכחה של הפטנטים.'],['575,000 ש״ח','ניכוי של משיכת היתר מהמזומן. היא התחייבות.'],['596,000 ש״ח',null],['706,000 ש״ח','המכונות הוצגו בעלות, בלי ניכוי הפחת הנצבר.']],
+ steps:['סך הנכסים השוטפים (שאלה 1): 236,000.','סך הנכסים הלא שוטפים (שאלה 2): 360,000.','סך הנכסים: 236,000 + 360,000 = 596,000.'],
+ refs:[['q',8],['q',11]]},
 {lv:3,q:'על בסיס אותם נתונים, מהו סך ההתחייבויות השוטפות?',
  o:[['107,000 ש״ח','שכחה של ההלוואה לזמן קצר.'],['111,000 ש״ח','שכחה של משיכת היתר.'],['120,000 ש״ח','שכחה של השיקים לפירעון, שמצטרפים לספקים.'],['132,000 ש״ח',null],['272,000 ש״ח','הכללה של ההלוואה לזמן ארוך.']],
  steps:['אשראי לזמן קצר: משיכת יתר 21,000 ועוד הלוואה לזמן קצר 25,000 = 46,000.','ספקים: 58,000 ועוד שיקים לפירעון 12,000 = 70,000. זכאים: 16,000.','סך ההתחייבויות השוטפות: 46,000 + 70,000 + 16,000 = 132,000.'],
@@ -1280,7 +1351,11 @@ bs:{title:'מקבץ שאלות: סיכומי המאזן',data:[['קופה','18,0
  steps:['פחת נצבר הוא סך השחיקה שהצטברה ברכוש הקבוע.','במאזן מנכים אותו מעלות הרכוש הקבוע, ולכן הוא נכס מנכה (Contra Asset).'],
  refs:[['q',2],['ex','3.1']]}]},
 
-re:{title:'שלוש שאלות מהירות: ההון העצמי וחילוץ העודפים',qs:[
+re:{title:'ארבע שאלות מהירות: ההון העצמי וחילוץ העודפים',qs:[
+{lv:2,q:'הון מניות ופרמיה 150,000 ש״ח; עודפים ליום 1.1 80,000 ש״ח; רווח נקי בשנה 45,000 ש״ח. מהו ההון העצמי ליום 31.12?',
+ o:[['125,000 ש״ח','אלה העודפים ל-31.12 בלבד, בלי הון המניות והפרמיה.'],['195,000 ש״ח','שכחה של עודפי הפתיחה.'],['230,000 ש״ח','שכחה של רווח השנה.'],['275,000 ש״ח',null],['320,000 ש״ח','רווח השנה נוסף פעמיים.']],
+ steps:['עודפים ל-31.12: 80,000 + 45,000 = 125,000.','הון עצמי = הון מניות ופרמיה + עודפים.','150,000 + 125,000 = 275,000.'],
+ refs:[['ex','3.7'],['q',26]]},
 {lv:3,q:'נתוני חברה ליום 31.12.2025 (ש״ח): סך הנכסים 840,000; סך ההתחייבויות 310,000; הון מניות 200,000; פרמיה 40,000. ההכנסות בשנה 620,000 וההוצאות 545,000. מהם העודפים ליום 1.1.2025?',
  o:[['215,000 ש״ח',null],['255,000 ש״ח','שכחה של הפרמיה.'],['290,000 ש״ח','זה העודף ל-31.12. לא הופחת רווח השנה.'],['365,000 ש״ח','הוספה של רווח השנה במקום הפחתה.'],['530,000 ש״ח','זה ההון העצמי כולו, לפני הפחתת הון המניות והפרמיה.']],
  steps:['הון עצמי ל-31.12: 840,000 - 310,000 = 530,000.','עודפים ל-31.12: 530,000 - 200,000 - 40,000 = 290,000.','רווח השנה: 620,000 - 545,000 = 75,000. הוא כבר כלול בעודפים ל-31.12.','עודפים ל-1.1: 290,000 - 75,000 = 215,000.'],
@@ -1314,7 +1389,27 @@ fx:{title:'מקבץ שאלות: עסקאות שלא נרשמו, ומה משתנ�
 {lv:4,q:'החזרה של לקוח בסך 9,000 ש״ח לא נרשמה. הלקוח טרם שילם, והסחורה שהוחזרה כבר נספרה במלאי הסגירה. מה ההשפעה של רישום ההחזרה?',
  o:[['המכירות נטו יורדות ב-9,000, הלקוחות יורדים ב-9,000, והרווח הגולמי יורד ב-9,000',null],['עלות המכירות יורדת ב-9,000','הסחורה כבר נספרה במלאי הסגירה, ולכן עלות המכירות כבר משקפת אותה.'],['המכירות לא משתנות, והוצאות המכירה והשיווק עולות ב-9,000','החזרות מלקוחות מקטינות את המכירות עצמן.'],['הלקוחות יורדים ב-9,000, ואין השפעה על הרווח','ההחזרה מבטלת מכירה, ולכן הרווח קטן.'],['המכירות יורדות ב-9,000, והמזומן יורד ב-9,000','הלקוח טרם שילם, ולכן יורד החוב שלו ולא המזומן.']],
  steps:['ההחזרה מבטלת מכירה: המכירות נטו יורדות ב-9,000.','הלקוח טרם שילם, ולכן החוב שלו (הלקוחות) יורד ב-9,000. המזומן לא משתנה.','הסחורה כבר במלאי הסגירה, ולכן עלות המכירות לא משתנה. הרווח הגולמי יורד ב-9,000.'],
- refs:[['q',13],['q',14]]}]},
+ refs:[['q',13],['q',14]]},
+{lv:2,q:'קנייה בהקפה של סחורה בסך 18,000 ש״ח לא נרשמה. הסחורה נמצאת במחסן ב-31.12, אבל לא נכללה בספירת המלאי. מה ההשפעה של שני התיקונים יחד?',
+ o:[['עלות המכירות עולה ב-18,000, והספקים עולים ב-18,000','הסחורה לא נמכרה: הקניות ומלאי הסגירה עולים יחד, ועלות המכירות לא משתנה.'],['המלאי והספקים עולים ב-18,000, ואין השפעה על עלות המכירות',null],['המלאי עולה ב-18,000, ועלות המכירות יורדת ב-18,000','זה היה נכון אילו רק הספירה תוקנה. כאן נרשמת גם הקנייה.'],['הספקים עולים ב-18,000, והמזומן יורד ב-18,000','הקנייה בהקפה, ולכן המזומן לא משתנה.'],['הרווח הגולמי עולה ב-18,000','שני התיקונים מתקזזים בחישוב עלות המכירות, והרווח לא משתנה.']],
+ steps:['רישום הקנייה: הקניות נטו עולות ב-18,000, והספקים עולים ב-18,000.','תיקון הספירה: מלאי הסגירה עולה ב-18,000. במאזן המלאי עולה, ובחישוב עלות המכירות מפחיתים 18,000 נוספים.','בעלות המכירות שני השינויים מתקזזים, ולכן היא לא משתנה. גם הרווח לא משתנה.'],
+ refs:[['ex','3.3'],['q',20]]},
+{lv:4,q:'קנייה בהקפה של סחורה בסך 11,000 ש״ח לא נרשמה. הסחורה נמצאת במחסן ב-31.12, והיא כבר נכללה בספירת המלאי. מה ההשפעה של רישום הקנייה?',
+ o:[['המלאי והספקים עולים ב-11,000, ואין השפעה על הרווח','הסחורה כבר נספרה, ולכן מלאי הסגירה לא משתנה. רק הקניות גדלות.'],['אין השפעה על הדוחות, כי הסחורה כבר במלאי','הספירה תקינה, אבל הקנייה וההתחייבות לספק חסרות.'],['עלות המכירות עולה ב-11,000, הרווח הגולמי יורד ב-11,000, והספקים עולים ב-11,000',null],['עלות המכירות יורדת ב-11,000','הקניות גדלות, ולכן עלות המכירות גדלה.'],['המלאי עולה ב-11,000, ועלות המכירות עולה ב-11,000','מלאי הסגירה כבר כולל את הסחורה, ולכן הוא לא עולה שוב.']],
+ steps:['רישום הקנייה: הקניות נטו גדלות ב-11,000, והספקים גדלים ב-11,000.','מלאי הסגירה כבר כולל את הסחורה, ולכן הוא לא משתנה.','עלות המכירות גדלה ב-11,000. הרווח הגולמי, התפעולי והנקי קטנים ב-11,000, וגם העודפים.','השוו לשאלה הקודמת: שם תוקנה גם הספירה, והשינויים התקזזו.'],
+ refs:[['ex','3.3'],['q',18]]},
+{lv:2,q:'הובלה ללקוחות בסך 5,000 ש״ח ששולמה במזומן לא נרשמה. מה ההשפעה של התיקון?',
+ o:[['עלות המכירות עולה ב-5,000, והרווח הגולמי יורד ב-5,000','זו הובלה למחסן. הובלה ללקוחות היא הוצאת מכירה ושיווק.'],['הרווח הגולמי והרווח התפעולי יורדים ב-5,000','הוצאות המכירה והשיווק מופיעות מתחת לרווח הגולמי.'],['הרווח הגולמי לא משתנה, הרווח התפעולי יורד ב-5,000, והמזומן יורד ב-5,000',null],['הרווח התפעולי לא משתנה, כי זו הוצאה אחרת','מכירה ושיווק היא הוצאה תפעולית, ולכן הרווח התפעולי יורד.'],['המלאי עולה ב-5,000','הובלה ללקוחות אינה חלק מעלות הסחורה.']],
+ steps:['הובלה ללקוחות היא הוצאת מכירה ושיווק.','הרווח הגולמי לא משתנה. הרווח התפעולי והנקי קטנים ב-5,000.','המזומן יורד ב-5,000, והעודפים יורדים ב-5,000.'],
+ refs:[['q',4],['q',5]]},
+{lv:3,q:'ספק העניק לחברה הנחה מסחרית של 4,000 ש״ח, והחברה לא רשמה אותה. היתרה לספק טרם שולמה, וכל הסחורה נמכרה. מה ההשפעה של רישום ההנחה?',
+ o:[['הכנסות המימון עולות ב-4,000','זו הנחה מסחרית, לא הנחת מזומן. היא מקטינה את הקניות.'],['הספקים יורדים ב-4,000, ואין השפעה על הרווח','ההנחה מקטינה את הקניות, ולכן את עלות המכירות.'],['המכירות יורדות ב-4,000','הנחה מספק נוגעת לקניות. הנחה ללקוח מקטינה את המכירות.'],['עלות המכירות יורדת ב-4,000, הרווח הגולמי עולה ב-4,000, והספקים יורדים ב-4,000',null],['עלות המכירות יורדת ב-4,000, והמזומן עולה ב-4,000','היתרה לספק טרם שולמה: יורד החוב לספק, והמזומן לא משתנה.']],
+ steps:['הנחה מסחרית מספק מקטינה את הקניות נטו ב-4,000.','הסחורה נמכרה, ולכן עלות המכירות קטנה ב-4,000. הרווח הגולמי, התפעולי והנקי גדלים ב-4,000.','במאזן: הספקים יורדים ב-4,000, והעודפים עולים ב-4,000.'],
+ refs:[['ex','3.4'],['q',16]]},
+{lv:3,q:'מכירה במזומן בסך 12,000 ש״ח לא נרשמה. הסחורה כבר יצאה מהמחסן ולא נכללה בספירת המלאי. מה ההשפעה של רישום המכירה?',
+ o:[['המכירות עולות ב-12,000, ועלות המכירות עולה ב-12,000','עלות הסחורה כבר כלולה בעלות המכירות, כי היא לא נספרה במלאי הסגירה.'],['המכירות עולות ב-12,000, והמלאי יורד ב-12,000','הסחורה לא נספרה, ולכן המלאי כבר נכון.'],['הלקוחות עולים ב-12,000','המכירה במזומן, ולכן המזומן עולה.'],['אין השפעה על הרווח, כי הסחורה כבר יצאה','ההכנסה חסרה, ורישומה מגדיל את הרווח.'],['המכירות והמזומן עולים ב-12,000, והרווח הגולמי עולה ב-12,000',null]],
+ steps:['המכירות נטו גדלות ב-12,000, והמזומן גדל ב-12,000.','הסחורה לא נכללה במלאי הסגירה, ולכן עלותה כבר בעלות המכירות. אין שינוי בעלות המכירות.','הרווח הגולמי, התפעולי והנקי גדלים ב-12,000, וגם העודפים.'],
+ refs:[['q',13],['q',20]]}]},
 
 app1:{title:'נספח א: שאלות לתרגול בבית, עם הפניה לתרגילים בחוברת',home:true,qs:[
 {lv:3,q:'בטבלת סיווג של חברה סוכמו העמודות (ש״ח): נכסים 1,240,000; התחייבויות 410,000; הון מניות ופרמיה 300,000; הכנסות 980,000; הוצאות 870,000. העודפים ליום 1.1 אינם נתונים. מהם העודפים ליום 1.1, ומהם העודפים במאזן ליום 31.12?',
@@ -1334,7 +1429,19 @@ app2:{title:'נספח ב: שאלות לתרגול בבית, עם הפניה לת
 {lv:4,q:'חשב בחברה טוען: ״רווח הון ממכירת מכונה ישנה נרשם בסעיף המכירות.״ חשב אחר טוען: ״הנחת מזומן שקיבלנו מספק מקטינה את הקניות ואת עלות המכירות.״ מה נכון?',
  o:[['שתי הטענות שגויות',null],['רק הטענה הראשונה נכונה','מכונה אינה המוצר הרגיל של החברה. רווח ההון הוא הכנסה אחרת.'],['רק הטענה השנייה נכונה','הנחת מזומן נובעת מאשראי, ולכן היא הכנסת מימון.'],['שתי הטענות נכונות','שתיהן שגויות.'],['הטענה הראשונה נכונה רק כשהמכונה נמכרה ברווח','גם כשיש רווח, הוא נרשם בהכנסות אחרות ולא במכירות.']],
  steps:['טענה 1 שגויה: מכירת רכוש קבוע היא אירוע חריג. רק הרווח (התמורה פחות הערך בספרים) נרשם, ובהכנסות אחרות.','טענה 2 שגויה: הנחת מזומן היא הטבה על מתן אשראי לספק. היא הכנסת מימון, ואינה נוגעת לקניות.','שימו לב: אילו שתי הטענות היו מתקבלות, הרווח הגולמי היה מנופח בשני המקרים.'],
- refs:[['ex','3.10'],['q',3],['q',16]]}]}
+ refs:[['ex','3.10'],['q',3],['q',16]]},
+{lv:3,q:'נתוני חברה (ש״ח): מכירות ברוטו 520,000; החזרות מלקוחות 20,000; הנחות מזומן ללקוחות 6,000; מלאי פתיחה 40,000; קניות 300,000; הובלה למחסן 10,000; החזרות לספקים 15,000; הנחות מסחריות מספקים 5,000; מלאי סגירה 50,000; הובלה ללקוחות 8,000; פרסום 22,000; שכר הנהלה 60,000; פחת ציוד משרדי 7,000; הכנסות ריבית 3,000; רווח הון ממכירת רכב 9,000. מהו הרווח התפעולי?',
+ o:[['117,000 ש״ח','ניכוי של הנחות המזומן ללקוחות מהמכירות. הן הוצאות מימון.'],['123,000 ש״ח',null],['126,000 ש״ח','הוספה של הכנסות הריבית. הן הכנסות מימון, אחרי הרווח התפעולי.'],['131,000 ש״ח','שכחה של ההובלה ללקוחות, שהיא הוצאת מכירה ושיווק.'],['132,000 ש״ח','הוספה של רווח ההון. הוא הכנסה אחרת, אחרי הרווח התפעולי.']],
+ steps:['מכירות נטו: 520,000 - 20,000 = 500,000.','קניות נטו: 300,000 + 10,000 - 15,000 - 5,000 = 290,000. עלות המכירות: 40,000 + 290,000 - 50,000 = 280,000.','רווח גולמי: 500,000 - 280,000 = 220,000.','מכירה ושיווק: 8,000 + 22,000 = 30,000. הנהלה וכלליות: 60,000 + 7,000 = 67,000.','רווח תפעולי: 220,000 - 30,000 - 67,000 = 123,000.'],
+ refs:[['ex','3.5'],['q',23],['q',24]]},
+{lv:4,q:'נתוני חברה (ש״ח): מכירות נטו 640,000; הרווח הגולמי הוא 35% מהמכירות נטו; מלאי פתיחה 48,000; מלאי סגירה 62,000; הובלה למחסן 6,000; החזרות לספקים 9,000. אין הנחות מספקים. מהן הקניות ברוטו?',
+ o:[['402,000 ש״ח','היפוך של שני המלאים בחילוץ הקניות.'],['419,000 ש״ח','החילוץ התחיל מעלות המכירות, בלי שינוי המלאי.'],['427,000 ש״ח','היפוך הסימנים של ההובלה ושל ההחזרות.'],['430,000 ש״ח','אלה הקניות נטו. השאלה היא על הקניות ברוטו.'],['433,000 ש״ח',null]],
+ steps:['רווח גולמי: 640,000 × 35% = 224,000. עלות המכירות: 640,000 - 224,000 = 416,000.','מהנוסחה: קניות נטו = עלות המכירות - מלאי פתיחה + מלאי סגירה.','קניות נטו: 416,000 - 48,000 + 62,000 = 430,000.','קניות נטו = ברוטו + הובלה למחסן - החזרות, ולכן ברוטו = 430,000 - 6,000 + 9,000 = 433,000.'],
+ refs:[['ex','3.7'],['q',22]]},
+{lv:3,q:'שלוש טענות: (1) כשכל השאר קבוע, מלאי סגירה גבוה יותר מגדיל את הרווח הגולמי. (2) מלאי הפתיחה של השנה הוא מלאי הסגירה של השנה הקודמת. (3) הובלה ללקוחות מגדילה את עלות המכירות. אילו טענות נכונות?',
+ o:[['טענה 1 בלבד','גם טענה 2 נכונה: המלאי שנשאר ב-31.12 הוא המלאי שפותח את השנה הבאה.'],['טענות 1 ו-2',null],['טענות 1 ו-3','טענה 3 שגויה: הובלה ללקוחות היא הוצאת מכירה ושיווק.'],['טענות 2 ו-3','טענה 3 שגויה, וטענה 1 נכונה.'],['כל הטענות נכונות','טענה 3 שגויה.']],
+ steps:['טענה 1 נכונה: מלאי סגירה מופחת בחישוב עלות המכירות. גבוה יותר פירושו עלות מכירות נמוכה יותר, ולכן רווח גולמי גבוה יותר.','טענה 2 נכונה: הסחורה שבמחסן ב-31.12 היא אותה סחורה שבמחסן ב-1.1 של השנה הבאה.','טענה 3 שגויה: הובלה ללקוחות היא הוצאת מכירה ושיווק, מתחת לרווח הגולמי.'],
+ refs:[['ex','3.6'],['q',19],['q',20]]}]}
 };
 
 /* ===== lesson 3 engine (lesson 2 engine, adapted) and modules (v3) ===== */
@@ -1361,13 +1468,13 @@ $('#gwrap').innerHTML=gk.map(k=>`<button class="gitem" data-t="${k}">${G[k].h}</
 $('#gpl').innerHTML=gk.map(k=>`<div class="gp"><b>${G[k].h}</b><br>${esc(G[k].p)}<br><i>${esc(G[k].f)}</i><br>דוגמה: ${esc(G[k].ex)}</div>`).join('');
 
 /* ---------- navigation ---------- */
-const hooks={};
+const hooks={},stepNext={};
 function show(i){ if(i<0||i>=slides.length)return; slides[cur].classList.remove('on'); cur=i; slides[cur].classList.add('on');
  $('#cnt').textContent=(cur+1)+' / '+slides.length; $('#progi').style.width=((cur+1)/slides.length*100)+'%';
  try{history.replaceState(null,'','#'+slides[cur].id);}catch(e){}
  $$('.mcell').forEach((c,j)=>c.classList.toggle('cur',j===cur)); if(hooks[slides[cur].id])hooks[slides[cur].id](); }
 function go(id){const i=slides.findIndex(s=>s.id===id); if(i>=0){closeOverlays();show(i);}}
-function next(){show(cur+1);} function prev(){show(cur-1);}
+function next(){const h=stepNext[slides[cur].id];if(h&&h())return;show(cur+1);} function prev(){show(cur-1);}
 $('#bNext').onclick=next; $('#bPrev').onclick=prev;
 $('#prog').onclick=e=>{const r=e.currentTarget.getBoundingClientRect(); const f=(r.right-e.clientX)/r.width; show(Math.min(slides.length-1,Math.floor(f*slides.length)));};
 function closeOverlays(keepDrawer){$('#menu').classList.remove('open');$('#gloss').classList.remove('open'); if(!keepDrawer)dr.classList.remove('open');}
@@ -1433,14 +1540,26 @@ $('#routegrid').innerHTML=RT.map(r=>`<button class="rcard" data-go="${r[3]}"><di
  hooks['s-flow']=()=>{clearInterval(timer);set(0);timer=setInterval(()=>{if(slides[cur].id!=='s-flow'){clearInterval(timer);return;}set((k+1)%5);},4200);};
  set(2);})();
 
-/* ---------- slide 5: the stock room in numbers ---------- */
-(function(){const K=300/450;const seg=(cls,v,col,t,st)=>`<div class="sseg" data-st="${st}" style="height:${v*K}px;background:${col}">${t}<small>${fmt(v)}</small></div>`;
- $('#shelf').innerHTML=`<div class="scol"><div class="sl">מה היה זמין</div>${seg('',100,'#0f9d90','מלאי פתיחה',0)}${seg('',300,'#6d4df2','קניות נטו',1)}</div>`+
-  `<div class="scol"><div class="sl">מה קרה לסחורה</div>${seg('',280,'#e0454f','יצא ונמכר: עלות המכירות',2)}${seg('',120,'#e8960c','נשאר: מלאי סגירה',2)}</div>`+
-  `<div class="scol"><div class="sl">מכירות נטו</div>${seg('',280,'#e0454f','עלות המכירות',3)}${seg('',170,'#25a65f','רווח גולמי',3)}</div>`;
- const TX=['<b>1.1: מלאי פתיחה בעלות 100 ש״ח.</b> זו הסחורה שהייתה במחסן בתחילת השנה.','<b>במהלך השנה: קניות נטו של 300 ש״ח.</b> החברה יכלה למכור השנה סחורה בעלות 400 ש״ח.','<b>31.12: נשאר מלאי סגירה בעלות 120 ש״ח.</b> מה יצא? 100 + 300 - 120 = 280. זו עלות המכירות. המלאי שנשאר הוא נכס במאזן.','<b>המכירות נטו: 450 ש״ח.</b> הרווח הגולמי: 450 - 280 = 170. הוא ההפרש בין ההכנסות העיקריות לבין העלות הבסיסית ביותר, עלות המוצרים שנמכרו.'];
- let k=0;const set=i=>{k=i;$$('#shelf .sseg').forEach(s=>s.classList.toggle('on',+s.dataset.st<=i));$('#shelfbox').innerHTML=TX.slice(0,i+1).map((t,j)=>`<div style="margin-bottom:5px;${j<i?'color:var(--mut)':''}">${t}</div>`).join('');$('#shelfnx').disabled=i>=3;};
- $('#shelfnx').onclick=()=>set(Math.min(3,k+1));$('#shelfre').onclick=()=>set(0);hooks['s-shelf']=()=>set(0);set(0);})();
+/* ---------- slide 5: the stock room in numbers: a step by step waterfall ---------- */
+(function(){const K=250/450;
+ const B=[{st:0,lo:0,hi:100,c:'#0f9d90',t:'100',l:'מלאי פתיחה 1.1'},{st:1,lo:100,hi:400,c:'#6d4df2',t:'+ 300',l:'(+) קניות נטו',fl:1},{st:1,lo:0,hi:400,c:'#16213a',t:'400',l:'(=) זמינה למכירה'},
+  {st:2,lo:280,hi:400,c:'#e8960c',t:'- 120',l:'(-) מלאי סגירה',out:1},{st:3,lo:0,hi:280,c:'#e0454f',t:'280',l:'(=) עלות המכירות'},null,
+  {st:4,lo:0,hi:450,c:'#2a5bd7',t:'450',l:'מכירות נטו'},{st:4,lo:170,hi:450,c:'#e0454f',t:'- 280',l:'(-) עלות המכירות',fl:1},{st:4,lo:0,hi:170,c:'#25a65f',t:'170',l:'(=) רווח גולמי'}];
+ $('#wfc').innerHTML=B.map(b=>b?`<div class="wb" data-st="${b.st}"><div class="wfbar${b.fl?' fl':''}${b.out?' out':''}" style="bottom:${b.lo*K}px;height:${(b.hi-b.lo)*K}px;background:${b.c}"><span class="num" dir="ltr" style="direction:ltr;unicode-bidi:isolate">${b.t}</span></div></div>`:'<div class="wsep"></div>').join('');
+ $('#wfl').innerHTML=B.map(b=>b?`<div data-st="${b.st}">${b.l}</div>`:'<div class="wsep"></div>').join('');
+ const TX=['<b>1.1: מלאי פתיחה בעלות 100 ש״ח.</b> זו הסחורה שהייתה במחסן בתחילת השנה, מלאי הסגירה של השנה הקודמת.',
+  '<b>במהלך השנה: קניות נטו של 300 ש״ח.</b> מלאי פתיחה ועוד קניות נטו הם הסחורה הזמינה למכירה: 100 + 300 = 400.',
+  '<b>31.12: נספר מלאי סגירה בעלות 120 ש״ח.</b> הסחורה הזו לא נמכרה, ולכן מפחיתים אותה מהזמין למכירה. היא נשארת נכס במאזן.',
+  '<b>עלות המכירות = מלאי פתיחה + קניות נטו - מלאי סגירה.</b> 100 + 300 - 120 = 280: עלות הסחורה שנמכרה. כמו בכיס: היה לי 50, קיבלתי 100, נשארו 20, ולכן הוצאתי 130.',
+  '<b>מכירות נטו 450 ש״ח.</b> רווח גולמי = מכירות נטו - עלות המכירות: 450 - 280 = 170. זה ההפרש בין ההכנסות העיקריות לבין עלות המוצרים שנמכרו.'];
+ const N=TX.length;let k=0;
+ const set=i=>{k=i;$$('#s-shelf [data-st]').forEach(e=>e.classList.toggle('on',+e.dataset.st<=i));$('#shelfbox').innerHTML=TX[i];$('#shelfn').textContent=`שלב ${i+1} מתוך ${N}`;$('#shelfnx').disabled=i>=N-1;};
+ const tab=p=>{$$('#shtabs button').forEach(b=>b.classList.toggle('on',+b.dataset.pane===p));$('#shp0').classList.toggle('on',p===0);$('#shp1').classList.toggle('on',p===1);};
+ $('#shtabs').onclick=e=>{e.stopPropagation();const b=e.target.closest('button');if(b)tab(+b.dataset.pane);};
+ $('#shelfnx').onclick=()=>set(Math.min(N-1,k+1));$('#shelfre').onclick=()=>set(0);
+ hooks['s-shelf']=()=>{tab(0);set(0);};
+ stepNext['s-shelf']=()=>{if($('#shp0').classList.contains('on')&&k<N-1){set(k+1);return true;}return false;};
+ set(0);})();
 
 /* ---------- slide 6: net purchases ---------- */
 (function(){const D=[['קניות (ברוטו)','קניות של מלאי שהחברה עוסקת במכירתו, לפי החשבוניות.','נקנתה סחורה ב-50,000.'],['הוצאות הובלה למחסן','מה ששולם על הבאת הסחורה מהספק. חלק מעלות הסחורה, ולכן מתווסף.','שולמו 8,000 למוביל.'],['החזרות לספקים','סחורה שהוחזרה לספק. הקנייה בוטלה, ולכן מנכים.','הוחזרה סחורה ב-7,000.'],['הנחות מסחריות מספקים','כל הנחה שאינה הנחת מזומן. מקטינה את עלות הקנייה, ולכן מנכים.','התקבלה הנחה של 1,000.'],['קניות נטו','ברוטו, ועוד הובלה למחסן, פחות החזרות והנחות מסחריות.','50,000 + 8,000 - 7,000 - 1,000 = 50,000.'],['הנחת מזומן מספק','נובעת מעסקה נפרדת של מתן אשראי לספק (תשלום מוקדם): הכנסת מימון. לא מנכים מהקניות.','קיבלנו 6,000 על תשלום מוקדם.']];
@@ -1735,6 +1854,12 @@ $('#hwtbl').innerHTML='<tr><td class="gl">נושא</td><td class="gl">בחובר
    const x=e.target.closest('[data-x]');if(!x)return;const a=x.dataset.x;
    if(a==='next'){st[k].step++;draw();}if(a==='all'){st[k].step=set.qs[k].steps.length;draw();}if(a==='retry'){st[k].sel=null;st[k].step=1;draw();}});
   draw();});})();
+
+/* ---------- summary of effects: reveal one row per click ---------- */
+(function(){const T=$('#fxsum');if(!T)return;const rows=()=>$$('#fxsum tr').slice(1);let k=0;
+ const set=i=>{const R=rows();k=Math.max(0,Math.min(R.length,i));R.forEach((r,j)=>r.classList.toggle('hid',j>=k));$('#fxn').textContent=`${k} מתוך ${R.length}`;$('#fxnx').disabled=k>=R.length;};
+ $('#fxnx').onclick=()=>set(k+1);$('#fxall').onclick=()=>set(rows().length);$('#fxre').onclick=()=>set(0);
+ hooks['s-fxsum']=()=>set(0);stepNext['s-fxsum']=()=>{if(k<rows().length){set(k+1);return true;}return false;};set(0);})();
 
 /* ---------- keep arithmetic left to right inside Hebrew text ---------- */
 (function(){const RX=/(?:\d{1,3}(?:,\d{3})*(?:\.\d+)?|x)(?: [-+=×] (?:\d{1,3}(?:,\d{3})*(?:\.\d+)?|x))+/g;
