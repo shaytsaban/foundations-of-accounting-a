@@ -811,6 +811,10 @@ tr.st{opacity:0;transform:none}tr.st.show{opacity:1}
 .rtab.sm td.ex{font-size:14.5px;line-height:1.3}
 .rtab tr.sub td,.rtab tr.tot td{font-size:inherit}
 .plw .rtab td.ex{min-width:230px}
+/* block totals under the values, in the same column, with a sum line above */
+.bdg td.sbl,.bdg tr.sb td.sbl{font-weight:800;color:var(--navy2);padding-inline-start:14px}
+.bdg td.v.sb{font-weight:800;color:var(--navy2);box-shadow:inset 0 2px 0 #1b2d55;background:#f3f6fd}
+.bdg td{height:20.5px}
 </style>
 </head>
 <body>
@@ -1538,38 +1542,44 @@ function Builder(root){
   let s=0;for(const o of e.of){const v=tot(o);if(v==null)return null;s+=v;}return s;}
  /* ---------- render both sheets with Excel row numbers and cell addresses ---------- */
  let addr={};
- /* each block: its title row, its items, and its total in the outer column on the LAST row (no total at the top) */
+ /* one amount column: each block has its title row, its items, and (with two items or more) a total row UNDER the items, in the same column */
+ const SUBL={sales:'סה״כ הכנסות ממכירות',cogs:'סה״כ עלות המכירות',sell:'סה״כ מכירה ושיווק',ga:'סה״כ הנהלה וכלליות',fin:'סה״כ מימון, נטו',oth:'סה״כ אחרות, נטו',tax:'סה״כ מסים',
+  ca:'סה״כ נכסים שוטפים',nca:'סה״כ נכסים לא שוטפים',cl:'סה״כ התחייבויות שוטפות',ncl:'סה״כ התחייבויות לא שוטפות',eq:'סה״כ הון עצמי'};
  function rowsFor(T){const out=[];T.forEach(e=>{if(e.z){const L=zItems(e.z);out.push({t:'zh',z:e.z,h:e.h});L.forEach(i=>out.push({t:'it',z:e.z,i}));
-    if(e.z==='eq'&&st.profit)out.push({t:'pr',z:'eq'});const last=out[out.length-1];if(last.t!=='zh')last.zt=true;}else out.push({t:'tot',k:e.c,h:e.h,last:e.last});});return out;}
- function fmlZone(z,rows,colB,sg){const its=rows.filter(x=>x.z===z&&x.t!=='zh').map(x=>x.r);if(!its.length)return '';const a=Math.min(...its),b=Math.max(...its);const rg=a===b?`${colB}${a}`:`SUM(${colB}${a}:${colB}${b})`;return '='+(sg<0?'-':'')+rg;}
+    if(e.z==='eq'&&st.profit)out.push({t:'pr',z:'eq'});const n=L.length+(e.z==='eq'&&st.profit?1:0);
+    if(n>=2)out.push({t:'sub',z:e.z,h:SUBL[e.z]});else if(n===1)out[out.length-1].single=true;}else out.push({t:'tot',k:e.c,h:e.h,last:e.last});});return out;}
+ const rng=(rows,z,col)=>{const its=rows.filter(x=>x.z===z&&(x.t==='it'||x.t==='pr')).map(x=>x.r);const a=Math.min(...its),b=Math.max(...its);return `=SUM(${col}${a}:${col}${b})`;};
  const sumF=(of,pre)=>{const parts=of.map(o=>addr[pre+o]).filter(Boolean);return parts.length?'='+parts.join('+'):'';};
+ /* in the profit and loss, an expense is shown as a negative number, as in the class Excel: every total is the plain sum of the numbers above it */
+ const plv=i=>{const e=PL.find(y=>y.z===st.where[i]);return (e?e.sg:1)*signed(i);};
  function render(anim){
-  /* P&L sheet */
+  /* P&L sheet: A label, B amount */
   const pr=rowsFor(PL);let r=2;pr.forEach(x=>x.r=r++);
-  addr={};pr.forEach(x=>{if(x.t==='tot')addr['pl.'+x.k]='C'+x.r;if(x.t==='it'){addr['it'+x.i]='B'+x.r;if(x.zt)addr['pl.'+x.z]='C'+x.r;}});
-  let h=`<div class="bd-tab">גיליון: רווח והפסד</div><table class="bdg"><colgroup><col style="width:24px"><col><col style="width:70px"><col style="width:76px"></colgroup><tr class="ch"><th></th><th>A</th><th>B</th><th>C</th></tr><tr><th>1</th><td colspan="3" class="ttl">דוח רווח והפסד לשנה שהסתיימה ב-${C.date||'31.12'}</td></tr>`;
+  addr={};pr.forEach(x=>{if(x.t==='tot')addr['pl.'+x.k]='B'+x.r;if(x.t==='it'){addr['it'+x.i]='B'+x.r;if(x.single)addr['pl.'+x.z]='B'+x.r;}if(x.t==='sub')addr['pl.'+x.z]='B'+x.r;});
+  let h=`<div class="bd-tab">גיליון: רווח והפסד</div><table class="bdg"><colgroup><col style="width:24px"><col><col style="width:84px"></colgroup><tr class="ch"><th></th><th>A</th><th>B</th></tr><tr><th>1</th><td colspan="2" class="ttl">דוח רווח והפסד לשנה שהסתיימה ב-${C.date||'31.12'}</td></tr>`;
   pr.forEach(x=>{const z=x.z?` data-z="${x.z}"`:'';
-   if(x.t==='zh'){h+=`<tr class="zh ${zItems(x.z).length?'':'emp'}"${z}><th>${x.r}</th><td colspan="3">${x.h}</td></tr>`;}
-   else if(x.t==='it'){const it=items[x.i],e=PL.find(y=>y.z===x.z);const zc=x.zt?`<td class="v zt" data-f="${fmlZone(x.z,pr,'B',e.sg)}" data-a="C${x.r}" data-s="pl">${fm(tot(x.z))}</td>`:'<td></td>';
-    h+=`<tr class="it ${x.zt?'zl':''}"${z} data-ii="${x.i}"><th>${x.r}</th><td class="in">${it.n}</td><td class="v" data-f="${signed(x.i)}" data-a="B${x.r}" data-s="pl">${fm(signed(x.i))}</td>${zc}</tr>`;}
-   else{const v=tot(x.k),e=PL.find(y=>y.c===x.k);h+=`<tr class="tot ${x.last?'last':''}"><th>${x.r}</th><td colspan="2">${x.h}</td><td class="v" data-f="${feeds(x.k)?sumF(e.of,'pl.'):''}" data-a="C${x.r}" data-s="pl" data-k="${x.k}">${shown(x.k,v)}</td></tr>`;}});
+   if(x.t==='zh'){h+=`<tr class="zh ${zItems(x.z).length?'':'emp'}"${z}><th>${x.r}</th><td colspan="2">${x.h}</td></tr>`;}
+   else if(x.t==='it'){const it=items[x.i],v=plv(x.i);h+=`<tr class="it"${z} data-ii="${x.i}"><th>${x.r}</th><td class="in">${it.n}</td><td class="v" data-f="${v}" data-a="B${x.r}" data-s="pl">${fm(v)}</td></tr>`;}
+   else if(x.t==='sub'){h+=`<tr class="sb"${z}><th>${x.r}</th><td class="sbl">${x.h}</td><td class="v sb" data-f="${rng(pr,x.z,'B')}" data-a="B${x.r}" data-s="pl">${fm(tot(x.z))}</td></tr>`;}
+   else{const v=tot(x.k),e=PL.find(y=>y.c===x.k);h+=`<tr class="tot ${x.last?'last':''}"><th>${x.r}</th><td>${x.h}</td><td class="v" data-f="${feeds(x.k)?sumF(e.of,'pl.'):''}" data-a="B${x.r}" data-s="pl" data-k="${x.k}">${shown(x.k,v)}</td></tr>`;}});
   root.querySelector('.bd-pl').innerHTML=h+'</table>';
-  /* balance sheet: assets in A to C, liabilities and equity in E to G */
+  /* balance sheet: assets in A and B, liabilities and equity in D and E */
   const ar=rowsFor(BA),lr=rowsFor(BLE);let r1=3;ar.forEach(x=>x.r=r1++);let r2=3;lr.forEach(x=>x.r=r2++);
-  ar.forEach(x=>{if(x.t==='tot')addr['bs.'+x.k]='C'+x.r;if(x.t==='it'){addr['it'+x.i]='B'+x.r;if(x.zt)addr['bs.'+x.z]='C'+x.r;}});
-  lr.forEach(x=>{if(x.t==='tot')addr['bs.'+x.k]='G'+x.r;if(x.t==='it'){addr['it'+x.i]='F'+x.r;if(items[x.i].q)addr['bs.re']='F'+x.r;}if(x.t==='pr')addr['bs.profit']='F'+x.r;if(x.zt)addr['bs.'+x.z]='G'+x.r;});
-  const zoneCell=(x,T,cb,cc)=>{if(!x.zt)return `<td data-z="${x.z}"></td>`;let f=fmlZone(x.z,T===BA?ar:lr,cb,1);if(x.z==='eq'&&st.re===2)f=`=${addr['bs.tle']}-${addr['bs.tl']}`;
-   return `<td class="v zt" data-z="${x.z}" data-f="${f}" data-a="${cc}${x.r}" data-s="bs" data-k="${x.z}">${fm(tot(x.z))}</td>`;};
-  const cell=(x,T,cb,cc)=>{if(!x)return '<td></td><td></td><td></td>';const z=x.z?` data-z="${x.z}"`:'';
-   if(x.t==='zh'){const show=zItems(x.z).length||x.z==='eq'&&st.profit;return `<td colspan="3" class="zh ${show?'':'emp'}"${z}>${x.h}</td>`;}
+  const setA=(rows,col)=>rows.forEach(x=>{if(x.t==='tot')addr['bs.'+x.k]=col+x.r;if(x.t==='it'){addr['it'+x.i]=col+x.r;if(items[x.i].q)addr['bs.re']=col+x.r;if(x.single)addr['bs.'+x.z]=col+x.r;}
+   if(x.t==='pr'){addr['bs.profit']=col+x.r;if(x.single)addr['bs.'+x.z]=col+x.r;}if(x.t==='sub')addr['bs.'+x.z]=col+x.r;});
+  setA(ar,'B');setA(lr,'E');
+  const cell=(x,T,col)=>{if(!x)return '<td></td><td></td>';const z=x.z?` data-z="${x.z}"`:'';const rows=T===BA?ar:lr;
+   if(x.t==='zh'){const show=zItems(x.z).length||x.z==='eq'&&st.profit;return `<td colspan="2" class="zh ${show?'':'emp'}"${z}>${x.h}</td>`;}
    if(x.t==='it'){const it=items[x.i];let val=it.q?(st.re>=3?reVal():null):signed(x.i);const f=it.q&&st.re>=3?`=(${addr['bs.ta']}-${addr['bs.tl']})-${zItems('eq').filter(j=>!items[j].q).map(j=>addr['it'+j]).concat(st.profit?[addr['bs.profit']]:[]).join('-')}`:(it.q?'':String(val));
-    return `<td class="in"${z} data-ii="${x.i}">${it.n}</td><td class="v ${it.q?'req':''}"${z} data-f="${f}" data-a="${cb}${x.r}" data-s="bs" data-ii="${x.i}">${it.q&&st.re<3?(mode==='drag'&&st.done&&st.re<3?'<input class="reIn" dir="ltr" inputmode="numeric" placeholder="?">':'?'):fm(val)}</td>${zoneCell(x,T,cb,cc)}`;}
-   if(x.t==='pr'){const v=netV();return `<td class="in pr"${z}>רווח השנה</td><td class="v pr"${z} data-f="='רווח והפסד'!${addr['pl.net']}" data-a="${cb}${x.r}" data-s="bs">${fm(v)}</td>${zoneCell(x,T,cb,cc)}`;}
+    return `<td class="in"${z} data-ii="${x.i}">${it.n}</td><td class="v ${it.q?'req':''}"${z} data-f="${f}" data-a="${col}${x.r}" data-s="bs" data-ii="${x.i}">${it.q&&st.re<3?(mode==='drag'&&st.done&&st.re<3?'<input class="reIn" dir="ltr" inputmode="numeric" placeholder="?">':'?'):fm(val)}</td>`;}
+   if(x.t==='pr'){const v=netV();return `<td class="in pr"${z}>רווח השנה</td><td class="v pr"${z} data-f="='רווח והפסד'!${addr['pl.net']}" data-a="${col}${x.r}" data-s="bs">${fm(v)}</td>`;}
+   if(x.t==='sub'){const f=x.z==='eq'&&st.re===2?`=${addr['bs.tle']}-${addr['bs.tl']}`:rng(rows,x.z,col);
+    return `<td class="sbl"${z}>${x.h}</td><td class="v sb"${z} data-f="${f}" data-a="${col}${x.r}" data-s="bs" data-k="${x.z}">${fm(tot(x.z))}</td>`;}
    const v=tot(x.k),e=T.find(y=>y.c===x.k);const f=feeds(x.k)?(x.k==='tle'&&st.re>=1?'='+addr['bs.ta']:sumF(e.of,'bs.')):'';
-   return `<td colspan="2" class="tot ${x.last?'last':''}">${x.h}</td><td class="v tot ${x.last?'last':''}" data-f="${f}" data-a="${cc}${x.r}" data-s="bs" data-k="${x.k}">${shown(x.k,v)}</td>`;};
-  let b=`<div class="bd-tab">גיליון: מאזן</div><table class="bdg bs"><colgroup><col style="width:24px"><col><col style="width:64px"><col style="width:70px"><col style="width:5px"><col><col style="width:64px"><col style="width:70px"></colgroup><tr class="ch"><th></th><th>A</th><th>B</th><th>C</th><th class="gap">D</th><th>E</th><th>F</th><th>G</th></tr><tr><th>1</th><td colspan="7" class="ttl">הדוח על המצב הכספי (מאזן) ליום ${C.date||'31.12'}</td></tr><tr><th>2</th><td colspan="3" class="side">נכסים</td><td class="gap"></td><td colspan="3" class="side">התחייבויות והון עצמי</td></tr>`;
+   return `<td class="tot ${x.last?'last':''}">${x.h}</td><td class="v tot ${x.last?'last':''}" data-f="${f}" data-a="${col}${x.r}" data-s="bs" data-k="${x.k}">${shown(x.k,v)}</td>`;};
+  let b=`<div class="bd-tab">גיליון: מאזן</div><table class="bdg bs"><colgroup><col style="width:24px"><col><col style="width:80px"><col style="width:5px"><col><col style="width:80px"></colgroup><tr class="ch"><th></th><th>A</th><th>B</th><th class="gap">C</th><th>D</th><th>E</th></tr><tr><th>1</th><td colspan="5" class="ttl">הדוח על המצב הכספי (מאזן) ליום ${C.date||'31.12'}</td></tr><tr><th>2</th><td colspan="2" class="side">נכסים</td><td class="gap"></td><td colspan="2" class="side">התחייבויות והון עצמי</td></tr>`;
   const n=Math.max(ar.length,lr.length);for(let k=0;k<n;k++){const a=ar[k],l=lr[k];
-   b+=`<tr class="${(a&&a.t==='tot'||l&&l.t==='tot')?'trow':''}"><th>${k+3}</th>${cell(a,BA,'B','C')}<td class="gap"></td>${cell(l,BLE,'F','G')}</tr>`;}
+   b+=`<tr><th>${k+3}</th>${cell(a,BA,'B')}<td class="gap"></td>${cell(l,BLE,'E')}</tr>`;}
   root.querySelector('.bd-bs').innerHTML=b+'</table>';
   /* the list */
   items.forEach((it,i)=>{const c=chip(i);c.classList.toggle('used',i in st.where);});
