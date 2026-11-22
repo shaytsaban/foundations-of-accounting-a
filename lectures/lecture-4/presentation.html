@@ -469,6 +469,8 @@ code.xl{direction:ltr;unicode-bidi:isolate;display:inline-block;font:700 20px 'M
 .qx .qr .mc .q{font-size:17px}.qx .qr .mc .o{font-size:17px;padding:5px 10px}
 .qx .qr svg.xlc{max-height:220px}
 .xl-g td.bld{box-shadow:inset 0 0 0 2px #ff6a4d;background:#fff1ec}
+
+.xl-cp{flex:none;font:600 14.5px/1 Rubik,Heebo,sans-serif;padding:0 10px;border:1px solid #c8c8c8;border-right:0;background:#fff;color:#16213a;cursor:pointer;white-space:nowrap}.xl-cp:hover{background:#e8f3ec;color:#217346}
 /* ===== lesson 4 ===== */
 .slide h2{font-size:38px}
 .st{transition:opacity .45s ease,transform .45s cubic-bezier(.2,.9,.3,1.25)}
@@ -1151,7 +1153,7 @@ function mount(host,cfg){
  const load=()=>{base=baseNow();S.raw={};S.fmt={...(cfg.fmt||{})};Object.entries(base).forEach(([a,v])=>S.set(a,v));S.recalc();};load();
  const W=cfg.widths||[];
  host.classList.add('xl');
- host.innerHTML=`<div class="xl-top"><div class="xl-name" title="תיבת השם">A1</div><div class="xl-fx">fx</div><input class="xl-bar" dir="auto" spellcheck="false" autocomplete="off"></div>
+ host.innerHTML=`<div class="xl-top"><div class="xl-name" title="תיבת השם">A1</div><div class="xl-fx">fx</div><input class="xl-bar" dir="auto" spellcheck="false" autocomplete="off"><button type="button" class="xl-cp" title="העתקת כל הגיליון, עם הנוסחאות, להדבקה בתא A1 של גיליון Excel">📋 העתקה ל-Excel</button></div>
   <div class="xl-tools">${cfg.tools===false?'':`<button data-x="formulas" title="הצגת נוסחאות">נוסחאות</button>`}${cfg.targets?`<button data-x="check" class="xl-go">✔ בדיקה</button>${cfg.steps?`<button data-x="step" class="xl-st">${cfg.stepLabel||'▶ צעד אחר צעד'}</button>`:''}${cfg.hints?'<button data-x="hint">💡 רמז</button>':''}${cfg.remind?'<button data-x="remind">📐 תזכורת נוסחה</button>':''}${cfg.partial?'<button data-x="part">פתרון חלקי</button>':''}<button data-x="solve">פתרון מלא</button>`:''}<button data-x="reset">איפוס</button><span class="xl-msg"></span></div>
   <div class="xl-wrap"${cfg.maxh?` style="max-height:${cfg.maxh}px"`:''}><table class="xl-g" tabindex="0"><thead><tr><th class="xl-c0"></th>${Array.from({length:C},(_,c)=>`<th style="width:${W[c]||92}px">${colName(c)}</th>`).join('')}</tr></thead><tbody>${Array.from({length:R-R0},(_,k)=>k+R0).map(r=>`<tr><th class="xl-rn">${r+1}</th>${Array.from({length:C},(_,c)=>`<td data-a="${addr(r,c)}"></td>`).join('')}</tr>`).join('')}</tbody></table></div>
   ${cfg.targets?'<div class="xl-fb"></div>':''}`;
@@ -1266,14 +1268,22 @@ function mount(host,cfg){
  const pointable=()=>{const inp=curInput();if(!inp)return false;if(editing.ptr)return true;const v=inp.value.slice(0,inp.selectionStart).trimEnd();return v[0]==='='&&/[=+\-*/^(,:;<>&]$/.test(v);};
  function insertRef(a){const p=parseAddr(a);pointTo(p,p);toastX(`נוספה הפניה לתא ${a}`);}
  function toastX(t){msg.textContent=t;clearTimeout(toastX.t);toastX.t=setTimeout(()=>{if(msg.textContent===t)msg.textContent='';},1800);}
+ /* copy out to the system clipboard as tab-separated text, the format Excel pastes into cells: values for a selection, formulas for the whole sheet */
+ function clipText(b,formulas){const out=[];for(let r=b.r0;r<=b.r1;r++){const row=[];for(let c=b.c0;c<=b.c1;c++){const a=addr(r,c),raw=S.raw[a];let t='';
+   if(raw!=null&&raw!==''){if(formulas||String(raw)[0]!=='=')t=String(raw);else{const v=S.val[a];t=v==null?'':isErr(v)?v.err:typeof v==='number'?(/^pct/.test(S.fmt[a]||'')?Math.round(v*1e10)/1e8+'%':String(Math.round(v*1e9)/1e9)):String(v);}}
+   row.push(t.replace(/[\t\r\n]+/g,' '));}out.push(row.join('\t'));}return out.join('\r\n');}
+ function toClip(t){const old=()=>{const ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(_){}ta.remove();focusG();};
+  if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).catch(old);else old();}
+ function used(){let r1=R0,c1=0;Object.keys(S.raw).forEach(a=>{if(S.raw[a]==null||S.raw[a]==='')return;const p=parseAddr(a);if(p.r>r1)r1=p.r;if(p.c>c1)c1=p.c;});return{r0:0,r1,c0:0,c1};}
  /* pointer: select, drag a range, insert a reference while writing a formula, or drag the fill handle */
- let drag=null;
+ let drag=null,lastDown=null;
  g.addEventListener('pointerdown',e=>{const cell=e.target.closest('td');
   if(e.target.classList.contains('xl-fh')){e.preventDefault();drag={k:'fill',b:blk(),to:null};try{g.setPointerCapture(e.pointerId);}catch(_){}return;}
   if(!cell)return;const p=parseAddr(cell.dataset.a);
   if(editing&&editing.a===cell.dataset.a)return;
   if(editing&&pointable()){e.preventDefault();insertRef(cell.dataset.a);drag={k:'ptr',a:p};try{g.setPointerCapture(e.pointerId);}catch(_){}return;}
   if(editing)commit(0,0);
+  {const now=Date.now(),a=cell.dataset.a;if(lastDown&&lastDown.a===a&&now-lastDown.t<500){lastDown=null;e.preventDefault();sel={...p};sel2={...p};render();startEdit('',true,'edit');return;}lastDown={a,t:now};}
   e.preventDefault();sel={...p};sel2={...p};drag={k:'sel'};try{g.setPointerCapture(e.pointerId);}catch(_){}render();focusG();explainAt(cell.dataset.a);});
  g.addEventListener('pointermove',e=>{if(!drag)return;
   /* dragging past the top or bottom edge of a scrolling sheet scrolls it, as in Excel */
@@ -1306,7 +1316,8 @@ function mount(host,cfg){
   const cell=(tgt.closest&&tgt.closest('td'))||e.target.closest('td');if(!cell||!g.contains(cell))return;if(editing&&editing.a===cell.dataset.a)return;sel=parseAddr(cell.dataset.a);sel2={...sel};startEdit('',true,'edit');});
  const gKey=e=>{if(editing)return;const k=e.key;
   const mod=e.ctrlKey||e.metaKey;
-  if(mod&&(k==='c'||k==='C'||k==='ג')){e.preventDefault();e.stopPropagation();CLIP={raw:S.raw[addr(sel.r,sel.c)],r:sel.r,c:sel.c,fmt:S.fmt[addr(sel.r,sel.c)]};toastX('הועתק. סמנו תא או טווח, והדביקו ב-Ctrl+V');return;}
+  if(mod&&(k==='c'||k==='C'||k==='ג')){e.preventDefault();e.stopPropagation();CLIP={raw:S.raw[addr(sel.r,sel.c)],r:sel.r,c:sel.c,fmt:S.fmt[addr(sel.r,sel.c)]};toClip(clipText(blk(),false));toastX('הועתק. אפשר להדביק כאן ב-Ctrl+V, או בגיליון Excel (ערכים)');return;}
+  if(mod&&(k==='a'||k==='A'||k==='ש')){e.preventDefault();e.stopPropagation();const u=used();sel={r:R0,c:0};sel2={r:Math.max(R0,u.r1),c:u.c1};render();return;}
   if(mod&&(k==='v'||k==='V'||k==='ה')){e.preventDefault();e.stopPropagation();if(!CLIP||CLIP.raw==null)return;
    for(let r=Math.min(sel.r,sel2.r);r<=Math.max(sel.r,sel2.r);r++)for(let c=Math.min(sel.c,sel2.c);c<=Math.max(sel.c,sel2.c);c++){S.set(addr(r,c),shift(CLIP.raw,r-CLIP.r,c-CLIP.c));if(CLIP.fmt)S.fmt[addr(r,c)]=CLIP.fmt;}
    render();if(cfg.onChange)cfg.onChange();return;}
@@ -1323,6 +1334,7 @@ function mount(host,cfg){
  bar.addEventListener('keydown',keyEdit);
  bar.addEventListener('blur',()=>{if(editing&&editing.where==='bar')setTimeout(()=>{if(editing&&editing.where==='bar'&&document.activeElement!==bar)commit(0,0);},120);});
  function toggleF(){showF=!showF;host.querySelector('[data-x="formulas"]')&&host.querySelector('[data-x="formulas"]').classList.toggle('on',showF);render();}
+ host.querySelector('.xl-cp').addEventListener('click',()=>{if(editing)commit(0,0);toClip(clipText(used(),true));toastX('הגיליון הועתק עם הנוסחאות. ב-Excel: עמדו על תא A1 והדביקו');});
  host.querySelector('.xl-tools').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const x=b.dataset.x;
   if(x==='pct'){for(let r=Math.min(sel.r,sel2.r);r<=Math.max(sel.r,sel2.r);r++)for(let c=Math.min(sel.c,sel2.c);c<=Math.max(sel.c,sel2.c);c++){const a=addr(r,c);S.fmt[a]=/^pct/.test(S.fmt[a]||'')?'':'pct';}render();}
   if(x==='formulas')toggleF();
